@@ -1,0 +1,30 @@
+{
+  "name": "gil",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] GIL 코어 — 도메인 AI 라우터, 초기화, 자가학습 엔진",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "moai",
+    "코어",
+    "라우터",
+    "초기화",
+    "자가학습",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

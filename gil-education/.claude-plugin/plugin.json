@@ -1,0 +1,31 @@
+{
+  "name": "gil-education",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 강사·교수·교사 교육 콘텐츠 풀스택 — 커리큘럼 설계, 출제, 학술 리서치, 강의 운영 매뉴얼, 수강 후 후기 자산화",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "교육",
+    "연구",
+    "강의",
+    "논문",
+    "커리큘럼",
+    "에듀테크",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

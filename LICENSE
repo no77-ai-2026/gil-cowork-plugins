@@ -1,0 +1,51 @@
+MIT License
+
+Copyright (c) 2026 GIL (Caleb Roh)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## Third-Party Attribution (Transitive)
+
+This project incorporates methodologies and code from the following open-source
+projects, all under MIT License:
+
+### modu-ai/cowork-plugins (v2.5.0)
+- Source: https://github.com/modu-ai/cowork-plugins
+- Used: Base plugin structure, ~130 skills as starting point
+- License: MIT
+
+### AgriciDaniel/claude-ads (v1.5.1)
+- Source: https://github.com/AgriciDaniel/claude-ads
+- Used: 50-check audit matrix, weighted scoring formula, Quick Wins logic,
+  EMQ tiered targets, A-F grading thresholds (in gil-ads-audit MCP)
+- License: MIT
+
+### NomaDamas/k-skill
+- Source: https://github.com/NomaDamas/k-skill
+- Used: Korean specialty skills (등기부등본·실거래가·식약처·법원경매·KRX·바른한글)
+- License: MIT
+
+### epoko77-ai/im-not-ai
+- Source: https://github.com/epoko77-ai/im-not-ai
+- Used: humanize-korean skill — Korean AI slop detection patterns
+- License: MIT
+
+See mcp-servers/gil-ads-audit/NOTICE.md for detailed attribution.

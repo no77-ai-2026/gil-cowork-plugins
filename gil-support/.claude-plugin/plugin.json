@@ -1,0 +1,30 @@
+{
+  "name": "gil-support",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 고객 지원 — 티켓 분류, 응답 초안, KB 문서, 에스컬레이션",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "고객지원",
+    "CS",
+    "티켓",
+    "KB",
+    "에스컬레이션",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

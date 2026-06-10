@@ -1,0 +1,33 @@
+{
+  "name": "gil-data",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 데이터 분석 — CSV/Excel 탐색, 공공데이터 조회, 시각화, 대시보드",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "데이터",
+    "분석",
+    "시각화",
+    "공공데이터",
+    "통계",
+    "차트",
+    "CSV",
+    "Excel",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

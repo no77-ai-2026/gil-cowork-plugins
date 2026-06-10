@@ -1,0 +1,39 @@
+{
+  "name": "gil-business",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 비즈니스 전략 — 사업계획서, 시장조사, 재무모델, IR, 상권분석, 정부지원사업",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "비즈니스",
+    "전략",
+    "사업계획서",
+    "시장조사",
+    "투자",
+    "IR",
+    "상권분석",
+    "창업타당성",
+    "소상공인365",
+    "정부지원사업",
+    "K-Startup",
+    "BIZINFO",
+    "창업지원",
+    "지원금",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

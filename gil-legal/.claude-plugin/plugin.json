@@ -1,0 +1,30 @@
+{
+  "name": "gil-legal",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 법률 — 계약서 검토(민법/상법), 개인정보보호법 컴플라이언스, NDA",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "법률",
+    "계약서",
+    "개인정보보호법",
+    "컴플라이언스",
+    "NDA",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

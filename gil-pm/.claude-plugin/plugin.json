@@ -1,0 +1,39 @@
+{
+  "name": "gil-pm",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 한국 팀의 프로젝트 관리·주간보고·OKR·회고 자동화. Notion·Linear·Asana·Slack MCP 활용, 격식체/구어체 톤 스위치 지원",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "PM",
+    "프로젝트관리",
+    "주간보고",
+    "WBR",
+    "OKR",
+    "회고",
+    "project-management",
+    "weekly-report",
+    "standup",
+    "retro",
+    "Notion",
+    "Linear",
+    "Asana",
+    "한국주간보고",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

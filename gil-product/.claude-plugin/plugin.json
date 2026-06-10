@@ -1,0 +1,31 @@
+{
+  "name": "gil-product",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 제품 혁신 — PM 로드맵, UX 리서치, 스프린트 플래닝, 제품 스펙",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "제품",
+    "PM",
+    "로드맵",
+    "UX리서치",
+    "스프린트",
+    "제품스펙",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

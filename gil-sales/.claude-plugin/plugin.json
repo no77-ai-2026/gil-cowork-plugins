@@ -1,0 +1,38 @@
+{
+  "name": "gil-sales",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 한국 B2B 영업 워크플로우 — 제안서, 견적서, 콜드메일, 후속 시퀀스. 국세청 표준 양식 호환",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "영업",
+    "B2B",
+    "제안서",
+    "RFP",
+    "견적서",
+    "콜드메일",
+    "sales",
+    "proposal",
+    "quote",
+    "cold-email",
+    "전자세금계산서",
+    "한국영업",
+    "B2B SaaS",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

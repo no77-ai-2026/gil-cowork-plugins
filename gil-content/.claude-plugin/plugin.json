@@ -1,0 +1,35 @@
+{
+  "name": "gil-content",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 크리에이티브 콘텐츠 — 카드뉴스, 랜딩페이지, 뉴스레터, 카피라이팅, 블로그, 소셜미디어, 한국어 AI 티 정밀 윤문(humanize-korean)",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "콘텐츠",
+    "카드뉴스",
+    "랜딩페이지",
+    "뉴스레터",
+    "카피라이팅",
+    "블로그",
+    "소셜미디어",
+    "한국어윤문",
+    "AI티제거",
+    "humanize",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

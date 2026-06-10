@@ -1,0 +1,32 @@
+{
+  "name": "gil-finance",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 재무/세무 — 3.3% 원천징수, 부가세, 홈택스, K-IFRS, 연말정산",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "재무",
+    "세무",
+    "부가세",
+    "원천징수",
+    "홈택스",
+    "K-IFRS",
+    "연말정산",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

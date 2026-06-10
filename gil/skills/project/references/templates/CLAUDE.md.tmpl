@@ -1,0 +1,125 @@
+# {project_name} — Cowork 작업 지침
+
+> gil-cowork v{version} | 생성일 {date}
+> 설치 플러그인: {installed_plugins}
+> 주요 산출물: {primary_deliverables}
+
+---
+
+## 1. 프로젝트 개요
+
+**목적**: {project_purpose}
+**대상 독자/고객**: {audience}
+**톤·형식 제약**: {tone_constraints}
+
+## 2. 행동 원칙 (HARD)
+
+1. **사전 확인 후 실행**: 맥락·목적·독자·양식을 확인한 뒤 착수한다.
+2. **스킬 체인 보고 후 실행**: 멀티스텝 작업은 체인을 먼저 보고하고 AskUserQuestion으로 승인받는다.
+3. **텍스트 산출물은 반드시 AI 슬롭 검수로 종료**: `ai-slop-reviewer` 스킬을 체인 마지막에 호출한다.
+4. **기본 artifacts보다 GIL 스킬 우선**: 아래 표의 스킬이 존재하면 Claude 기본 도구 대신 스킬을 사용한다.
+5. **파일은 폴더별로 분류 저장**: 입력물·산출물·작업 파일을 프로젝트 루트에 흩어 두지 말고 지정 폴더에 저장한다 (아래 §5 파일 저장 규칙).
+
+## 3. 문서·콘텐츠 생성 우선순위 (HARD)
+
+| 산출물 | 사용 스킬 |
+|---|---|
+| DOCX / Word 문서 | `gil-office:docx-generator` |
+| PPTX / 발표자료 | `gil-office:pptx-designer` |
+| XLSX / Excel | `gil-office:xlsx-creator` |
+| HWPX / 한글 | `gil-office:hwpx-writer` |
+| HTML / 웹페이지 / 랜딩 | `gil-content:landing-page` |
+| 블로그 포스트 | `gil-content:blog` |
+| 카드뉴스 | `gil-content:card-news` |
+| 뉴스레터 | `gil-content:newsletter` |
+| SNS 콘텐츠 | `gil-content:social-media` |
+| 카피·광고 문구 | `gil-content:copywriting` |
+| 상세페이지 | `gil-content:product-detail` |
+| 이미지 | `gil-media:nano-banana` or `ideogram` |
+| 영상 | `gil-media:kling` |
+| 음성·TTS | `gil-media:elevenlabs` |
+
+설치되어 있는 스킬이면 기본 artifacts로 직접 생성하지 않는다.
+
+## 4. AI 슬롭 후처리 (HARD)
+
+**모든 텍스트 산출물 워크플로우의 마지막 단계**에 `ai-slop-reviewer`를 호출한다. 한국어 최종본은 그 직후 `humanize-korean`(v2.1.0+)으로 정밀 윤문한다.
+
+- 대상: 블로그, 뉴스레터, 카피, 사업계획서, 계약서·공문 초안, 제안서, 보고서, 이메일, 랜딩 카피, 사업보고, 특허 초안, 강의자료 원고 등
+- 제외: 코드, JSON/CSV, 차트·표, 숫자 리포트, 단순 조회 응답
+- 출력: **진단 요약 → 수정 텍스트 → 주요 변경사항** 3블록
+- 한국어 권장 체인: `… → ai-slop-reviewer (1차 일반 후처리) → humanize-korean (2차 한국어 정밀 윤문, A/B/C/D 등급)`
+
+## 5. 파일 저장 규칙 (HARD)
+
+프로젝트 루트에 입력물·산출물·작업 파일을 섞지 않는다. 아래 구조로 분류 저장한다.
+
+- **입력물·원본 자료** → `inputs/` (사용자 업로드, 참고 자료, 원천 데이터)
+- **최종 산출물** → 유형별 카테고리 폴더 `NN_유형명/` (예: `01_시장조사/`, `02_기획서/`, `03_디자인/`). 프로젝트 성격에 맞는 카테고리를 Phase 1에서 정해 쓰고, 새 유형이 생기면 동일 규칙으로 폴더를 추가한다.
+- **작업 중간·임시본** → `_working/` (또는 임시 outputs). 최종본만 카테고리 폴더로 승격한다.
+- **시스템 파일**(`CLAUDE.md`, `.gil/`)은 루트에 유지하며 분류 대상이 아니다.
+
+파일명 규칙: `[유형]_[주제]_[날짜]` (예: `시장조사_우즈벡핀테크_20260604.docx`).
+산출물 전달 시 해당 카테고리 폴더에 저장하고 computer:// 링크로 공유한다.
+
+## 6. 프로젝트 워크플로우 (스킬 체인)
+
+{workflow_chains}
+
+<!--
+위 섹션 예시:
+
+### 사업계획서 작성
+- 요청 예시: "초기 스타트업 사업계획서 써줘"
+- 체인: `strategy-planner` → `market-analyst` → `docx-generator` → `ai-slop-reviewer`
+- 입력: 사업 아이템, 타겟 시장, 자금 조달 목표
+- 출력: `.docx` 파일 + AI 슬롭 검수 리포트
+
+### 블로그 발행
+- 요청 예시: "AI 스킬 체인 관련 블로그 글 써줘"
+- 체인: `blog` → `ai-slop-reviewer` → `humanize-korean` (한국어 산출물) → (선택) `nano-banana` (썸네일)
+- 입력: 주제, 키워드, 목표 독자
+- 출력: Markdown 포스트 + 검수 리포트 + 정밀 윤문본(등급 A~D) + (선택)썸네일
+
+### 제품 랜딩 페이지
+- 요청 예시: "신규 SaaS 랜딩 만들어줘"
+- 체인: `copywriting` → `landing-page` → `ai-slop-reviewer` → `humanize-korean` (한국어 카피)
+- 입력: 제품 가치 제안, 주요 기능, CTA
+- 출력: HTML 파일 + 검수 리포트 + 정밀 윤문본
+
+### IR 피칭 덱
+- 요청 예시: "Series A용 피칭 덱"
+- 체인: `investor-relations` → `pptx-designer` → `ai-slop-reviewer`
+- 입력: 재무 데이터, 시장 크기, 팀 구성
+- 출력: `.pptx` 파일 + 검수 리포트
+-->
+
+## 7. 실행 플로우 (Interview → Plan → Confirm → Execute)
+
+1. [Interview] 소크라테스 인터뷰로 빠진 맥락 수집 (최대 3질문)
+2. [Summary] 수집한 맥락을 구조화하여 확인 요약
+3. [Plan+Confirm] 스킬 체인 실행 계획 제시 → AskUserQuestion으로 승인
+4. [Execute] 체인 순차 실행 → 각 단계 요약 보고 → ai-slop-reviewer 검수 → 전달
+
+스킵 조건: 단순 조회, 이미 상세 지시, "빠르게" 명시, 후속 요청
+
+## 8. 라우팅 요약
+
+{routing_summary}
+
+## 9. 커넥터 / API 키
+
+{connectors_and_apikeys}
+
+## 10. 딥씽킹
+
+`--deepthink` 또는 `ultrathink` 키워드 포함 시 단계별 심층 분석.
+자동 트리거: 법률/세무 판단, 2개+ 플러그인 복합 작업, 전략적 의사결정.
+
+## 11. 프로젝트 맥락
+
+{project_context_notes}
+
+---
+
+**작업을 요청하면 위 체인이 자동으로 트리거됩니다. 자연스럽게 대화하세요.**

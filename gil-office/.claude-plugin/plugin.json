@@ -1,0 +1,36 @@
+{
+  "name": "gil-office",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 문서 생성 — PPT 디자인, Word(DOCX), Excel(XLSX), 한글(HWPX) + NotebookLM 슬라이드 프롬프트(notebooklm-slide-prompt)",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "문서",
+    "PPT",
+    "DOCX",
+    "XLSX",
+    "HWPX",
+    "한글",
+    "프레젠테이션",
+    "NotebookLM",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads",
+    "맥킨지",
+    "컨설팅 덱",
+    "McKinsey"
+  ],
+  "license": "MIT"
+}

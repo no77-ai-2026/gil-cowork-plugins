@@ -1,0 +1,42 @@
+{
+  "name": "gil-oda",
+  "version": "1.0.1",
+  "description": "공적개발원조 — KOICA·EDCF·KSP 한·우즈벡 사업 전담. F/S·Pre-F/S·PCP·PDM·RBM·UZ 정부 협력·UN·WB·ADB 입찰",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "ADB",
+    "EDCF",
+    "F/S",
+    "IT Park",
+    "KOICA",
+    "KSP",
+    "MID",
+    "ODA",
+    "ODA 사업",
+    "PCP",
+    "PDM",
+    "RBM",
+    "SEZ",
+    "SROI",
+    "Tashkent",
+    "Telegram Ads",
+    "UN",
+    "Uzbekistan",
+    "World Bank",
+    "Yandex",
+    "data.gov.uz",
+    "soliq.uz",
+    "stat.uz",
+    "uzbek",
+    "공적 개발 원조",
+    "국제 입찰",
+    "우즈베키스탄",
+    "타슈켄트",
+    "트릴링구얼",
+    "한·우즈벡 협력",
+    "한국+우즈벡"
+  ],
+  "license": "MIT"
+}

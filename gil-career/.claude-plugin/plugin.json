@@ -1,0 +1,37 @@
+{
+  "name": "gil-career",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 한국 취준생·재직자 커리어 풀스택 — 2026 채용 시장(팀핏·핀셋·AI 리터러시) 기준 자소서·이력서·JD 분석·AI 면접·포트폴리오 4종",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "자기소개서",
+    "이력서",
+    "면접",
+    "취업",
+    "이직",
+    "포트폴리오",
+    "커리어",
+    "취준",
+    "재직자",
+    "AI면접",
+    "팀핏",
+    "수시채용",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

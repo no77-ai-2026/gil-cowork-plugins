@@ -1,0 +1,34 @@
+{
+  "name": "gil-research",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 연구/특허 — 논문 검색, 학술 논문 작성, 특허 분석/출원, 연구비 신청",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "논문",
+    "특허",
+    "연구",
+    "KIPRIS",
+    "KCI",
+    "RISS",
+    "연구비",
+    "출원",
+    "학술",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

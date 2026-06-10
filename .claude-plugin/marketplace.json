@@ -1,0 +1,134 @@
+{
+  "name": "gil-plugins",
+  "owner": {
+    "name": "gil (Caleb Roh)",
+    "email": "no77show@gmail.com"
+  },
+  "metadata": {
+    "description": "GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.17.1(GIL 오리지널 디벨롭): gil-office:pptx-designer에 스타일 프리셋 분기(맥킨지/일반/사용자지정) + 맥킨지 컨설팅 스타일 reference(40 아키타입·액션타이틀·MECE·네이비 테마) + 트리거 라우팅. 방법론 차용 axlabs-mckinsey-pptx(MIT). GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.17.0(GIL 오리지널 디벨롭): gil-book에 5번째 장르 프리셋 '경험서·실무회고'(GIL 오리지널) 신설 — 6요소(장면→맥락→원칙 30/40/30·현장노트/Before-After·[TODO] 5종·원재료 재구성·샘플 챕터 앵커)를 8 스킬에 반영(chapter-writer 大), uz-fieldnote.md 신규. fieldnote-book-workflow 자유 반영(개인). GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.16.4(GIL 오리지널 디벨롭): language-tutor EN 팩 풀 커버리지 — en-soundblock-drills 전 블록 그룹(be/It's/there/be-ving/be-pp/wanna/think/have to/조동사/코어동사 have·make·get·take·do·go·keep/디테일) 드릴 + en-business-examples 전 40강 상황 인덱스. 사용자 제공 교재 기반. GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.16.3(GIL 오리지널 디벨롭): language-tutor EN 팩 예문·연습 확장 — en-business-examples(상황별 예문·다이얼로그·순서배열 연습)·en-soundblock-drills(블록별 순한맛/매운맛/답안 영어+IPA+한국어). 사용자 제공 교재 기반. GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.16.2(GIL 오리지널 디벨롭): language-tutor EN 팩 교재 기반 심화 — en-business-verbs(상황별 필수동사 뱅크 casual/formal·5단계 레슨)·en-soundblock(블록 스피킹 3단 훈련·소리튠 발음기호 대조표). 사용자 제공 교재 기반(개인 사용). GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.16.1(GIL 오리지널 디벨롭): language-tutor EN(영어) 언어 팩 lean 추가 — en-cis-business(CIS 비즈니스 영어)·en-contrastive-ko(한·영 대조·발음 자가점검). EN 활성, RU·KO는 다음. GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.16.0(GIL 오리지널 디벨롭): gil-education uzbek-language-tutor → language-tutor 전면 개편 Phase 1 — 범용 어학 튜터 엔진(명령형 5모드: placement·lesson·drill·conversation·review) + 청중 라우팅(한국인→CIS 영어·러시아어·우즈벡어 / 외국인→한국어) + UZ 팩 재배치(uzbek-*→uz-*) + 교차참조 정정. RU·EN·KO 팩은 Phase 2~3. GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.15.5(GIL 오리지널 디벨롭): gil-education 스킬별 약점·갭 보완 — assessment-creator(문항 예시·이원목적분류표·오답분석), curriculum-designer(분야별 설계 예시), textbook-builder(docx/pdf 핸드오프·교사용 지도서), past-exam-analyzer(데이터 유무 3모드), research-assistant(gil-research 역할 경계), uzbek-language-tutor(포지션 명확화). (개인화 스타일 통일은 다음 단계) GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.15.4(GIL 오리지널 디벨롭): gil-education 플러그인 전체 종합 디벨롭 — 오리지널 3종(past-exam·textbook·uzbek-tutor) UZ 주입 + 얇은 modu 3종(assessment·research-assistant·curriculum-designer) 콘텐츠 보강 + 교육 파이프라인 체이닝 통일 + 플러그인 README 정비 + education 네임스페이스 39건 정정. GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.15.3(GIL 오리지널 디벨롭): gil-research 고유 5(devil-review·journal-selection·journal-style-adapter·research-analysis·research-methodology)에 UZ·CIS 컨텍스트 주입(uz-ref 5종 신규) + devil-review·research-methodology에 AI 연구 무결성 게이트·인용 충실성·인간 in-the-loop 개념 clean-room 보강(공개 방법론 기반, 외부 라이선스 미차용) + 연구 파이프라인 체이닝. GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.15.2(GIL 오리지널 디벨롭): gil-commerce UZ 4채널(marketplace-uzum·marketplace-olx·telegram-commerce·yandex-market) 스텁 → 본격 운영 스킬 확장(입점·수수료·트릴링구얼 SEO·결제·정산·체이닝), reference 경로 정정. GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.15.1(GIL 오리지널 디벨롭): humanize-korean을 im-not-ai v2.0.0 기준 강화(taxonomy 587줄·metrics_v2 post-editese·번역투 8종·scholarship), 코어 humanize-korean 정본 위임 포인터 단일화, 휴머나이징 체인 네임스페이스 97건 정정, 네임스페이스 자동화 자산(rebrand-namespace.py) 신설. GIL Claude Cowork 플러그인 마켓플레이스 — 24 플러그인, 183 스킬. v2.15.0에서 신규 2 스킬: gil-office **notebooklm-slide-prompt**(NotebookLM Studio 슬라이드 데크 + 나노바나나 5-Component 이미지 프롬프트 빌더, 49 시각 스타일 라이브러리) · gil-marketing **meta-ads-manager**(Meta 공식 Ads AI Connectors OAuth 2.0 기반 라이브 광고 운영 — 생성·수정·예산·온오프, 신규 리소스 PAUSED 기본·쓰기 승인 가드). gil-marketing meta-ads 커넥터를 정적 토큰 → Meta Business OAuth 2.0 커넥터 흐름으로 정정(서드파티 fallback 3종 제거, 공식 단일화). gil-design claude-design-prompt-builder·claude-design-handoff-reader에 프론티어 미디어 프로토타입(셰이더·3D·웹오디오)·Canva 네이티브 파트너십 두 경로 분기 반영. 신규 2 스킬 모두 한·UZ 듀얼 컨텍스트 주입(트릴링구얼 한·러·우즈벡). 모태: modu-ai/cowork-plugins v2.15.0 (MIT). v2.1.0에서 **gil-book** 신규 플러그인 도입 — 한국·UZ 듀얼 출판 풀스택 8 스킬(book-concept-planner·book-target-reader·book-outline-designer·book-author-bio·book-proposal-writer·book-publisher-matcher·book-chapter-writer·book-revision-coach). 도서 컨셉서·JTBD 페르소나·목차 설계·저자 약력·출판 제안서·30+ 한국 출판사 매칭·챕터 집필·퇴고 7 단계 점검을 4 장르(실용서·인문·기술·소설) 자동 분기로 처리. KPIPA·국립국어원·교보문고·알라딘 + 부크크·텀블벅 자비 출판 + UZ 한인사회 트릴링구얼(한·러·우즈벡) 출판 시장 컨텍스트 포함. modu-ai v2.11.1 동기화 (v2.10 gil-book + v2.11 commerce 13 + media 3 신규 + content 1 신규). gil-commerce 13 신규: commerce-early-fan-builder · commerce-influencer-collab · commerce-ltv-cac-architect · commerce-marketing-compliance-kr · commerce-product-image-pipeline · commerce-promotion-planner · commerce-push-planner · commerce-repurchase-timer · commerce-review-aggregator · commerce-season-calendar · commerce-subscription-strategist · commerce-trend-namer · commerce-voc-triage. gil-media 신규 3 (gemini-3-image-prompt·gpt-image-2-prompt·midjourney-v8-prompt) + GIL 보존 12 미디어 스킬 유지. UZ 듀얼 컨텍스트 100% 보존 (gil-oda 6·education 3·research 5·commerce UZ 4·humanize-korean·media 12). UZ-tagged refs 125+ (신규 21+ 추가 — gil-book 8 + commerce 13 신규 스킬 UZ 주입). 모태: modu-ai/cowork-plugins v2.11.1 (MIT). v2.0.0 누적 — NomaDamas/k-skill 한국 특화 6종 + humanize-korean + html-report + 캠프 통합본 17 + 광고 심리학 5 + meta-ads-analyzer.",
+    "version": "1.0.1",
+    "language": "ko"
+  },
+  "plugins": [
+    {
+      "name": "gil",
+      "source": "./gil",
+      "description": "[한·UZ 듀얼] GIL 코어 — 도메인 AI 라우터, 초기화, 자가학습 엔진"
+    },
+    {
+      "name": "gil-bi",
+      "source": "./gil-bi",
+      "description": "[한·UZ 듀얼] 비즈니스 인텔리전스·리포트 풀스택. 기본 출력은 단일 HTML 파일(이미지·CSS·JS 인라인, 카톡 즉시 공유 가능). pdf/docx/pptx/hwpx 변환 옵션 체이닝. K-IFRS·KOSIS·DART 한국 통계 친화"
+    },
+    {
+      "name": "gil-book",
+      "source": "./gil-book",
+      "description": "[한·UZ 듀얼] 한국 출판사 제출용 원고 집필 풀스택 — 도서 컨셉서·타깃 독자·목차 설계·저자 약력·출판 제안서·출판사 매칭·챕터 본문·퇴고 8 스킬. 실용서·인문·기술·소설 4 장르 프리셋, 한빛·길벗·웅진·민음사·문학동네·창비·다산북스·휴머니스트 등 한국 주요 출판사 컨벤션 내장. 한국출판문화산업진흥원(KPIPA)·국립국어원 어문규범·도서정가제 준수"
+    },
+    {
+      "name": "gil-business",
+      "source": "./gil-business",
+      "description": "[한·UZ 듀얼] 비즈니스 전략 — 사업계획서, 시장조사, 재무모델, IR, 상권분석, 정부지원사업"
+    },
+    {
+      "name": "gil-career",
+      "source": "./gil-career",
+      "description": "[한·UZ 듀얼] 한국 취준생·재직자 커리어 풀스택 — 2026 채용 시장(팀핏·핀셋·AI 리터러시) 기준 자소서·이력서·JD 분석·AI 면접·포트폴리오 4종"
+    },
+    {
+      "name": "gil-commerce",
+      "source": "./gil-commerce",
+      "description": "[한·UZ 듀얼] 한국 이커머스 풀스택 35 스킬 — 13섹션 상세페이지·1080×12720 이미지 합성·시장/고객/전략 분석·5개 채널 가이드(쿠팡·네이버·D2C·크라우드펀딩·큐레이션)·쿠팡 광고 풀세트·마진/엔드ROAS·자동화 진단·LTV/CAC 설계·정통망법 게이트·앱 푸시·재구매 골든타임·프로모션·리뷰 통합·VOC·구독·인플루언서·시즌 캘린더·식약처(MFDS) 안전"
+    },
+    {
+      "name": "gil-content",
+      "source": "./gil-content",
+      "description": "[한·UZ 듀얼] 크리에이티브 콘텐츠 — 카드뉴스, 랜딩페이지, 뉴스레터, 카피라이팅, 블로그, 소셜미디어, 한국어 AI 티 정밀 윤문(humanize-korean)"
+    },
+    {
+      "name": "gil-data",
+      "source": "./gil-data",
+      "description": "[한·UZ 듀얼] 데이터 분석 — CSV/Excel 탐색, 공공데이터 조회, 시각화, 대시보드"
+    },
+    {
+      "name": "gil-design",
+      "source": "./gil-design",
+      "description": "[한·UZ 듀얼] Claude Design 보조 풀스택 — 6요소 브리프·디자인 시스템 자산 합성·시니어 UX 10패턴 프롬프트·Claude Code 핸드오프 분석·AI 슬롭 검수 5 스킬. 한국 SaaS·D2C·공공 UI 표준 + UZ 트릴링구얼(한·러·우즈벡) 디자인 컨텍스트"
+    },
+    {
+      "name": "gil-education",
+      "source": "./gil-education",
+      "description": "[한·UZ 듀얼] 강사·교수·교사 교육 콘텐츠 풀스택 — 커리큘럼 설계, 출제, 학술 리서치, 강의 운영 매뉴얼, 수강 후 후기 자산화"
+    },
+    {
+      "name": "gil-finance",
+      "source": "./gil-finance",
+      "description": "[한·UZ 듀얼] 재무/세무 — 3.3% 원천징수, 부가세, 홈택스, K-IFRS, 연말정산"
+    },
+    {
+      "name": "gil-hr",
+      "source": "./gil-hr",
+      "description": "[한·UZ 듀얼] 인사/노무 — 근로계약서, 4대보험, 채용, 성과평가, 연차/퇴직금"
+    },
+    {
+      "name": "gil-legal",
+      "source": "./gil-legal",
+      "description": "[한·UZ 듀얼] 법률 — 계약서 검토(민법/상법), 개인정보보호법 컴플라이언스, NDA"
+    },
+    {
+      "name": "gil-lifestyle",
+      "source": "./gil-lifestyle",
+      "description": "[한·UZ 듀얼] 라이프스타일 — 여행 플래닝, 건강/식단, 웨딩/이벤트"
+    },
+    {
+      "name": "gil-marketing",
+      "source": "./gil-marketing",
+      "description": "[한·UZ 듀얼] 마케팅 — 네이버/카카오 SEO·SNS(한국 3+글로벌 4채널)·캠페인·이메일 + v2.4.0 광고 심리학 통합(campaign-planner·sns-content 완전판) + 랜딩 진단(landing-page-conversion-audit) + 픽셀 검증(pixel-audit) + v2.5.0 메타 광고 보고서 분석(meta-ads-analyzer, 9 모듈·4D 교차·3 그룹·4 출력 형식·🟢🟡🔴 강도별 액션) + MCP 인프라 2서버(meta-ads hosted + gil-ads-audit local std"
+    },
+    {
+      "name": "gil-media",
+      "source": "./gil-media",
+      "description": "[한·UZ 듀얼] AI 이미지·영상·음성 — Higgsfield MCP 직접 호출(higgsfield-image 11 이미지 모델 + higgsfield-video 11 영상 모델·6 비디오 프리셋) + 이미지 프롬프트 빌더 3종(GPT-image-2·Gemini 3 Pro Image·Midjourney v8.1) + ElevenLabs TTS·더빙 + GIL 보존 미디어 스킬 12종"
+    },
+    {
+      "name": "gil-oda",
+      "source": "./gil-oda",
+      "description": "공적개발원조 — KOICA·EDCF·KSP 한·우즈벡 사업 전담. F/S·Pre-F/S·PCP·PDM·RBM·UZ 정부 협력·UN·WB·ADB 입찰"
+    },
+    {
+      "name": "gil-office",
+      "source": "./gil-office",
+      "description": "[한·UZ 듀얼] 문서 생성 — PPT 디자인, Word(DOCX), Excel(XLSX), 한글(HWPX)"
+    },
+    {
+      "name": "gil-operations",
+      "source": "./gil-operations",
+      "description": "[한·UZ 듀얼] 운영 — 결재 프로세스, 정부조달, SOP, 벤더 관리"
+    },
+    {
+      "name": "gil-pm",
+      "source": "./gil-pm",
+      "description": "[한·UZ 듀얼] 한국 팀의 프로젝트 관리·주간보고·OKR·회고 자동화. Notion·Linear·Asana·Slack MCP 활용, 격식체/구어체 톤 스위치 지원"
+    },
+    {
+      "name": "gil-product",
+      "source": "./gil-product",
+      "description": "[한·UZ 듀얼] 제품 혁신 — PM 로드맵, UX 리서치, 스프린트 플래닝, 제품 스펙"
+    },
+    {
+      "name": "gil-research",
+      "source": "./gil-research",
+      "description": "[한·UZ 듀얼] 연구/특허 — 논문 검색, 학술 논문 작성, 특허 분석/출원, 연구비 신청"
+    },
+    {
+      "name": "gil-sales",
+      "source": "./gil-sales",
+      "description": "[한·UZ 듀얼] 한국 B2B 영업 워크플로우 — 제안서, 견적서, 콜드메일, 후속 시퀀스. 국세청 표준 양식 호환"
+    },
+    {
+      "name": "gil-support",
+      "source": "./gil-support",
+      "description": "[한·UZ 듀얼] 고객 지원 — 티켓 분류, 응답 초안, KB 문서, 에스컬레이션"
+    }
+  ]
+}

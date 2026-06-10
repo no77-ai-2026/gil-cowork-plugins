@@ -1,0 +1,31 @@
+{
+  "name": "gil-lifestyle",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 라이프스타일 — 여행 플래닝, 건강/식단, 웨딩/이벤트",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "라이프스타일",
+    "여행",
+    "건강",
+    "식단",
+    "웨딩",
+    "이벤트",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

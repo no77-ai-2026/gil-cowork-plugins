@@ -1,0 +1,31 @@
+{
+  "name": "gil-operations",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 운영 — 결재 프로세스, 정부조달, SOP, 벤더 관리",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "운영",
+    "결재",
+    "조달",
+    "SOP",
+    "벤더",
+    "나라장터",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

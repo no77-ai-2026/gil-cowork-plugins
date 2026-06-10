@@ -1,0 +1,40 @@
+{
+  "name": "gil-bi",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 비즈니스 인텔리전스·리포트 풀스택. 기본 출력은 단일 HTML 파일(이미지·CSS·JS 인라인, 카톡 즉시 공유 가능). pdf/docx/pptx/hwpx 변환 옵션 체이닝. K-IFRS·KOSIS·DART 한국 통계 친화",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "BI",
+    "데이터분석",
+    "대시보드",
+    "KPI",
+    "경영보고",
+    "1pager",
+    "analytics",
+    "executive-summary",
+    "html-report",
+    "single-file-html",
+    "inline-html",
+    "카톡공유",
+    "K-IFRS",
+    "KOSIS",
+    "한국BI",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

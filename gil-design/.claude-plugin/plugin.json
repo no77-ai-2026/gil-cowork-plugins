@@ -1,0 +1,33 @@
+{
+  "name": "gil-design",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] Claude Design(claude.ai/design) 보조 풀스택 5 스킬 — 6요소 브리프 작성·디자인 시스템 자산 합성(DESIGN.md)·시니어 UX 10패턴 프롬프트 빌더·Claude Code 핸드오프 번들 분석·AI 슬롭 카피 검수. 한국 SaaS·D2C·공공 UI 표준 + UZ 한인사회 트릴링구얼(한·러·우즈벡) 디자인 컨텍스트(키릴·라틴 폰트·러시아어 장문 레이아웃·Telegram/Uzum 채널 규격) 동시 지원.",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "클로드디자인",
+    "Claude Design",
+    "디자인 브리프",
+    "디자인 시스템",
+    "프롬프트 빌더",
+    "핸드오프",
+    "AI 슬롭",
+    "UX 패턴",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,43 @@
+# Build artifacts
+*.plugin
+backup-pre-*/
+deploy-log*.txt
+
+# Working directories
+v2.0-build/
+v2.0-planning/
+patches/
+
+# Old version backups
+*.bak
+*.v0.*.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# OS
+.Trash/
+desktop.ini
+
+# Logs
+*.log
+*.tmp
+
+# Build tools
+node_modules/
+.uv/
+uv.lock

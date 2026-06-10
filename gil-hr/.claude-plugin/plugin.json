@@ -1,0 +1,32 @@
+{
+  "name": "gil-hr",
+  "version": "1.0.1",
+  "description": "[한·UZ 듀얼] 인사/노무 — 근로계약서, 4대보험, 채용, 성과평가, 연차/퇴직금",
+  "author": {
+    "name": "gil"
+  },
+  "keywords": [
+    "인사",
+    "노무",
+    "근로계약서",
+    "4대보험",
+    "채용",
+    "성과평가",
+    "퇴직금",
+    "Uzbekistan",
+    "uzbek",
+    "우즈베키스탄",
+    "타슈켄트",
+    "IT Park",
+    "SEZ",
+    "EDCF",
+    "KOICA",
+    "stat.uz",
+    "soliq.uz",
+    "data.gov.uz",
+    "트릴링구얼",
+    "Yandex",
+    "Telegram Ads"
+  ],
+  "license": "MIT"
+}
