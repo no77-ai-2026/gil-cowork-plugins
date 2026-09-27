@@ -2,7 +2,7 @@
 name: plan-payroll
 description: |
   급여일 자금 계획 — 현금 전망과 미수금 우선순위를 정리해 급여 지급 가능성을 확인합니다 트리거: "급여 자금 계획", "이번달 월급 나가도 되나", "급여일 전 자금 점검"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-plan-payroll.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/plan-payroll, Apache-2.0)
 ---

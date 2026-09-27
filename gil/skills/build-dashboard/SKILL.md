@@ -2,7 +2,7 @@
 name: build-dashboard
 description: |
   KPI 카드·필터·다중 차트를 갖춘 인터랙티브 HTML 대시보드를 만듭니다 트리거: "대시보드 만들어줘", "KPI 대시보드 HTML로", "경영 현황판 만들어줘"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-build-dashboard.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (data/build-dashboard, Apache-2.0)
 ---

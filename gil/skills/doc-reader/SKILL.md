@@ -2,7 +2,7 @@
 name: doc-reader
 description: |
   한국 공문서(HWP 3.0/5.x·HWPX·HWPML·PDF·XLSX·DOCX)를 마크다운으로 파싱해 드립니다 — 표 완벽 재현, 신구대조표, 양식 필드 추출/자동 채우기, 문서 비교, DRM 배포용 문서 복호화, OCR 연동까지. kordoc MCP의 8개 도구를 호출하므로 별도 설치·API 키가 필요 없습니다(N… 트리거: "이 HWP 파일 읽어줘", "HWP 문서 내용 알려줘", "한글 파일 텍스트 추출"
-version: "2.4.1"
+version: "2.5.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

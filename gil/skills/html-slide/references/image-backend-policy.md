@@ -36,8 +36,8 @@ html-slide의 비트맵 이미지(실사 히어로·일러스트 컨셉 등 SVG�
 ```
 
 ```text
-# 한국어 텍스트 포함 시 — gpt-image-2-prompt로 6-Block 프롬프트 빌드 후 전달
-gil-creative:gpt-image-2-prompt → 산출 프롬프트 → higgsfield-image(GPT Image 2 모델)
+# 한국어 텍스트 포함 시 — gpt-image-prompt로 6-Block 프롬프트 빌드 후 전달
+gil-creative:gpt-image-prompt → 산출 프롬프트 → higgsfield-image(GPT Image 2 모델)
 ```
 
 **권장 모델 선택**:

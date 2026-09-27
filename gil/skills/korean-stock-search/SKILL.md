@@ -2,7 +2,7 @@
 name: korean-stock-search
 description: |
   KRX(한국거래소) 상장 종목을 검색하고 종목 기본정보·일별 시세를 조회합니다 트리거: "삼성전자 종목코드", "005930 기본정보", "SK하이닉스 시세"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

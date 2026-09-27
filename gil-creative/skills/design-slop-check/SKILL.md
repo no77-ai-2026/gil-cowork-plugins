@@ -2,7 +2,7 @@
 name: design-slop-check
 description: |
   Claude Design에서 생성된 결과 카피(헤드라인·서브헤드·CTA·feature·푸터)를 AI 슬롭 패턴으로 검수합니다 트리거: "Claude Design 카피 검수", "AI 슬롭 점검", "AI 티 나는 카피 확인"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: customer-pulse-check
 description: |
   고객 이슈 펄스 — 분쟁·문의·리뷰를 종합해 지금 고칠 수 있는 톱3 이슈와 응대 초안을 만듭니다 트리거: "고객 불만 종합해줘", "지금 제일 급한 고객 이슈", "리뷰·문의 펄스 체크"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-customer-pulse-check.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/customer-pulse-check+customer-pulse, Apache-2.0)
 ---

@@ -6,7 +6,7 @@ description: |
   microcopy, taglines, value propositions, marketing-landing-page and footer copy,
   with anti-AI-slop rules and concrete-number enforcement.
 user-invocable: false
-version: "2.4.1"
+version: "2.5.0"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---

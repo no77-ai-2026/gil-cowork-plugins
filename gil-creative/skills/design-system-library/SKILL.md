@@ -2,7 +2,7 @@
 name: design-system-library
 description: |
   75개 글로벌 브랜드 디자인 시스템(Claude · ClickHouse · Clay 포함)을 단일 파일 HTML 산출물에 적용합니다 트리거: "Claude 스타일로 HTML 보고서 만들어줘", "ClickHouse 다크 테마로 랜딩 만들어줘", "Clay 디자인 시스템 적용해서 문서 생성"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

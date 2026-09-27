@@ -38,3 +38,7 @@ effort: high
 - 시놉시스·대사·내레이션은 `gil:ai-slop-reviewer` → `gil:humanize-korean`로 마감.
 - 세계관·캐릭터 설정의 내적 일관성은 story-series-bible 정본과 대조.
 - 타인 IP·실존 인물 유사성은 창작 단계에서 회피(인용·저작권 가드 준수).
+
+## ◆최종본 사실 검수 (v2.5.0)
+
+◆최종본을 마감하기 전에 `gil-creative:story-continuity-audit`로 수치·출처·주장을 원자료에 1회 대조합니다(원본 수정 없음, PASS/FAIL/미확인). ⚡초안·◐작업본에는 붙이지 않습니다. FAIL·미확인 항목은 사용자에게 그대로 보고하고 PASS로 바꾸지 않습니다. 같은 세션의 자기 검수는 `자체 검수`로 표기합니다.

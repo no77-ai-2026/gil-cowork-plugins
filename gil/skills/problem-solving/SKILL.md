@@ -2,7 +2,7 @@
 name: problem-solving
 description: |
   [책임 경계] 문제 정의·구조화 전담 — SCQ로 Key Question을 도출하고 3-Test로 이슈화, 로직트리(5유형)로 분해해 가설·Work Plan까지 산출하는 PSA(Problem Solving Approach) 스킬. 리서치 실행·사실검증은 gil:research-verify가 담당 트리거: "문제 정의해줘", "이슈 정리해줘", "로직트리 짜줘"
-version: "2.4.1"
+version: "2.5.0"
 ---
 
 # problem-solving — PSA 기반 문제 구조화 스킬

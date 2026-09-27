@@ -345,6 +345,19 @@ playwright install chromium
 
 본 플러그인은 메타 광고 운영·분석에 필요한 2개 MCP 서버를 등록한다.
 
+## gil-mcp-ip (특허·상표 공식 데이터 MCP, v2.5.0+)
+
+모태 modu-ai/moai-cowork의 `moai-mcp-ip`를 리브랜드 vendor(Apache-2.0). KIPRIS Plus(한국 특허·상표)·USPTO ODP(미국 특허)·USPTO TSDR(미국 상표 상태)·JPO 特許情報取得API(일본, 번호 기반)·EPO OPS(유럽·국제 특허·패밀리·법적상태).
+
+- **사전 설치**: uv (`gil:env-preflight`로 확인)
+- **자격증명**: 플러그인 설치 시 입력 폼 7칸(`KIPRIS_API_KEY`·`USPTO_ODP_API_KEY`·`USPTO_TSDR_API_KEY`·`JPO_API_USER`·`JPO_API_PASSWORD`·`EPO_OPS_KEY`·`EPO_OPS_SECRET`) 또는 `~/.gil/mcp/ip.json`. **쓰지 않는 소스는 비워 두면 됩니다** — KIPRIS 키 하나만으로도 한국 조사가 동작합니다.
+- **먼저 호출**: `ip_check_access(sources=[...])` — 소스별 자격증명 존재만 보고(값은 응답에 싣지 않음)
+- 발급 절차 상세: `mcp-servers/gil-mcp-ip/CONNECTORS.md`
+- 사용 스킬: `gil:legal-ip-search-report`(해외·상표 선행조사 보고서), `gil:patent-search`·`gil:patent-analyzer`(연계)
+- 우즈베키스탄은 API 없음 — 공개 검색 화면 범위로만 조사(`legal-ip-search-report/references/uz-ip-search.md`)
+
+---
+
 ## 등록 MCP 서버 요약
 
 | 이름 | 책임 | 유형 | 라이선스 | 인증 |
@@ -361,6 +374,17 @@ playwright install chromium
   - `gil-creative:meta-ads-analyzer` — 보고서 **분석·진단**(`.xlsx` 1-6개 → 9 모듈·4D 교차·🟢🟡🔴 액션)
 
 `meta-ads` 비활성 환경에서도 `gil-ads-audit` 단독으로 `.xlsx` 보고서 업로드 모드 동작 (REQ-AUDIT-MCP-005).
+
+---
+
+## gil-mcp-openai (GPT Image 2.5 정확 모델 지정 MCP, v2.5.0+ · gil-creative)
+
+모태 modu-ai/moai-cowork의 `moai-mcp-openai`를 리브랜드 vendor(Apache-2.0). OpenAI Image API로 `gpt-image-2.5-flare`(기본)·`gpt-image-2.5-sunburst`를 **정확히 지정해** 생성한다(도구 `openai_image_generate` 1종, 1회 1장·편집 미지원).
+
+- **사전 설치**: uv (`gil:env-preflight`로 확인)
+- **자격증명**: 설치 입력 폼 `OPENAI_API_KEY` 또는 `~/.gil/mcp/openai.json`. ChatGPT 구독·로그인과는 별개인 **OpenAI API 키·별도 과금**이다. 키는 채팅에 붙여 넣지 않는다.
+- **사용 스킬**: `gil-creative:image-bridge`(A0 경로, 사용자가 2.5를 명시할 때), 프롬프트는 `gil-creative:gpt-image-prompt`
+- GIL 기본 요청 모델은 여전히 `gpt-image-2`(`image-bridge/references/image-generation-runtime.md`). 2.5는 사용자 명시 요청 시에만 쓰며 유료 생성 승인 게이트·2회 상한을 그대로 적용한다.
 
 ---
 
@@ -515,7 +539,7 @@ Last Updated: 2026-05-30
 
 `gil-media`는 **4개 스킬 + 2개 MCP 번들**로 구성됩니다:
 
-- **이미지 프롬프트 빌더 3종** (`gpt-image-2-prompt`·`gemini-3-image-prompt`·`midjourney-v8-prompt`) — 텍스트 프롬프트만 산출, API 키 불필요
+- **이미지 프롬프트 빌더 3종** (`gpt-image-prompt`·`gemini-3-image-prompt`·`midjourney-v8-prompt`) — 텍스트 프롬프트만 산출, API 키 불필요
 - **음성 생성 1종** (`audio-gen`) — ElevenLabs MCP 호출, `ELEVENLABS_API_KEY` 1개 필요
 
 **번들 MCP 2종** (`gil-media/.mcp.json`에 자동 등록):
@@ -607,7 +631,7 @@ python -m elevenlabs_mcp --api-key=${ELEVENLABS_API_KEY}
 
 | 스킬 | 출력·동작 | 사용 MCP |
 |---|---|---|
-| `gpt-image-2-prompt` | OpenAI 6-Block 프롬프트 텍스트 | (직접 호출 X) — ChatGPT 등에 사용자가 복붙 |
+| `gpt-image-prompt` | OpenAI 6-Block 프롬프트 텍스트 | (직접 호출 X) — ChatGPT 등에 사용자가 복붙 |
 | `gemini-3-image-prompt` | Google 5-component 프롬프트 텍스트 | (직접 호출 X) — Google AI Studio에 복붙 또는 Higgsfield MCP로 호출 (Nano Banana 모델) |
 | `midjourney-v8-prompt` | 키워드+`--파라미터` 텍스트 | (직접 호출 X) — Discord `/imagine` 또는 alpha.midjourney.com에 복붙 |
 | `audio-gen` | MP3·WAV·OGG 음성 파일 | **ElevenLabs MCP** 자동 호출 |

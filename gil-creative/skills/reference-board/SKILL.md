@@ -2,7 +2,7 @@
 name: reference-board
 description: |
   [한·UZ 듀얼] 4레인(Pinterest 범용·Production Paradise 상업 사진·Ads of the World/D&AD/The One Show 수상 광고·MeiGen AI 프롬프트) 출처 격리 레퍼런스 보드 — 기본 6장을 대화 안에 실제 이미지로 표시하고 Visual DNA를 추출 트리거: "레퍼런스 찾아줘", "무드보드 6장", "핀터레스트 레퍼런스", "수상 광고 벤치마크", "상업 사진 레퍼런스", "MeiGen 프롬프트 레퍼런스", "referens rasmlar" (UZ)
-version: "2.4.1"
+version: "2.5.0"
 origin: chany-studio/chany-studio@v2.8.1 (MIT, 2026-09-15 반영)
 ---
 

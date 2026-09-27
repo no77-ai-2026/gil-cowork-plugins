@@ -2,7 +2,7 @@
 name: instagram-post
 description: |
   주제를 Instagram 게시글(이미지/비디오/릴) 초안으로 작성해 즉시 발행합니다. 저장된 문체 프로필이 있으면 자동 적용합니다. 큐·예약·상태머신 없이 세션 안에서 직접 발행합니다. 예약·정기 발행은 Claude Cowork 이 담당합니다. 트리거: "이 주제로 Instagram 포스트 작성해줘", "인스타에 올릴 이미지 캡션 써줘", "이 영상 인스타 릴로 올려줘"
-version: "2.4.1"
+version: "2.5.0"
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
 

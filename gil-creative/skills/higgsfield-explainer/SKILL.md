@@ -2,7 +2,7 @@
 name: higgsfield-explainer
 description: |
   Higgsfield MCP로 내레이션이 깔린 비실사 설명 영상을 만듭니다. 트리거: "이 주제로 설명 영상 만들어줘", "이 문서를 나레이션 영상으로", "얼굴 안 나오는 내레이션 영상"
-version: "2.4.1"
+version: "2.5.0"
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
 

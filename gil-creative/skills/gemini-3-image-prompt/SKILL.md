@@ -2,7 +2,7 @@
 name: gemini-3-image-prompt
 description: |
   Google Gemini 3 Pro Image (a.k.a 트리거: "Gemini 이미지 프롬프트 만들어줘", "나노바나나 프롬프트", "Nano Banana Pro 프롬프트"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 
@@ -80,7 +80,7 @@ Gemini 이미지 프롬프트 나노바나나 프롬프트 Nano Banana Pro 프�
 
 ### Round 2 — 프리셋별 미세조정 (3-4 질문)
 
-`presets/<name>.md`의 슬롯 정의를 따릅니다. 본 스킬의 presets/는 gpt-image-2-prompt와 동일한 슬롯 데이터를 사용하지만, 모델별 어조 변환 가이드는 Gemini Creative Director 어조로 자동 변환됩니다.
+`presets/<name>.md`의 슬롯 정의를 따릅니다. 본 스킬의 presets/는 gpt-image-prompt와 동일한 슬롯 데이터를 사용하지만, 모델별 어조 변환 가이드는 Gemini Creative Director 어조로 자동 변환됩니다.
 
 ### Round 3 — 화면비 + 텍스트 + 카메라 하드웨어(선택)
 
@@ -118,7 +118,7 @@ Component 5 — [Specific Constraint/Text]
 
 ### 내부 처리 — GPT 6-Block + MJ 변환
 
-페어 스킬 gpt-image-2-prompt / midjourney-v8-prompt와 동일 로직.
+페어 스킬 gpt-image-prompt / midjourney-v8-prompt와 동일 로직.
 
 ### 출력 — 3개 모델 코드블록
 
@@ -151,7 +151,7 @@ Component 5 — [Specific Constraint/Text]
 
 ### 🔗 페어 스킬 (실제 이미지 생성)
 - `higgsfield-image` — Higgsfield MCP 직접 호출 (Nano Banana Pro 포함, 실제 이미지 생성)
-- `gpt-image-2-prompt` — GPT 어조 프롬프트 빌더 (sibling)
+- `gpt-image-prompt` — GPT 어조 프롬프트 빌더 (sibling)
 - `midjourney-v8-prompt` — MJ 어조 프롬프트 빌더 (sibling)
 ```
 
@@ -205,7 +205,7 @@ Component 5 — [Specific Constraint/Text]
 
 | 스킬 | 관계 | 설명 |
 |---|---|---|
-| gpt-image-2-prompt | sibling | 동일 입력으로 GPT 6-Block 어조 프롬프트 |
+| gpt-image-prompt | sibling | 동일 입력으로 GPT 6-Block 어조 프롬프트 |
 | midjourney-v8-prompt | sibling | 동일 입력으로 MJ 키워드+파라미터 프롬프트 |
 | higgsfield-image | after | Higgsfield MCP 직접 호출로 실제 이미지 생성 (Nano Banana Pro 포함) |
 

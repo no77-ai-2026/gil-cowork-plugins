@@ -2,7 +2,7 @@
 name: card-news
 description: |
   인스타그램·스레드·카카오 채널용 카드뉴스 4장(본문 카피·디자인 가이드·이미지 생성 프롬프트·채널별 캡션·해시태그)을 한 번에 만들어 드립니다 트리거: "카드뉴스 만들어줘", "인스타 슬라이드 기획해줘", "캐러셀 콘텐츠 구성해줘"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 
@@ -99,7 +99,7 @@ version: "2.4.1"
 | **`gil-creative:higgsfield-image`** | **GPT Image 2** (1순위) | **텍스트가 정확히 들어가는 카드뉴스 ★ 권장** — MCP 자동 호출 |
 | `gil-creative:higgsfield-image` | Nano Banana Pro | 보조·fallback |
 | `gil-creative:higgsfield-image` | Soul Cinema | 시네마틱 카드 (글자 비중 낮을 때) |
-| `gil-creative:gpt-image-2-prompt` | OpenAI GPT-image-2 | ChatGPT 외부 도구로 복붙 (MCP 미사용 환경) |
+| `gil-creative:gpt-image-prompt` | OpenAI GPT Image 2.5 | ChatGPT 외부 도구로 복붙 (MCP 미사용 환경) |
 | `gil-creative:gemini-3-image-prompt` | Google Gemini 3 Image | Google AI Studio 외부 도구로 복붙 |
 | `gil-creative:midjourney-v8-prompt` | Midjourney v8.1 | Discord MJ 사용 (비주얼 임팩트) |
 
@@ -261,7 +261,7 @@ CTA: [저장/공유/팔로우/링크/댓글/DM 중 1개]
 | 스킬 | 사용 시점 |
 |---|---|
 | `gil-creative:higgsfield-image` | 텍스트 정확 렌더링 카드뉴스 (★ 권장) — GPT Image 2, MCP 자동 호출 |
-| `gil-creative:gpt-image-2-prompt` | 일러스트·캐릭터 강조 |
+| `gil-creative:gpt-image-prompt` | 일러스트·캐릭터 강조 |
 | `gil-creative:gemini-3-image-prompt` | Google Gemini 3 Image 외부 도구 복붙 |
 | `gil-creative:midjourney-v8-prompt` | 비주얼 임팩트 중심 |
 | `gil-creative:audio-gen` | 카드뉴스 영상화 시 보이스오버 |

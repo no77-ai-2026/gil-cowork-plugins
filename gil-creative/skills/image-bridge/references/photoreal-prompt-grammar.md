@@ -158,9 +158,9 @@ authorized_marks:
 
 ---
 
-## 4. gpt-image-2-prompt 6-Block ↔ 8칸 매핑
+## 4. gpt-image-prompt 6-Block ↔ 8칸 매핑
 
-| 6-Block (gil-creative:gpt-image-2-prompt) | 8칸 | 변환 메모 |
+| 6-Block (gil-creative:gpt-image-prompt) | 8칸 | 변환 메모 |
 |---|---|---|
 | Subject | 1 인물 + 4 의상 | 성인 명시·피부 질감·소재를 Subject 절에 합친다 |
 | Action | 2 포즈 + 3 표정 | 동사 + 손 + 미세 표정을 한 절로 |
@@ -483,5 +483,5 @@ Film look: Kodak Portra 400, subtle grain, cool-neutral balance with warm skin r
 ## 관련 파일
 - `candid-moments-kr-uz.md` — 연출이 아닌 찰나 장치 30개, 감정여정 8단계 매핑
 - `../../higgsfield-identity/references/virtual-model-preset.md` — 브랜드 가상 모델 외형 시트·`identity_authorities`
-- `../../gpt-image-2-prompt/references/prompt-blocks.md` — 6-Block 원 규격
+- `../../gpt-image-prompt/references/prompt-blocks.md` — 6-Block 원 규격
 - `../../design-slop-check/SKILL.md` — 이미지 AI 티 체크리스트 12항목

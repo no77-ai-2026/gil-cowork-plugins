@@ -2,7 +2,7 @@
 name: tax-helper
 description: |
   세금 관련 질문에 답해주는 스킬입니다
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

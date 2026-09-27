@@ -7,7 +7,7 @@ description: |
   - "시나리오", "대본", "씬 작성"
   - "드라마 대본", "영화 시나리오"
   - "씬 넘버", "S#", "지문", "대사"
-version: "2.4.1"
+version: "2.5.0"
 origin: moai-cowork@f1eb954
 ---
 

@@ -2,7 +2,7 @@
 name: accessibility-review
 description: |
   WCAG 2.1 AA 접근성 감사 — 디자인·페이지의 대비·키보드·스크린리더 이슈를 점검합니다 트리거: "접근성 검토해줘", "a11y 감사", "이 페이지 접근성 괜찮아"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-accessibility-review.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (design/accessibility-review, Apache-2.0)
 ---

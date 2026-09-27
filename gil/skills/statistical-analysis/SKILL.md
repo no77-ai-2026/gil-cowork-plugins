@@ -2,7 +2,7 @@
 name: statistical-analysis
 description: |
   기술통계·추세·이상치·가설검정 등 통계 기법을 데이터 분석에 적용합니다 트리거: "통계 분석해줘", "이 차이가 유의미한지 검정", "이상치 탐지"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-statistical-analysis.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (data/statistical-analysis, Apache-2.0)
 ---

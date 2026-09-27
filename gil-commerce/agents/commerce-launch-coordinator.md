@@ -47,3 +47,7 @@ effort: high
 
 - 고객 대상 텍스트는 `gil:ai-slop-reviewer`(필수) → `gil:humanize-korean`로 마감.
 - 국내 광고 표현은 `commerce-compliance-coordinator` 에이전트 또는 `gil-commerce:commerce-marketing-compliance-kr` 검수를 권장.
+
+## ◆최종본 사실 검수 (v2.5.0)
+
+◆최종본을 마감하기 전에 `gil-commerce:commerce-margin-audit`로 수치·출처·주장을 원자료에 1회 대조합니다(원본 수정 없음, PASS/FAIL/미확인). ⚡초안·◐작업본에는 붙이지 않습니다. FAIL·미확인 항목은 사용자에게 그대로 보고하고 PASS로 바꾸지 않습니다. 같은 세션의 자기 검수는 `자체 검수`로 표기합니다.

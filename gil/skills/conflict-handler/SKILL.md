@@ -2,7 +2,7 @@
 name: conflict-handler
 description: |
   까다로운 동료·소통빌런과 부딪힐 때 감정 상하지 않게 대응하고 거리를 지키도록 도와주는 스킬입니다
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: book-concept-planner
 description: |
   [한·UZ 듀얼] 한국 출판사 제출용 도서 컨셉서 작성 트리거: "책 컨셉서 작성", "도서 기획서", "출판 컨셉"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: story-webnovel-writer
 description: |
   웹소설 회차 집필 스킬 — 한 회를 어떻게 쓰고 어디서 자를 것인가에 집중한다. 장르별 문법(현판·로판·무협·BL·미스터리)의 문단 길이·대사 비중·시점 관습·회귀/빙의/환생 클리셰 운용을 적용하고, 회차 절단(클리프행어) 강도를 등급으로 설계한다. 어느 플랫폼에 연재할지는 story-webnovel-planner에… 트리거: "웹소설 회차 집필", "웹소설 한 회 써줘", "웹소설 절단"
-version: "2.4.1"
+version: "2.5.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

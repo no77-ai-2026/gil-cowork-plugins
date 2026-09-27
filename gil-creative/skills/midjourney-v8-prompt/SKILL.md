@@ -2,7 +2,7 @@
 name: midjourney-v8-prompt
 description: |
   Midjourney v8.1 (2026.03 Alpha) 전용 이미지 프롬프트 빌더 트리거: "미드저니 프롬프트 만들어줘", "MJ 프롬프트", "Midjourney 프롬프트"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 
@@ -68,7 +68,7 @@ Midjourney v8 Alpha (2026.03.17 출시) 및 v8.1 (2026.03.21 announce)은 5배 �
 
 ### Round 1 — 프리셋 선택 (필수)
 
-`presets/`의 4개 프리셋 (제품샷·인물·일러스트·풍경) 중 선택. gpt-image-2-prompt와 동일한 슬롯 데이터를 공유합니다.
+`presets/`의 4개 프리셋 (제품샷·인물·일러스트·풍경) 중 선택. gpt-image-prompt와 동일한 슬롯 데이터를 공유합니다.
 
 ### Round 2 — 프리셋별 미세조정 (3-4 질문)
 
@@ -172,7 +172,7 @@ Midjourney v8은 텍스트 렌더링이 V6/V7보다 개선됐지만 GPT/Gemini�
 - `--cw 100` 함정: reference 이미지의 조명·스타일까지 상속됨
 
 ### 🔗 페어 스킬
-- `gpt-image-2-prompt` — GPT 어조 (sibling)
+- `gpt-image-prompt` — GPT 어조 (sibling)
 - `gemini-3-image-prompt` — Gemini 어조 (sibling)
 - Midjourney 실행은 Discord `/imagine` 또는 alpha.midjourney.com에서 직접
 ```
@@ -220,7 +220,7 @@ Midjourney v8은 텍스트 렌더링이 V6/V7보다 개선됐지만 GPT/Gemini�
 
 | 스킬 | 관계 | 설명 |
 |---|---|---|
-| gpt-image-2-prompt | sibling | 동일 입력으로 GPT 6-Block 어조 프롬프트 |
+| gpt-image-prompt | sibling | 동일 입력으로 GPT 6-Block 어조 프롬프트 |
 | gemini-3-image-prompt | sibling | 동일 입력으로 Gemini 5-component 어조 프롬프트 |
 | Higgsfield MCP (Soul) | alternative | API 자동 생성 (시네마틱 이미지·캐릭터 단일 통합, MJ는 미포함) |
 

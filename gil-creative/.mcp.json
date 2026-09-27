@@ -62,6 +62,19 @@
         "${CLAUDE_PLUGIN_ROOT}/mcp-servers/reference-preview/server.mjs"
       ],
       "alwaysLoad": true
+    },
+    "gil-mcp-openai": {
+      "$comment": "정확한 GPT Image 2.5 모델 지정용 OpenAI Image API MCP. 별도 API 키·과금 필요. 키는 앱 MCP 연결 설정 또는 ~/.gil/mcp/openai.json에 저장하고 채팅에 입력하지 않는다.",
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${CLAUDE_PLUGIN_ROOT}/mcp-servers/gil-mcp-openai",
+        "gil-mcp-openai"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${user_config.OPENAI_API_KEY}"
+      }
     }
   },
   "staggeredStartup": {

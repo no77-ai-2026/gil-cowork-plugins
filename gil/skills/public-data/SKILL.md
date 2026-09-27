@@ -2,7 +2,7 @@
 name: public-data
 description: |
   공공데이터포털(data.go.kr)·KOSIS 통계청의 실시간 통계 조회·분석 결과를 만들어 드립니다 트리거: "통계 찾아줘", "공공데이터 조회해줘", "인구 통계"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: story-synopsis
 description: |
   영상 시놉시스 스킬 — 로그라인·기획의도·인물·구성을 한 문서로 정리한다. 로그라인 패턴 유형과 장르별 분기, 한국 편성 관행(16부작·12부작), 방송사 극본공모·영화진흥위원회·한국콘텐츠진흥원 지원사업 제출 규격을 다룬다. story-screenplay의 선행 스킬. 트리거: "시놉시스", "로그라인", "기획의도"
-version: "2.4.1"
+version: "2.5.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

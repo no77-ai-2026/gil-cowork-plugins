@@ -2,7 +2,7 @@
 name: env-preflight
 description: |
   [한·UZ 듀얼] 사용자 PC의 로컬 실행 환경(Node 18+·uv·Python·npx·ffmpeg·한글 폰트·자격증명 파일·MCP 기동)을 4상태(available·missing·not_observable·blocked)로 비파괴 점검하고, 설치 명령은 승인 후에만 안내 트리거: "내 PC 환경 점검", "MCP 왜 안 돼", "uv 설치돼 있어?", "한글 폰트 확인", "플러그인 실행 환경 진단", "muhitni tekshirish" (UZ)
-version: "2.4.1"
+version: "2.5.0"
 origin: chany-studio/chany-studio@v2.8.1 (MIT, 2026-09-15 반영)
 ---
 
@@ -71,7 +71,7 @@ GIL에서 이 점검이 필요한 대표 상황:
 |---|---|---|
 | Node.js 18+ | `node --version` (dart는 20.19+) | context7·kordoc·dart(`npx`), gil-creative `reference-preview` |
 | npx | `npx --version` | context7·kordoc·dart 기동 |
-| uv | `uv --version` | smartstore·imweb·cafe24·threads-poster·ElevenLabs·dart 런처(`uv run --script mcp_launch.py`) |
+| uv | `uv --version` | smartstore·imweb·cafe24·threads-poster·ElevenLabs·dart 런처(`uv run --script mcp_launch.py`)·gil-mcp-ip(특허·상표)·gil-mcp-openai(GPT Image 2.5) |
 | Python 3.10+ | `python --version` / `python3 --version` (Windows는 `py -3 --version`) | uv 서버 런타임, 표·컨택트시트·배치 헬퍼 |
 | ffmpeg / ffprobe (선택) | `ffmpeg -version`, `ffprobe -version` | 영상 조립·자막 굽기·미디어 측정(gil-creative 영상 스킬) |
 | ImageMagick (선택) | `magick -version` 또는 `convert -version` | 컨택트시트·배치 이미지 |

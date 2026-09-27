@@ -35,3 +35,7 @@ effort: medium
 
 - 학습 목표·평가 기준의 정합성을 단계마다 확인합니다.
 - 교안·안내 텍스트는 `gil:ai-slop-reviewer`(필수) → `gil:humanize-korean`.
+
+## ◆최종본 사실 검수 (v2.5.0)
+
+◆최종본을 마감하기 전에 `gil:education-assessment-audit`로 수치·출처·주장을 원자료에 1회 대조합니다(원본 수정 없음, PASS/FAIL/미확인). ⚡초안·◐작업본에는 붙이지 않습니다. FAIL·미확인 항목은 사용자에게 그대로 보고하고 PASS로 바꾸지 않습니다. 같은 세션의 자기 검수는 `자체 검수`로 표기합니다.

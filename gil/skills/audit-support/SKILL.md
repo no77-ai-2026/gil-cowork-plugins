@@ -2,7 +2,7 @@
 name: audit-support
 description: |
   감사 대응 — 내부통제 테스트 방법론·샘플 선정·문서화 표준으로 감사·내부회계관리제도 대응을 지원합니다 트리거: "감사 자료 준비", "내부통제 테스트 워크페이퍼", "샘플 선정해줘"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-audit-support.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (finance/audit-support+sox-testing, Apache-2.0)
 ---

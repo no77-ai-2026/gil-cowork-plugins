@@ -1,0 +1,10 @@
+# UZ 듀얼 — consult-feasibility-audit 우즈베키스탄 추가 기준 (GIL 오리지널)
+
+UZ 시장 수치는 국가통계위원회(stat.uz) 기준연도와 환율 기준일을 확인한다. ODA·EDCF 타당성은 `gil:edcf-feasibility`의 산식과 대조하고, 현지 인허가 요건은 원문 확보 상한(정보원 3곳·5회) 안에서만 확인해 미확인은 분리한다.
+
+## 공통
+- 우즈베크어(라틴)·러시아어(키릴) 병기본은 두 판본을 모두 대조하고, 한쪽만 확인했으면 `미확인`으로 둔다.
+- 현지 법령·기관 기준은 원문 확보 상한(정보원 3곳·총 5회, `gil:contract-review` `references/source-access-notes.md`) 안에서만 확인한다.
+
+## 트리거 예시 (UZ)
+- "biznes-reja raqamlarini tekshirish"

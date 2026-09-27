@@ -2,7 +2,7 @@
 name: product-brainstorming
 description: |
   제품 브레인스토밍 — 기회 탐색·문제 공간 정의·가정 검증을 함께하는 사고 파트너입니다 트리거: "제품 아이디어 브레인스토밍", "이 문제 공간 탐색해줘", "내 가정 반박해봐"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-product-brainstorming.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (product-management/product-brainstorming, Apache-2.0)
 ---

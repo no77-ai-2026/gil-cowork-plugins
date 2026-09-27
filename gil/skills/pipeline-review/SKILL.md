@@ -2,7 +2,7 @@
 name: pipeline-review
 description: |
   파이프라인 건강 점검 — 딜 우선순위·리스크 플래그·주간 액션 플랜을 만듭니다 트리거: "파이프라인 리뷰", "딜 상태 점검해줘", "이번 주 영업 액션 플랜"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-pipeline-review.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (sales/pipeline-review, Apache-2.0)
 ---

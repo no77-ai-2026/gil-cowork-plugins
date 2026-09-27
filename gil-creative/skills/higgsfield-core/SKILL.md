@@ -3,7 +3,7 @@ name: higgsfield-core
 description: |
   Higgsfield MCP 이미지·영상 생성의 공유 코어.
   [역할 경계] higgsfield-core=모델 카탈로그·파라미터·비용 공통 정본(직접 트리거 아님). 이미지 생성 요청은 higgsfield-image, 영상 생성 요청은 higgsfield-video가 담당하며 이 스킬을 내부 참조합니다.
-version: "2.4.1"
+version: "2.5.0"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---

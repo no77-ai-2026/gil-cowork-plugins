@@ -2,7 +2,7 @@
 name: patent-analyzer
 description: |
   특허 동향 보고서·선행기술 조사 보고서·FTO(침해 가능성) 분석·특허 출원서 초안을 만들어 드립니다 트리거: "배터리 기술 특허 동향 분석해줘. 최근 10년 기준으로", "이 발명의 선행기술 조사해줘. 핵심 구성요소는 A, B, C야", "FTO 분석 해줘. 대상 기술은 AI 이상 탐지야"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 
@@ -191,6 +191,7 @@ AskUserQuestion으로 분석 목적을 선택받습니다:
 ## 관련 스킬
 
 - **gil:patent-search** - 특허 검색 및 서지정보 수집
+- **gil:legal-ip-search-report** - 해외(US·JP·EP) 선행조사·상표 선행검색·권리상태·패밀리 확인과 국가별 출원 전략 (v2.5.0, `gil-mcp-ip`)
 - **gil:data-visualizer** - 특허 동향 시각화 (연도별 추이, IPC 분포 차트)
 - **gil:grant-writer** - 연구비 신청서 선행기술 섹션 작성
 

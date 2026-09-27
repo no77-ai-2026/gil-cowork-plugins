@@ -2,7 +2,7 @@
 name: skill-builder
 description: |
   6-Phase 스킬 생성 워크플로우 트리거: "새 스킬 만들어줘", "스킬 생성", "skill-builder"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

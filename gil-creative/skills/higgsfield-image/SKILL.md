@@ -2,7 +2,7 @@
 name: higgsfield-image
 description: |
   Higgsfield MCP 기반 AI 이미지를 자연어 요청 한 줄로 생성합니다 트리거: "Higgsfield로 이미지 만들어 줘", "Soul 2.0으로 이미지", "Nano Banana Pro로 카드뉴스 이미지"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 
@@ -339,7 +339,7 @@ quality: 1080p
 |---|---|
 | `gil-creative:higgsfield-video` | 후속: 이미지를 영상으로 |
 | `gil-creative:gemini-3-image-prompt` | 대안: 프롬프트만 산출 (외부 도구) |
-| `gil-creative:gpt-image-2-prompt` | 대안: 외부 ChatGPT 사용 |
+| `gil-creative:gpt-image-prompt` | 대안: 외부 ChatGPT 사용 |
 | `gil-creative:card-news` | 후속: 이미지를 카드뉴스에 배치 |
 | `gil-creative:design-system-prep` | 보조: 브랜드 톤 확정 |
 | `gil-creative:campaign-planner` | 보조: 캠페인 시리즈 이미지 |

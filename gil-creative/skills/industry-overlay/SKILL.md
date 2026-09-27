@@ -2,7 +2,7 @@
 name: industry-overlay
 description: |
   [한·UZ 듀얼] 업종(전문서비스·교육·의료·식음·숙박여행·공간부동산·디지털제품·공연행사·자동차·소비자테크·기업고용브랜드 11종)을 판별해 canonical `industry_direction` 패킷(증거·금지표현·고지·리뷰 게이트)을 만들고 제작 스킬로 인계하는 업종 오버레이 트리거: "업종 체크리스트 먼저", "학원/병원/식당/부동산/자동차/앱 광고 주의사항", "업종별 증거·금지표현", "industry packet", "soha bo'yicha reklama qoidalari" (UZ)
-version: "2.4.1"
+version: "2.5.0"
 origin: chany-studio/chany-studio@v2.8.1 (MIT, 2026-09-15 반영)
 ---
 

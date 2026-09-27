@@ -2,7 +2,7 @@
 name: telegram-commerce
 description: |
   [한·UZ 듀얼] Telegram 기반 이커머스(채널·Bot·Shop) 운영 전담 스킬 트리거: "텔레그램 판매", "Telegram 채널 운영", "Telegram Bot 쇼핑몰"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

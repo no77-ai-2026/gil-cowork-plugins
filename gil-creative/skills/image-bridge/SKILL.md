@@ -8,19 +8,19 @@ description: |
   - "배경 이미지만 생성 (후조판용)"
   - "포스터 비주얼 렌더"
   - "rasm yaratish" (이미지 생성, UZ)
-  프롬프트 설계는 gil-creative:gpt-image-2-prompt·gil-creative:gemini-3-image-prompt와, 커넥터 폴백은 gil-creative:higgsfield-image와 조합합니다. BYOK 키는 환경변수/세션에만 두고 저장·메모리 기록하지 않습니다.
-version: "2.4.1"
+  프롬프트 설계는 gil-creative:gpt-image-prompt·gil-creative:gemini-3-image-prompt와, 커넥터 폴백은 gil-creative:higgsfield-image와 조합합니다. BYOK 키는 환경변수/세션에만 두고 저장·메모리 기록하지 않습니다.
+version: "2.5.0"
 ---
 
 # 이미지 브리지 (Image Bridge) — BYOK
 
 > **역할** gil-creative:creative-architect가 만든 이미지 프롬프트를 OpenAI/Gemini 최신 이미지 모델로 렌더한다. **이미지 생성만 외부**, BYOK.
-> **보안 원칙** 사용자 API 키는 **환경변수/세션에만** 둔다. 파일·메모리에 저장하지 않고, 로그·산출물에 노출하지 않는다.
+> **보안 원칙** 사용자 API 키는 **환경변수/세션**, 또는 MCP 경로라면 앱의 설치 입력 폼(키체인)·사용자가 직접 만든 `~/.gil/mcp/openai.json`에만 둔다. Claude는 키를 채팅으로 받거나 파일·메모리에 쓰지 않고, 로그·산출물에 노출하지 않는다.
 
 ---
 
 ## 1. 제공자·모델
-- **OpenAI**: 최신 gpt-image 계열(구현 시점 최신 버전). 프롬프트 = gil-creative:gpt-image-2-prompt 산출.
+- **OpenAI**: gpt-image 계열. 기본 요청 모델 `gpt-image-2`(스크립트 경로). 사용자가 **GPT Image 2.5**(`gpt-image-2.5-flare`·`gpt-image-2.5-sunburst`)를 명시하면 `gil-mcp-openai` MCP로 정확한 모델 ID를 지정해 생성한다(v2.5.0, 명시 요청 = `override-approved`). 프롬프트 = gil-creative:gpt-image-prompt 산출.
 - **Google Gemini**: Imagen / Gemini Image 계열. 프롬프트 = gil-creative:gemini-3-image-prompt 산출.
 - **제공자 토글**: 사용자가 `--provider openai|gemini` 선택. 기본 = openai.
 - **기본 모델·오버라이드 계약**: 요청 기본 모델은 `gpt-image-2`이며, 실제 해석 모델(`resolved_model`)·`selection_status`·오버라이드 3조건·유료 실행 규칙은 `references/image-generation-runtime.md`가 정본이다. `--provider gemini` 토글은 사용자 명시 요청으로 `override-approved`에 해당한다. 모델·제공자를 바꾸면 견적·승인·수락 레코드가 무효화된다.
@@ -31,6 +31,7 @@ version: "2.4.1"
 
 | 옵션 | 설명 | 우선순위 |
 |---|---|---|
+| **A0. `gil-mcp-openai` MCP** | GPT Image 2.5 명시 요청 시 `openai_image_generate` 도구로 정확한 모델 지정 **생성**(한 번에 1장, 편집 미지원 — 편집은 Higgsfield 경로 또는 이후 버전). OpenAI API 키(설치 입력 폼 `OPENAI_API_KEY` 또는 `~/.gil/mcp/openai.json`)·별도 과금·유료 생성 승인 게이트 적용 | 2.5 명시 시 최우선 (v2.5.0) |
 | **A. 샌드박스 직접 호출** | 스킬 스크립트가 API 직접 호출 (BYOK) | **Phase 1 우선** (네트워크 허용 검증 후) |
 | B. 커넥터 경유 | `gil-creative:higgsfield-image` 등 커넥터로 생성 | A 실패 시 폴백 |
 | C. 서버 프록시 | 자체 서버가 키 받아 프록시 | Phase 2 |
@@ -85,7 +86,7 @@ BYOK 호출도 사용자 비용이 나가는 유료 생성이다. 정본: `gil-c
 ## 6. 체이닝
 | 목적 | 스킬 |
 |---|---|
-| OpenAI 프롬프트 설계 | `gil-creative:gpt-image-2-prompt` |
+| OpenAI 프롬프트 설계 | `gil-creative:gpt-image-prompt` |
 | Gemini 프롬프트 설계 | `gil-creative:gemini-3-image-prompt` |
 | 커넥터 폴백(옵션 B) | `gil-creative:higgsfield-image` |
 | 설계 입력 | `gil-creative:creative-architect` |

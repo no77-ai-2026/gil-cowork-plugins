@@ -2,7 +2,7 @@
 name: personal-tax-saver
 description: |
   근로자 연말정산에서 환급을 더 받도록 절세 전략을 짜주는 스킬입니다
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

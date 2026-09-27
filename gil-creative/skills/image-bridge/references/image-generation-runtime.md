@@ -20,6 +20,7 @@ GIL의 정지 이미지 기본은 **OpenAI gpt-image 계열**이며, 요청 기�
 | 경로 | 제공자 | 기본 모델 해석 |
 |---|---|---|
 | `image-bridge --provider openai` (기본) | openai | `gpt-image-2`를 정확 선택자로 지정 → `exact-default` |
+| `gil-mcp-openai` (v2.5.0, GPT Image 2.5 명시 요청) | openai | `gpt-image-2.5-flare`(기본)·`gpt-image-2.5-sunburst` 정확 지정 → `override-approved`(사용자 명시) |
 | `image-bridge --provider gemini` (토글) | gemini | 사용자 토글 = 명시 요청 → `override-approved`, `override_reason: "user-toggle --provider gemini"` |
 | `gil-creative:higgsfield-image` (커넥터 폴백) | higgsfield | 라이브 카탈로그에 GPT Image 2 계열이 있으면 그 ID로 해석. 카탈로그에 없으면 `unavailable` |
 | `gil-creative:codex-image` | codex(OpenAI OAuth) | codex `image_gen`이 실제 사용 모델을 보고하면 그 값, 아니면 `provider-confirmed-default`는 문서 확인 시에만 |
@@ -121,5 +122,5 @@ Higgsfield뿐 아니라 크레딧·과금 잡을 만들 수 있는 모든 연결
 - `gil-creative:higgsfield-core/references/media-job-ledger.md` — `media_job` 원장·상태 규칙
 - `gil-creative:higgsfield-core/references/creative-quality-loop.md` — 시도 상한 2회·검수 순서·중단 조건
 - `gil-creative:higgsfield-core/references/job-lifecycle.md` — Higgsfield `get_cost`·`adjustments`·폴링
-- `gil-creative:gpt-image-2-prompt` / `gil-creative:gemini-3-image-prompt` — 제공자별 프롬프트 설계
+- `gil-creative:gpt-image-prompt` / `gil-creative:gemini-3-image-prompt` — 제공자별 프롬프트 설계
 - `references/uz-image-bridge.md` — UZ/CIS 후조판·채널 규격

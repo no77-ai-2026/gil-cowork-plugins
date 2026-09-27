@@ -2,7 +2,7 @@
 name: validate-data
 description: |
   분석 공유 전 QA — 방법론·정확성·편향을 점검해 이해관계자 보고 전 오류를 걸러냅니다 트리거: "분석 검증해줘", "보고 전 데이터 QA", "이 분석 맞는지 봐줘"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-validate-data.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (data/validate-data, Apache-2.0)
 ---
@@ -401,6 +401,17 @@ Output:
 - Even quick analyses benefit from a sanity check -- it takes a minute and can save your credibility
 - If the validation finds issues, fix them and re-validate
 - Share the validation output alongside your analysis to build stakeholder confidence
+
+## 출처 대조 (Provenance) — v2.5.0 흡수
+
+모태 moai-cowork `data-provenance-audit`(Apache-2.0)를 흡수한 읽기 전용 점검입니다. 공공데이터·데이터셋 분석·차트 산출물을 원자료에 대조할 때 위 QA 체크리스트에 추가로 적용합니다. 원본 파일과 외부 데이터 서비스는 변경하지 않습니다.
+
+- 인용된 KOSIS 통계표 ID, DART 접수번호, data.go.kr 데이터셋, 건축물대장 질의 조건을 찾아 지역·기간·단위가 주장한 수치와 맞는지 확인합니다. 원문을 볼 수 없으면 출처 확인은 `미확인`으로 남깁니다(UZ는 stat.uz 표 번호·기준연도).
+- 표·차트·본문·요약의 수치, 축 단위, 날짜가 원자료와 같은지 확인하고, 합계·증감률·평균·면적당 가격은 입력값으로 다시 계산합니다.
+- 주민등록번호·전화번호·개인 주소·계좌번호 등 불필요한 개인 식별 정보 노출을 확인합니다.
+- 조회 실패를 추정값으로 바꿔 적었는지, 실측·추정·예측을 구분했는지 확인합니다.
+- 보고: `판정(PASS/FAIL/미확인)`, `확인 자료`, `위치·근거가 있는 발견`, `재계산 표`, `출처 범위 대조`, `미검증 항목`. 확인하지 못한 수치를 PASS로 채우지 않고, 독립 검수자를 실행하지 않았다면 독립 감사라고 부르지 않습니다.
+- 문서 형태 산출물(보고서·슬라이드·엑셀)의 수치 대조는 `gil:doc-data-audit`을 함께 씁니다.
 
 ## 연계 스킬 (v2.2.0 추가)
 

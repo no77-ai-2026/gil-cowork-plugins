@@ -52,6 +52,25 @@
         "-y",
         "@upstash/context7-mcp@latest"
       ]
+    },
+    "gil-mcp-ip": {
+      "$comment": "특허·상표 공식 데이터 MCP(모태 moai-cowork 유래, Apache-2.0) — KIPRIS Plus(한국 특허·상표)·USPTO ODP(미국 특허)·TSDR(미국 상표 상태)·JPO 特許情報取得API(일본, 번호 기반)·EPO OPS(유럽·국제 특허 검색·패밀리·법적상태). ip_check_access 로 소스별 자격증명을 먼저 확인한다(값은 응답에 싣지 않음). 자격증명: 환경변수 → ~/.gil/mcp/ip.json. 사전 설치: uv. 등록 절차는 mcp-servers/gil-mcp-ip/CONNECTORS.md.",
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "${CLAUDE_PLUGIN_ROOT}/mcp-servers/gil-mcp-ip",
+        "gil-mcp-ip"
+      ],
+      "env": {
+        "KIPRIS_API_KEY": "${user_config.KIPRIS_API_KEY}",
+        "USPTO_ODP_API_KEY": "${user_config.USPTO_ODP_API_KEY}",
+        "USPTO_TSDR_API_KEY": "${user_config.USPTO_TSDR_API_KEY}",
+        "JPO_API_USER": "${user_config.JPO_API_USER}",
+        "JPO_API_PASSWORD": "${user_config.JPO_API_PASSWORD}",
+        "EPO_OPS_KEY": "${user_config.EPO_OPS_KEY}",
+        "EPO_OPS_SECRET": "${user_config.EPO_OPS_SECRET}"
+      }
     }
   },
   "staggeredStartup": {

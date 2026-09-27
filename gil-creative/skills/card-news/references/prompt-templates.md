@@ -330,7 +330,7 @@ gil-media 이미지 프롬프트 빌더로 위임
 | 스킬 | 시점 |
 |---|---|
 | `gil-creative:gemini-3-image-prompt` | 통합 프롬프트 → 실제 이미지 생성 (★ 권장) |
-| `gil-creative:gpt-image-2-prompt` | 일러스트 강조 시 |
+| `gil-creative:gpt-image-prompt` | 일러스트 강조 시 |
 | `gil-creative:midjourney-v8-prompt` | 비주얼 임팩트 중심 |
 | `gil:humanize-korean` | 한국어 카피 AI 티 자연화 (검수 단계) |
 | `gil:ai-slop-reviewer` | 전반 AI 슬롭 표현 검수 |

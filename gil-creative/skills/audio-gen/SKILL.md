@@ -2,7 +2,7 @@
 name: audio-gen
 description: |
   통합 오디오 생성 스킬 트리거: "목소리 생성", "TTS", "음성 합성"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

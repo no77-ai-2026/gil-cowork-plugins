@@ -9,7 +9,7 @@ description: |
   - "브리프 받아서 멀티 포맷으로 만들어줘"
   - "reklama kreativ sehrgari" (광고 크리에이티브 마법사, UZ)
   텍스트 지능(카피·구성·현지화·후기분석)은 Claude가 직접 수행하고, 이미지 생성만 gil-creative:image-bridge(OpenAI/Gemini BYOK)로 붙입니다. 설계는 gil-creative:creative-architect, 현지화는 gil-creative:market-profile-engine, 자료는 gil-creative:material-analyzer로 위임합니다. v2.4.0부터 0단계 업종 오버레이(gil-creative:industry-overlay), 레퍼런스 보드(gil-creative:reference-board), 게시 전 검수(gil-creative:publication-review), 캠페인 상태 레코드(references/campaign-state.md)가 흐름에 들어갑니다.
-version: "2.4.1"
+version: "2.5.0"
 ---
 
 # 크리에이티브 마법사 (Creative Wizard) — 코디네이터
@@ -40,7 +40,7 @@ version: "2.4.1"
 | 3-1 | **레퍼런스 보드** (v2.4.0, 선택) — 아트 디렉션이 없거나 요청 시 한 레인에서 6장 표시·선택·Visual DNA | `gil-creative:reference-board` |
 | 4 | **히어로 톤 앵커링** (승인 게이트) | `gil-creative:creative-architect` §3 |
 | 5 | **크리에이티브 설계**(앵커 상속·8단계·10종) | `gil-creative:creative-architect` |
-| 6 | **이미지 프롬프트 생성** | `gil-creative:creative-architect` (+ `gil-creative:gpt-image-2-prompt`·`gil-creative:gemini-3-image-prompt`, 실사 인물은 `gil-creative:image-bridge/references/photoreal-prompt-grammar.md`) |
+| 6 | **이미지 프롬프트 생성** | `gil-creative:creative-architect` (+ `gil-creative:gpt-image-prompt`·`gil-creative:gemini-3-image-prompt`, 실사 인물은 `gil-creative:image-bridge/references/photoreal-prompt-grammar.md`) |
 | 7 | 이미지 생성 (외부, BYOK) — 산출물당 `media_job` 레코드·기본 2회 상한 | `gil-creative:image-bridge` (+ `gil-creative:higgsfield-core/references/media-job-ledger.md`) |
 | 8 | **포맷 빌더** | 포맷별(§4) |
 | 9 | **QA** (슬롭·윤문·규제) | `gil:ai-slop-reviewer`→`gil:humanize-korean`→규제 |
@@ -122,7 +122,7 @@ creative-wizard(코디네이터)
 ├─ reference-board ──(레퍼런스 6장·Visual DNA, 선택, v2.4.0)─┤
 ├─ creative-architect ◄────────────────────┘  (설계: 8단계·방법론 10종·CreativeSpec)
 │    └─ 승인 게이트(히어로)
-├─ image-bridge (OpenAI/Gemini BYOK) ◄ gpt-image-2-prompt / gemini-3-image-prompt
+├─ image-bridge (OpenAI/Gemini BYOK) ◄ gpt-image-prompt / gemini-3-image-prompt
 ├─ 포맷 빌더: detail-page-* / card-news / poster-ad-builder / print-creative-builder
 ├─ QA: ai-slop-reviewer → korean-spell-check(민감도 public 시) → humanize-korean(Phase 6 최종 검수) → commerce-marketing-compliance-kr
 └─ publication-review (게시 목적 산출물, 4상태 기록, v2.4.0) — 상태 레코드: references/campaign-state.md

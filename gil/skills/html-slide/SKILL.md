@@ -2,7 +2,7 @@
 name: html-slide
 description: |
   발표용 슬라이드 덱을 브라우저에서 바로 열리는 단일 파일·자체 완결형(self-contained) HTML로 만들어 드립니다 트리거: "발표 슬라이드 HTML로 만들어줘", "키노트 덱 단일 HTML 파일로 렌더해줘", "사업계획서 슬라이드 10장, 브라우저에서 바로 열리게"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 
@@ -87,7 +87,7 @@ PDF 배포본이 필요하면 브라우저 `?print-pdf` 인쇄 모드를 쓰거�
 
 > 위 4개 백엔드만 허용됩니다. 그 외 외부 이미지 백엔드(MCP·API·게이트웨이)는 사용하지 않습니다 — [`references/image-backend-policy.md`](references/image-backend-policy.md).
 
-한국어 텍스트가 이미지에 들어가면 `gil-creative:gpt-image-2-prompt`(6-Block 프롬프트 빌더)로 verbatim 지시 후 선택 백엔드로 생성합니다.
+한국어 텍스트가 이미지에 들어가면 `gil-creative:gpt-image-prompt`(6-Block 프롬프트 빌더)로 verbatim 지시 후 선택 백엔드로 생성합니다.
 
 ### 5. design-system-library 토큰 적용
 design_system 지정 시 `systems/<name>.md` 토큰 → Tailwind Play CDN config + shadcn vanilla 컴포넌트로 렌더. 미지정 시 0의존 기본 템플릿. html-report와 동일 계약 재사용. 사용자가 getdesign.md 링크로 토큰을 미리 확인한 뒤 선택할 수 있습니다.
@@ -203,7 +203,7 @@ design_system 지정 시 `systems/<name>.md` 토큰 → Tailwind Play CDN config
 이미지 필요 시 분기:
 ```
 html-slide → gil-creative:higgsfield-image (Higgsfield MCP, 기본)
-           → gil-creative:gpt-image-2-prompt (한국어 verbatim 프롬프트 빌더) → higgsfield-image
+           → gil-creative:gpt-image-prompt (한국어 verbatim 프롬프트 빌더) → higgsfield-image
            → codex exec "$imagegen ..." (image_backend: codex 시, 로컬)
 ```
 
@@ -269,7 +269,7 @@ AI 슬라이드 스킬 스타트업 사업계획서 10장 슬라이드로 만들
 - `gil-creative:design-system-library`(gil-creative 설치 시) — 75개 브랜드 토큰 SSOT
 - [`gil:pptx-designer`](../pptx-designer/SKILL.md) — 편집 가능 .pptx 생성 (체이닝)
 - `gil-creative:higgsfield-image`(gil-creative 설치 시) — Higgsfield MCP 이미지 (기본 백엔드)
-- `gil-creative:gpt-image-2-prompt`(gil-creative 설치 시) — 한국어 verbatim 이미지 프롬프트 빌더
+- `gil-creative:gpt-image-prompt`(gil-creative 설치 시) — 한국어 verbatim 이미지 프롬프트 빌더
 - [`gil:ai-slop-reviewer`](../../../gil/skills/ai-slop-reviewer/SKILL.md) → [`gil:humanize-korean`](../humanize-korean/SKILL.md) — 의무 후처리 체인
 
 ## 자체 검수

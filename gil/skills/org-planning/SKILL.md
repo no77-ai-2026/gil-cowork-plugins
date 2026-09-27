@@ -2,7 +2,7 @@
 name: org-planning
 description: |
   조직 설계 — 헤드카운트 계획·팀 구조 최적화·리오그 시나리오를 설계합니다 트리거: "조직 개편안 짜줘", "헤드카운트 플랜", "팀 구조 검토"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-org-planning.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/org-planning, Apache-2.0)
 ---

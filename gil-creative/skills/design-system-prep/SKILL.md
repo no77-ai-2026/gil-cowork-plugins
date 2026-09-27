@@ -2,7 +2,7 @@
 name: design-system-prep
 description: |
   브랜드 자산(로고·색·타이포·기존 사이트·PPTX 등)을 분석해 Claude Design 업로드용 DESIGN.md를 자동으로 합성합니다 트리거: "Claude Design용 디자인 시스템 자료 정리", "브랜드 자산을 DESIGN.md로 합성", "디자인 시스템 자산 업로드 준비"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

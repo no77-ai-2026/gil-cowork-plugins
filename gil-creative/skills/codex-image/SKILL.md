@@ -2,7 +2,7 @@
 name: codex-image
 description: |
   codex CLI의 내장 image_gen 도구로 **gpt-image-2** 이미지를 생성합니다 — ChatGPT OAuth 인증으로 **API 키 불필요**, ChatGPT Plus/Team/Enterprise 구독 한도로 동작합니다. 트리거: "codex로 이미지 만들어줘", "codex 이미지 생성", "codex image"
-version: "2.4.1"
+version: "2.5.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---
@@ -18,7 +18,7 @@ codex CLI의 내장 image_gen 도구로 **gpt-image-2** 이미지를 생성합�
 - "API 키 없이 이미지 생성해줘"
 - "로컬에서 이미지 생성", "ChatGPT 구독 한도로 이미지"
 - "/codex-image" (직접 호출)
-프롬프트가 복잡하거나 한국어 텍스트가 들어가면 `gil-creative:gpt-image-2-prompt`(6-Block 프롬프트 빌더)로 먼저 프롬프트를 빌드한 뒤 이 스킬로 생성하세요. Higgsfield MCP가 연결돼 있지 않거나 로컬 개발·ChatGPT 구독 한도 재사용이 목적이면 이 스킬을 사용합니다 (프로덕션·CI·멱등은 `higgsfield-image` 권장).
+프롬프트가 복잡하거나 한국어 텍스트가 들어가면 `gil-creative:gpt-image-prompt`(6-Block 프롬프트 빌더)로 먼저 프롬프트를 빌드한 뒤 이 스킬로 생성하세요. Higgsfield MCP가 연결돼 있지 않거나 로컬 개발·ChatGPT 구독 한도 재사용이 목적이면 이 스킬을 사용합니다 (프로덕션·CI·멱등은 `higgsfield-image` 권장).
 
 
 > moai-coworker | 로컬 이미지 생성 (codex CLI OAuth, API 키 불필요)
@@ -30,7 +30,7 @@ codex CLI의 내장 image_gen 도구로 **gpt-image-2** 이미지를 생성합�
 특히 본 스킬은:
 
 - **API 키 불필요** — `codex login` 1회 OAuth로 ChatGPT 구독(Plus/Team/Enterprise) 한도 사용. `OPENAI_API_KEY` 관리 부담 없음.
-- **6-Block 프롬프트 연동** — `gpt-image-2-prompt`가 빌드한 OpenAI Cookbook 6-Block 프롬프트(Subject·Action·Scene·Composition·Lighting·Style&Text)를 그대로 codex에 전달.
+- **6-Block 프롬프트 연동** — `gpt-image-prompt`가 빌드한 OpenAI Cookbook 6-Block 프롬프트(Subject·Action·Scene·Composition·Lighting·Style&Text)를 그대로 codex에 전달.
 - **한국어 verbatim 보장** — 이미지 내 한글 텍스트는 따옴표·ALL CAPS·verbatim 지시로 gpt-image-2의 95%+ 텍스트 렌더링 정확도 활용.
 - **higgsfield-image 대체 경로** — 같은 gpt-image-2를 Higgsfield MCP 경로(`higgsfield-image`)로도 호출 가능. 백엔드 선택은 환경·비용 선호에 따라.
 
@@ -78,7 +78,7 @@ codex login status       # "Logged in using ChatGPT"
 
 ```
 1. 컨텍스트 수집 — 주제·화면비·품질·출력 경로·장수
-   (복잡한 프롬프트/한국어 텍스트 → gpt-image-2-prompt로 6-Block 프롬프트 빌드 선행)
+   (복잡한 프롬프트/한국어 텍스트 → gpt-image-prompt로 6-Block 프롬프트 빌드 선행)
     ↓
 2. 인자 조립 — --size · --quality · --out · -n + 프롬프트
     ↓
@@ -134,14 +134,14 @@ gpt-image-2의 한국어 렌더링 정확도를 극대화하려면 **따옴표 +
 codex exec "Use \$imagegen. Text (verbatim, 한글): '2026년 분기 실적'. Typography: bold sans 한글, 검정, 상단 중앙. Require verbatim rendering, no extra characters. quality high, size 1536x1024, save to ./slide-q1.png"
 ```
 
-> 한국어 텍스트 정확도 규칙은 `gil-creative:gpt-image-2-prompt`의 `references/text-rendering.md`와 동일한 원칙을 따릅니다.
+> 한국어 텍스트 정확도 규칙은 `gil-creative:gpt-image-prompt`의 `references/text-rendering.md`와 동일한 원칙을 따릅니다.
 
 ## 6-Block 프롬프트 체이닝 (권장)
 
-복잡한 장면이나 에디토리얼 품질이 필요하면 `gpt-image-2-prompt`로 먼저 프롬프트를 빌드하세요:
+복잡한 장면이나 에디토리얼 품질이 필요하면 `gpt-image-prompt`로 먼저 프롬프트를 빌드하세요:
 
 ```
-사용자 자연어 → gil-creative:gpt-image-2-prompt (6-Block 프롬프트 빌드)
+사용자 자연어 → gil-creative:gpt-image-prompt (6-Block 프롬프트 빌드)
                     ↓ 산출: 6-Block 자연어 단락
               gil-creative:codex-image (해당 프롬프트로 codex exec 호출 → gpt-image-2 생성)
 ```
@@ -185,7 +185,7 @@ gpt-image-2는 reasoning-driven 모델로 **art-director 어조의 자연어 단
 - **무드/품질**: "serene", "8K detail", "ultra detailed"
 - **네거티브 프롬프트 미지원** — gpt-image-2는 부정 지시 대신 긍정 묘사로 회피
 
-상세 6-Block 구조는 `gpt-image-2-prompt`의 `references/prompt-blocks.md` 참조.
+상세 6-Block 구조는 `gpt-image-prompt`의 `references/prompt-blocks.md` 참조.
 
 ## 주의사항
 
@@ -241,7 +241,7 @@ codex `image_gen`(ChatGPT 구독 한도 소진) 유료 생성은 코어 원장·
 
 | 스킬 | 관계 | 설명 |
 |---|---|---|
-| gpt-image-2-prompt | before | 6-Block 프롬프트 빌더 — 복잡한 장면·한국어 텍스트 시 선행 |
+| gpt-image-prompt | before | 6-Block 프롬프트 빌더 — 복잡한 장면·한국어 텍스트 시 선행 |
 | higgsfield-image | alternative | Higgsfield MCP 경로 (API 키, 프로덕션/CI). 같은 gpt-image-2·Nano Banana Pro 모델 |
 | gemini-3-image-prompt | sibling | Gemini 어조 프롬프트 (Nano Banana Pro) |
 

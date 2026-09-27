@@ -2,7 +2,7 @@
 name: process-manager
 description: |
   업무 프로세스를 문서화하고 표준화합니다 트리거: "SOP 만들어줘", "구매 요청서 써줘", "회의록 정리해줘"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

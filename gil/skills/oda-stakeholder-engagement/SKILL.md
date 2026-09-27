@@ -2,7 +2,7 @@
 name: oda-stakeholder-engagement
 description: |
   ODA 사업의 이해관계자 협력·거버넌스를 관리합니다
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: commerce-jtbd-persona
 description: |
   [책임 경계] 1스킬 2모드 트리거: "JTBD 분석해줘", "고객이 왜 사는지 분석", "구매 동기 9개 뽑아줘"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

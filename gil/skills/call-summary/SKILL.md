@@ -2,7 +2,7 @@
 name: call-summary
 description: |
   통화 노트·녹취록 처리 — 액션 아이템 추출, 후속 이메일 초안, 내부 공유 요약을 만듭니다 트리거: "통화 내용 정리해줘", "미팅 노트에서 액션 아이템 뽑아줘", "후속 메일 써줘"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-call-summary.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (sales/call-summary, Apache-2.0)
 ---

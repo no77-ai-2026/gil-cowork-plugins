@@ -2,7 +2,7 @@
 name: compliance-check
 description: |
   규제 준수 점검, 내부 감사, ESG 보고, 인허가 서류를 지원합니다
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

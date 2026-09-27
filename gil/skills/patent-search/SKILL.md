@@ -2,7 +2,7 @@
 name: patent-search
 description: |
   KIPRIS Plus로 특허·실용신안·디자인·상표를 검색해 출원 현황과 서지정보를 정리해 드립니다 트리거: "딥러닝 이미지 분류 관련 특허 검색해줘", "삼성전자 반도체 등록특허 찾아줘", "최근 5년간 배터리 기술 출원 현황 조사해줘"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 
@@ -128,6 +128,7 @@ GET https://plus.kipris.or.kr/openapi/rest/patentSearchInfo
 ## 관련 스킬
 
 - **gil:patent-analyzer** - 선행기술 조사, FTO 분석, 출원서 작성
+- **gil:legal-ip-search-report** - 상표·특허를 미국·일본·유럽까지 공식 API(`gil-mcp-ip`)로 조사해 검색 로그·위험 평가·출원 전략 보고서 작성 (v2.5.0)
 - **gil:grant-writer** - 연구비 신청서 선행기술 섹션 작성
 - **gil:data-visualizer** - 특허 동향 시각화 (연도별 추이, IPC 분포 차트)
 

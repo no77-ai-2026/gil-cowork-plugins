@@ -2,7 +2,7 @@
 name: performance-review
 description: |
   성과평가 체계를 설계하고 실행을 도와주는 스킬입니다 트리거: "OKR 설정해줘", "성과 리뷰 템플릿 만들어줘", "피드백 면담 스크립트 써줘"
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

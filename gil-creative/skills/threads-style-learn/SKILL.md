@@ -2,7 +2,7 @@
 name: threads-style-learn
 description: |
   과거 Facebook/Threads 포스팅 3-10개를 붙여넣으면 문체를 분석해 style profile 파일로 저장합니다. 이후 threads-post-draft 가 저장된 프로필을 자동으로 불러와 적용합니다. 트리거: "내 문체 학습해줘", "이전 포스팅들 보고 문체 분석해줘", "내 글투 분석해서 저장해줘"
-version: "2.4.1"
+version: "2.5.0"
 origin: moai-cowork@f1eb954
 ---
 

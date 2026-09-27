@@ -2,7 +2,7 @@
 name: quarterly-review
 description: |
   분기 리뷰(QBR) — 매출·마진 추세, 고객 헬스, 기회·리스크를 발표 가능한 서사로 정리합니다 트리거: "분기 리뷰 만들어줘", "QBR 정리", "3분기 성과 발표자료 준비"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-quarterly-review.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/quarterly-review, Apache-2.0)
 ---

@@ -2,7 +2,7 @@
 name: self-care
 description: |
   번아웃과 지친 마음을 점검하고 회복하도록 돕는 자기돌봄 스킬입니다
-version: "2.4.1"
+version: "2.5.0"
 ---
 ## 스킬 개요(상세)
 

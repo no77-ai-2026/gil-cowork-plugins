@@ -39,7 +39,7 @@ def gen_openai(prompt: str, size: str, n: int, out: str) -> int:
         log("OPENAI_API_KEY not set. Provide the key in the session env (BYOK). Not saved.")
         return 2
     payload = json.dumps({
-        "model": "gpt-image-1",   # replace with latest gpt-image model at build time
+        "model": os.environ.get("GIL_OPENAI_IMAGE_MODEL", "gpt-image-2"),  # GIL default (image-generation-runtime.md); 2.5 via gil-mcp-openai
         "prompt": prompt,
         "size": size,
         "n": n,

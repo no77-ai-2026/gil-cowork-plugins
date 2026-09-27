@@ -364,6 +364,23 @@ playwright install chromium
 
 ---
 
+## gil-mcp-openai (GPT Image 2.5 정확 모델 지정 MCP, v2.5.0+ · gil-creative)
+
+모태 modu-ai/moai-cowork의 `moai-mcp-openai`를 리브랜드 vendor(Apache-2.0). OpenAI Image API로 `gpt-image-2.5-flare`(기본)·`gpt-image-2.5-sunburst`를 **정확히 지정해** 생성한다(도구 `openai_image_generate` 1종, 1회 1장·편집 미지원).
+
+- **사전 설치**: uv (`gil:env-preflight`로 확인)
+- **자격증명**: 설치 입력 폼 `OPENAI_API_KEY` 또는 `~/.gil/mcp/openai.json`. ChatGPT 구독·로그인과는 별개인 **OpenAI API 키·별도 과금**이다. 키는 채팅에 붙여 넣지 않는다.
+- **사용 스킬**: `gil-creative:image-bridge`(A0 경로, 사용자가 2.5를 명시할 때), 프롬프트는 `gil-creative:gpt-image-prompt`
+- GIL 기본 요청 모델은 여전히 `gpt-image-2`(`image-bridge/references/image-generation-runtime.md`). 2.5는 사용자 명시 요청 시에만 쓰며 유료 생성 승인 게이트·2회 상한을 그대로 적용한다.
+
+---
+
+## gil-mcp-ip (특허·상표 공식 데이터 MCP, v2.5.0+ · gil)
+
+KIPRIS Plus·USPTO·JPO·EPO 공식 데이터. 자격증명 입력 폼 7칸(쓰지 않는 소스는 비워 둠) 또는 `~/.gil/mcp/ip.json`, 사전 설치 uv. 사용 스킬 `gil:legal-ip-search-report`. 상세는 gil 번들 `mcp-servers/gil-mcp-ip/CONNECTORS.md`.
+
+---
+
 ## reference-preview (Pinterest 레퍼런스 미리보기 MCP, v2.4.0+ · gil-creative)
 
 레퍼런스 보드 스킬(`gil-creative:reference-board`)이 Pinterest 레인 후보를 **대화 안에 실제 이미지**로 표시할 때 쓰는 아주 작은 로컬 서버입니다. 도구 1개(`fetch_reference_preview_image`), 비밀값·API 키 없음.
@@ -515,7 +532,7 @@ Last Updated: 2026-05-30
 
 `gil-media`는 **4개 스킬 + 2개 MCP 번들**로 구성됩니다:
 
-- **이미지 프롬프트 빌더 3종** (`gpt-image-2-prompt`·`gemini-3-image-prompt`·`midjourney-v8-prompt`) — 텍스트 프롬프트만 산출, API 키 불필요
+- **이미지 프롬프트 빌더 3종** (`gpt-image-prompt`·`gemini-3-image-prompt`·`midjourney-v8-prompt`) — 텍스트 프롬프트만 산출, API 키 불필요
 - **음성 생성 1종** (`audio-gen`) — ElevenLabs MCP 호출, `ELEVENLABS_API_KEY` 1개 필요
 
 **번들 MCP 2종** (`gil-media/.mcp.json`에 자동 등록):
@@ -607,7 +624,7 @@ python -m elevenlabs_mcp --api-key=${ELEVENLABS_API_KEY}
 
 | 스킬 | 출력·동작 | 사용 MCP |
 |---|---|---|
-| `gpt-image-2-prompt` | OpenAI 6-Block 프롬프트 텍스트 | (직접 호출 X) — ChatGPT 등에 사용자가 복붙 |
+| `gpt-image-prompt` | OpenAI 6-Block 프롬프트 텍스트 | (직접 호출 X) — ChatGPT 등에 사용자가 복붙 |
 | `gemini-3-image-prompt` | Google 5-component 프롬프트 텍스트 | (직접 호출 X) — Google AI Studio에 복붙 또는 Higgsfield MCP로 호출 (Nano Banana 모델) |
 | `midjourney-v8-prompt` | 키워드+`--파라미터` 텍스트 | (직접 호출 X) — Discord `/imagine` 또는 alpha.midjourney.com에 복붙 |
 | `audio-gen` | MP3·WAV·OGG 음성 파일 | **ElevenLabs MCP** 자동 호출 |

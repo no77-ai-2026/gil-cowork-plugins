@@ -2,7 +2,7 @@
 name: legal-brief
 description: |
   법무 브리핑 — 데일리 요약·주제 리서치·사건 대응 등 맥락형 법무 브리핑을 생성합니다 트리거: "오늘 법무 브리핑", "이 주제 법적 이슈 정리", "사건 대응 브리핑"
-version: "2.4.1"
+version: "2.5.0"
 uz: references/uz-legal-brief.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (legal/brief, Apache-2.0)
 ---
