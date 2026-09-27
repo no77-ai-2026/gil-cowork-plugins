@@ -2,7 +2,7 @@
 name: financial-statements
 description: |
   재무제표를 만들어주는 스킬입니다
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

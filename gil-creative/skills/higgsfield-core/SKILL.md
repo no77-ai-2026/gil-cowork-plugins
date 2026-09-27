@@ -3,7 +3,7 @@ name: higgsfield-core
 description: |
   Higgsfield MCP 이미지·영상 생성의 공유 코어.
   [역할 경계] higgsfield-core=모델 카탈로그·파라미터·비용 공통 정본(직접 트리거 아님). 이미지 생성 요청은 higgsfield-image, 영상 생성 요청은 higgsfield-video가 담당하며 이 스킬을 내부 참조합니다.
-version: "2.4.0"
+version: "2.4.1"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
@@ -98,7 +98,7 @@ Higgsfield 도구의 namespace 접두사는 등록 방식에 따라 `mcp__higgsf
 
 ## 승인 요청 계약 (런타임 중립)
 
-[HARD] 이 스킬의 게이트는 **특정 도구 이름에 묶이지 않는다.** `AskUserQuestion`은 Claude 런타임의 수단일 뿐이고, Codex를 비롯한 다른 런타임에는 그 도구가 없다. 도구 이름으로 계약을 쓰면 그 도구가 없는 런타임에서 게이트가 **영구 blocker**가 되어, 승인이 필요한 모든 작업이 그냥 멈춘다. 그건 안전이 아니라 고장이다.
+[HARD] 이 스킬의 게이트는 **특정 도구 이름에 묶이지 않는다.** 질문 채널(`AskUserQuestion`)은 Claude 런타임의 수단일 뿐이고, Codex를 비롯한 다른 런타임에는 그 도구가 없다. 도구 이름으로 계약을 쓰면 그 도구가 없는 런타임에서 게이트가 **영구 blocker**가 되어, 승인이 필요한 모든 작업이 그냥 멈춘다. 그건 안전이 아니라 고장이다.
 
 승인은 아래 순서로 구한다. 위에서부터 **실제로 가능한 첫 번째**를 쓴다.
 
@@ -123,7 +123,7 @@ Higgsfield 도구의 namespace 접두사는 등록 방식에 따라 `mcp__higgsf
 
 **[HARD] 세 경로가 모두 불가능한 무인 실행에서는 실행하지 않는다(fail-closed).** 물을 수단이 없다는 것은 승인을 받았다는 뜻이 아니다. 이때는 "승인 수단이 없어 진행하지 못했다"고 기록하고 멈춘다 — 조용히 진행하지 않는다. 반대로 **대화가 가능한데 도구가 없다는 이유로 멈추는 것도 잘못**이다. 2번 경로를 쓴다.
 
-> 이 계약은 GIL 공통 규칙(`gil:project` `references/core/common-rules.md`)의 승인형 원칙을 게이트 쪽에 적용한 것이다. AskUserQuestion 유무·서브에이전트 여부와 무관하게 같은 승인서·같은 선택지로 동작해야 한다.
+> 이 계약은 GIL 공통 규칙(`gil:project` `references/core/common-rules.md`)의 승인형 원칙을 게이트 쪽에 적용한 것이다. 질문 채널(AskUserQuestion) 유무·서브에이전트 여부와 무관하게 같은 승인서·같은 선택지로 동작해야 한다.
 
 ## 유료 생성 원장·품질 루프 (v2.4.0 HARD)
 

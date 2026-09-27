@@ -60,12 +60,12 @@ Phase 1 인터뷰 → Phase 2 인벤토리 → Phase 3 체인 설계 → Phase 4
 | **2 인벤토리** | `~/.claude/plugins/`에서 설치 여부 + 활성 스킬 스캔 | `.gil/config.json` 스냅샷 |
 | **3 체인 설계** | 인터뷰 + 인벤토리 + 재진입 시 기존 맥락, 3종 입력을 종합해 산출물별 스킬 체인 설계(§3 프리셋). 텍스트 체인은 `ai-slop-reviewer` 종료 | chain_design + 설계 근거 |
 | **4 Gap Detection** | 체인 스킬 ↔ 인벤토리 대조 → 누락 시 설치 안내 + "이어서 진행" 재개 | 진행 상태 |
-| **5 확인** | 설계된 체인 `AskUserQuestion` 승인 — 요약에 설계 근거 표시 | 승인/수정/취소 |
+| **5 확인** | 설계된 체인 질문 채널(`AskUserQuestion`) 승인 — 요약에 설계 근거 표시 | 승인/수정/취소 |
 | **6 지침 생성** | `references/templates/AGENTS.md.tmpl` 치환, ≤100라인, HARD 블록 8종 고정 — 정본은 AGENTS.md 한 파일. `CLAUDE.md`는 `CLAUDE.md.tmpl` 그대로 복사한 `@AGENTS.md` 포인터 | `./AGENTS.md` + `./CLAUDE.md`(포인터) |
 | **7 커스텀 에이전트 생성** | 반복 작업 유형별 Claude `.claude/agents/*.md`(markdown+frontmatter) + Codex `.codex/agents/*.toml`(TOML) 양쪽 생성 | `.claude/agents/*.md` + `.codex/agents/*.toml` |
 | **8 API 키 + 첫 실행 안내** | 체인이 요구하는 키만 선택적 등록 안내 + 상위 체인 3개 예시 | 안내 메시지 |
 
-각 Phase의 `AskUserQuestion` 스키마·`.gil/config.json` 상세·재개(Re-entry) 흐름은 `references/core/init-protocol.md` 참조.
+각 Phase의 질문 채널(`AskUserQuestion`) 스키마·`.gil/config.json` 상세·재개(Re-entry) 흐름은 `references/core/init-protocol.md` 참조.
 
 ### 2-1. Phase 3 입력 — 수집 맥락 분석
 
@@ -149,7 +149,7 @@ Phase 3 체인의 스킬이 인벤토리에 없으면 누락으로 간주한다.
 ```
 체인 스킬 중 인벤토리에 없는 것이 1개+
   → 누락 스킬 → 소속 플러그인 매핑
-  → AskUserQuestion 4옵션:
+  → 질문 채널(AskUserQuestion) 4옵션:
       1. (권장) 설치 안내 + 완료 후 "이어서 진행" 재개
       2. 누락 스킬 제외하고 진행
       3. 대체 스킬로 변경

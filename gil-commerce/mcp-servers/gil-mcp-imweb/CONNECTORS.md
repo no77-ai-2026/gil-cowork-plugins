@@ -1,11 +1,8 @@
-# 아임웹(Imweb) 연동 가이드 — `moai-imweb` MCP
+# 아임웹 OPEN API 연동
 
-아임웹 OPEN API v3 는 **OAuth2 authorizationCode** 흐름으로 인증합니다. 이 MCP 서버는
-사용자가 (브라우저로) 최초 1회 발급받은 **access token / refresh token** 을 환경변수로
-받아 사용하며, access token 이 만료되면 **refresh token 으로 자동 갱신**합니다.
+이 서버는 아임웹 [공식 개발자 문서](https://developers-docs.imweb.me/)의 앱 등록·OAuth 인가 절차로 발급한 자격증명을 사용합니다. 사이트별 이용 권한과 필요한 scope는 호출할 작업의 공식 명세에서 확인하세요. 실제 계정 인가가 끝나기 전에는 주문·상품 작업을 실행할 수 없습니다.
 
-> 서버가 브라우저 인가를 대신 수행하지 않습니다. 최초 1회는 아래 절차대로 수동 발급이
-> 필요합니다. 이후에는 `.mcp.json` env 만 세팅하면 됩니다.
+## 준비
 
 ---
 
@@ -83,11 +80,10 @@ curl -X POST https://openapi.imweb.me/oauth2/token \
 
 ```json
 {
-  "IMWEB_CLIENT_ID": "<클라이언트 ID>",
-  "IMWEB_CLIENT_SECRET": "<클라이언트 시크릿>",
-  "IMWEB_ACCESS_TOKEN": "<최초 발급 access token>",
-  "IMWEB_REFRESH_TOKEN": "<최초 발급 refresh token>",
-  "IMWEB_UNIT_CODE": "<유닛 코드>"
+  "IMWEB_CLIENT_ID": "<앱 ID>",
+  "IMWEB_CLIENT_SECRET": "<앱 시크릿>",
+  "IMWEB_ACCESS_TOKEN": "<액세스 토큰>",
+  "IMWEB_REFRESH_TOKEN": "<갱신 토큰>"
 }
 ```
 
@@ -143,14 +139,8 @@ Claude 에서는 `.claude-plugin/plugin.json` 의 `userConfig` 선언에 따라 
 
 ## 8. 트러블슈팅
 
-| 증상 | 원인 | 해결 |
-|---|---|---|
-| `토큰 갱신 불가` 에러 | client_id/secret/refresh_token 누락 | `.mcp.json` env 4종 모두 설정 |
-| `토큰 갱신 실패` 반복 | refresh_token 만료 | 3~4단계 재수행으로 토큰 재발급 |
-| `403` / scope 오류 | 등록한 scope 부족 | 앱 등록 시 누락된 scope 추가 후 재동의 |
-| `GW.AUTHN` 401 지속 | access·refresh 동시 만료 | 토큰 재발급 |
-| 페이징 누락 | `page`/`limit` 미지정 | 기본 단일 페이지; `imweb_*_list` 계열에 `page`/`limit` 전달 |
+## 동작과 확인
 
----
+서버는 인증 헤더에 access token을 넣습니다. 401 응답 시 refresh token으로 한 번 갱신한 뒤 재시도합니다. 갱신 토큰이 유효하지 않으면 앱 인가 절차를 다시 진행해야 합니다. 도구 등록 여부는 MCP 클라이언트의 도구 목록에서 확인하고, API 권한은 허용된 읽기 작업으로 계정에서 별도 검증하세요.
 
-버전: 0.1.0 · 문의: 아임웹 고객지원 · API 스펙 SSOT: `https://developers-docs.imweb.me/reference/openapi.json`
+기본 API 주소는 `https://openapi.imweb.me`입니다. `IMWEB_API_BASE`, `IMWEB_TOKEN_FILE`, `IMWEB_REQUEST_DELAY` 설정은 필요한 경우에만 사용합니다. 기본 토큰 파일 위치와 자격증명 우선순위는 서버의 `_base.py`와 공유 코어 구현을 기준으로 합니다.

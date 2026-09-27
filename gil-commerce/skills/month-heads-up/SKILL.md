@@ -2,7 +2,7 @@
 name: month-heads-up
 description: |
   매월 25일 실행 — 다음 30일 현금흐름 전망과 월말 전 조치 항목을 미리 경고합니다 트리거: "월말 전 현금 점검", "다음달 현금흐름 미리 봐줘", "25일 헤드업"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-month-heads-up.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/month-heads-up, Apache-2.0)
 ---

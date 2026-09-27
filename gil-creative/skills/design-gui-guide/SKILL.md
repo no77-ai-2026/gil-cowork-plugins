@@ -2,7 +2,7 @@
 name: design-gui-guide
 description: |
   모든 화면을 구성하는 10개 GUI 요소(버튼·폼·메뉴·링크·다이얼로그·알림·아이콘·체크박스/라디오·탭·검색)와 보너스 2(윈도우·포인터)에 대한 증거 기반 사용성 가이드라인 86종. 트리거: "10 GUI Design Elements", "컴포넌트 사용성 가이드라인", "GUI 위젯 설계 규칙"
-version: "2.4.0"
+version: "2.4.1"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

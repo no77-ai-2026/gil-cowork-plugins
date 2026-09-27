@@ -2,7 +2,7 @@
 name: data-visualizer
 description: |
   데이터를 한눈에 보여주는 인터랙티브 차트·대시보드(HTML)를 만들어 드립니다 트리거: "차트 만들어줘", "그래프 그려줘", "시각화해줘"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -48,7 +48,7 @@ Mermaid·Recharts·Chart.js·Tremor·ECharts 중 적합한 스택으로 인터�
 
 ## [HARD] HTML 대시보드 생성 시 shadcn 테마 인터뷰
 
-HTML·React 대시보드(방식 2)를 산출할 때는 **코드 생성 직전에** GIL 오케스트레이터가 `AskUserQuestion`으로 다음 4개 질문을 제시합니다.
+HTML·React 대시보드(방식 2)를 산출할 때는 **코드 생성 직전에** GIL 오케스트레이터가 질문 채널(`AskUserQuestion`)로 다음 4개 질문을 제시합니다.
 
 1. **Q1 베이스 팔레트** — Neutral(기본) / Zinc / Stone / Slate
 2. **Q2 컬러 모드** — System+Toggle(기본) / Light / Dark / Auto

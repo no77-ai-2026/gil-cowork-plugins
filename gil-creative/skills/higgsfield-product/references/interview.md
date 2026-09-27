@@ -5,7 +5,7 @@
 
 **Evidence tier:** 2차 (Higgsfield 공식 스킬 `higgsfield-product-photoshoot` v0.12.0, MIT)
 
-> 이 스킬은 사용자에게 직접 묻지 않는다. 아래 슬롯을 blocker로 반환하고, 실제 질문은 오케스트레이터가 `AskUserQuestion`으로 진행한다.
+> 이 스킬은 사용자에게 직접 묻지 않는다. 아래 슬롯을 blocker로 반환하고, 실제 질문은 오케스트레이터가 질문 채널(`AskUserQuestion`)로 진행한다.
 
 ---
 

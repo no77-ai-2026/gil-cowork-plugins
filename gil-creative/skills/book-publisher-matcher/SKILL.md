@@ -2,7 +2,7 @@
 name: book-publisher-matcher
 description: |
   [한·UZ 듀얼] 한국 출판사 매칭 트리거: "출판사 매칭", "어느 출판사에 투고", "출판사 추천"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -48,7 +48,7 @@ version: "2.4.0"
 | 페르소나 | book-target-reader (200자 페르소나 카드) |
 | 분량 | book-outline-designer (200자 원고지 기준 매수) |
 | 저자 신뢰 신호 | book-author-bio (5 영역 매트릭스) |
-| 저자 선호 | AskUserQuestion (자비 vs 출판사·대형 vs 소형 등) |
+| 저자 선호 | 질문 채널(AskUserQuestion) (자비 vs 출판사·대형 vs 소형 등) |
 
 ### Step 2: 4 차원 출판사 평가
 

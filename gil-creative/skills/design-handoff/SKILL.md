@@ -6,7 +6,7 @@ description: |
   Design package (prompt, context, references, acceptance, checklist),
   brand-voice context, and paste-ready claude.com session bundles.
 user-invocable: false
-version: "2.4.0"
+version: "2.4.1"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
@@ -41,7 +41,7 @@ Key guarantees:
 - [HARD] `prompt.md` contains NO MoAI-specific tokens (no `SPEC-`, `.moai/`, `manager-`, internal skill names)
 - [HARD] Brand voice integrated when `.moai/project/brand/brand-voice.md` exists
 - [HARD] Brand-absent fallback: `Brand Voice (default — please customize)` placeholder section
-- [HARD] Handoff exits with AskUserQuestion offering 3 options (a/b/c per the relevant requirement)
+- [HARD] Handoff exits with question channel(AskUserQuestion) offering 3 options (a/b/c per the relevant requirement)
 - [HARD] All 5 files produced regardless of brand context availability
 
 ---
@@ -66,7 +66,7 @@ IF .moai/project/brand/brand-voice.md exists AND is non-empty:
 ELSE:
   Use default brand voice placeholder
   SET brand_present = false
-  Note: will include AskUserQuestion offer to run brand interview
+  Note: will include question channel(AskUserQuestion) offer to run brand interview
 ```
 
 ### Step 1: Assemble prompt.md
@@ -117,11 +117,11 @@ See [supporting files templates](references/supporting-files.md) for verbatim re
 
 ## Handoff Exit: AskUserQuestion
 
-After all 5 files are written, the skill MUST surface an AskUserQuestion (with ToolSearch preload) presenting 3 options:
+After all 5 files are written, the skill MUST surface an question channel(AskUserQuestion) (with ToolSearch preload) presenting 3 options:
 
 ```
-ToolSearch(query: "select:AskUserQuestion")
-AskUserQuestion({
+ToolSearch(query: "select:question channel(AskUserQuestion)")
+question channel(AskUserQuestion)({
   questions: [{
     question: "핸드오프 패키지가 준비되었습니다. 다음 단계를 선택하세요.",
     header: "Design 핸드오프 완료",
@@ -174,7 +174,7 @@ For non-Korean conversation_language, translate option labels and descriptions a
 - [ ] prompt.md contains no internal skill/agent names or /design references
 - [ ] Brand-absent path includes "Brand Voice (default — please customize)" header in prompt.md
 - [ ] context.md includes note that it is NOT for pasting into Claude Design
-- [ ] Handoff exit AskUserQuestion called with exactly 3 options
+- [ ] Handoff exit question channel(AskUserQuestion) called with exactly 3 options
 
 ## 흡수 방법론 (knowledge-work-plugins@2cf4294, Apache-2.0)
 

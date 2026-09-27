@@ -2,7 +2,7 @@
 name: story-ip-pitch
 description: |
   IP 사업화 스킬 — 완성작을 2차 저작(드라마화·영화화·게임·굿즈·웹툰↔웹소설 전환)으로 피칭하는 문서와 판권 제안서를 작성한다. 문체부 표준계약서 유형·2차적저작물작성권 유보·한국저작권위원회 등록 구조를 개요로 다룬다. 계약 심화는 gil 법무 스킬군(contract-review·legal-risk) 라우팅. 트리거: "IP 피칭", "판권 제안", "2차 저작"
-version: "2.4.0"
+version: "2.4.1"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

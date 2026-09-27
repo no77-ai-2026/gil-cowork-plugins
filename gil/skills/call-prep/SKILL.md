@@ -2,7 +2,7 @@
 name: call-prep
 description: |
   영업 통화·미팅 준비 — 어카운트 맥락·참석자 리서치·제안 어젠다를 준비합니다 트리거: "내일 미팅 준비해줘", "영업 콜 프렙", "참석자 파악하고 어젠다 짜줘"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-call-prep.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (sales/call-prep, Apache-2.0)
 ---

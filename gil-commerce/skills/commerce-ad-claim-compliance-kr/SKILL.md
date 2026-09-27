@@ -2,7 +2,7 @@
 name: commerce-ad-claim-compliance-kr
 description: |
   [책임 경계] 광고·상세페이지·리스팅 "문구·표현" 법규 검증 게이트 전담 — ① 표시광고법 부당표시 6유형 체크리스트 ② 식약처 건강기능식품·화장품 의약품-오인 표현 금지 목록 ③ 전자상거래법 필수 고지(청약철회 7일·통신판매업 신고번호·사업자정보·배송/반품 비용) 점검. 페어 commerce-marketing-c… 트리거: "문구·표현", "표시광고법 점검", "이 광고 문구 괜찮아?"
-version: "2.4.0"
+version: "2.4.1"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

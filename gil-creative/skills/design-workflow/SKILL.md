@@ -7,7 +7,7 @@ description: |
   from .moai/design/, DTCG token validation, and brand-context
   constitutional priority.
 user-invocable: false
-version: "2.4.0"
+version: "2.4.1"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
@@ -34,7 +34,7 @@ path may override brand constraints (design constitution §3.1, §3.3).
 `tokens.json`, `components.json`, `assets/`, `import-warnings.json`, `brief/BRIEF-*.md`,
 `copy.json`, `path-selection.json` — all under `.moai/design/`.
 
-**Path selection** (presented via AskUserQuestion when `/moai design` needs choice):
+**Path selection** (presented via question channel(AskUserQuestion) when `/moai design` needs choice):
 1. **Path A — Claude Design** (권장) — handoff bundle (ZIP or HTML)
 2. **Path B1 — Figma** — meta-harness generates `moai-harness-figma-extractor` dynamically
 

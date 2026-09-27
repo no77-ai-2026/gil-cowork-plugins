@@ -2,7 +2,7 @@
 name: public-data
 description: |
   공공데이터포털(data.go.kr)·KOSIS 통계청의 실시간 통계 조회·분석 결과를 만들어 드립니다 트리거: "통계 찾아줘", "공공데이터 조회해줘", "인구 통계"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -56,7 +56,7 @@ IF DATA_GO_KR_API_KEY 미설정 AND KOSIS_API_KEY 미설정:
 
    어떤 API 키를 등록하시겠습니까?"
 
-  AskUserQuestion:
+  question channel(AskUserQuestion):
   ○ 공공데이터포털 키 입력 (권장)
   ○ KOSIS 통계 키 입력
   ○ 두 키 모두 입력

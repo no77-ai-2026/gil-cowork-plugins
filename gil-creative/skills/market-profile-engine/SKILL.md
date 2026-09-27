@@ -9,7 +9,7 @@ description: |
   - "카자흐스탄 시장 프로필 생성"
   - "bozor profili" (시장 프로필, UZ)
   gil-creative:creative-wizard·gil-creative:creative-architect가 현지화 오버레이로 호출합니다. 심층 시장 규모/경쟁은 gil:market-analyst, 규제 점검은 gil-commerce:commerce-marketing-compliance-kr로 이어집니다.
-version: "2.4.0"
+version: "2.4.1"
 ---
 
 # 시장 프로필 엔진 (Market Profile Engine)

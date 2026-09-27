@@ -2,7 +2,7 @@
 name: friday-brief
 description: |
   금요일 주간 마감 브리핑 — 전주 대비 매출·베스트셀러·성과와 관찰 항목을 정리합니다 트리거: "금요일 브리핑", "주간 마감 정리해줘", "이번 주 성과 요약"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-friday-brief.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/friday-brief, Apache-2.0)
 ---

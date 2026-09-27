@@ -2,7 +2,7 @@
 name: codex-image
 description: |
   codex CLI의 내장 image_gen 도구로 **gpt-image-2** 이미지를 생성합니다 — ChatGPT OAuth 인증으로 **API 키 불필요**, ChatGPT Plus/Team/Enterprise 구독 한도로 동작합니다. 트리거: "codex로 이미지 만들어줘", "codex 이미지 생성", "codex image"
-version: "2.4.0"
+version: "2.4.1"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

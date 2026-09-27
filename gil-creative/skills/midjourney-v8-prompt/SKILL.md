@@ -2,11 +2,11 @@
 name: midjourney-v8-prompt
 description: |
   Midjourney v8.1 (2026.03 Alpha) 전용 이미지 프롬프트 빌더 트리거: "미드저니 프롬프트 만들어줘", "MJ 프롬프트", "Midjourney 프롬프트"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
-Midjourney v8.1 (2026.03 Alpha) 전용 이미지 프롬프트 빌더. 사용자 자연어 한 줄 + AskUserQuestion 프리셋·미세조정으로 컨텍스트를 수집해 Midjourney 공식 Parameter List 기반 키워드+`--파라미터` 형식으로 변환합니다. Discord `/imagine` 또는 alpha.midjourney.com에 그대로 복붙 가능. `--sref`/`--oref`/`--cw`/`--p`/`--hd`/`--q 4`/`--style raw`/`--no`/`--c`/`--s` 모두 지원. 보너스로 GPT-image-2(6-Block) · Gemini 3 Pro Image(5-component) 프롬프트도 동시 출력합니다.
+Midjourney v8.1 (2026.03 Alpha) 전용 이미지 프롬프트 빌더. 사용자 자연어 한 줄 + 질문 채널(AskUserQuestion) 프리셋·미세조정으로 컨텍스트를 수집해 Midjourney 공식 Parameter List 기반 키워드+`--파라미터` 형식으로 변환합니다. Discord `/imagine` 또는 alpha.midjourney.com에 그대로 복붙 가능. `--sref`/`--oref`/`--cw`/`--p`/`--hd`/`--q 4`/`--style raw`/`--no`/`--c`/`--s` 모두 지원. 보너스로 GPT-image-2(6-Block) · Gemini 3 Pro Image(5-component) 프롬프트도 동시 출력합니다.
 
 다음과 같은 요청 시 반드시 이 스킬을 사용하세요:
 - "미드저니 프롬프트 만들어줘", "MJ 프롬프트"
@@ -49,11 +49,11 @@ Midjourney v8 Alpha (2026.03.17 출시) 및 v8.1 (2026.03.21 announce)은 5배 �
 ```
 사용자 자연어 한 줄
     ↓
-[Round 1] AskUserQuestion — 프리셋 선택
+[Round 1] 질문 채널(AskUserQuestion) — 프리셋 선택
     ↓
-[Round 2] AskUserQuestion — 프리셋별 미세조정 (3~4 슬롯)
+[Round 2] 질문 채널(AskUserQuestion) — 프리셋별 미세조정 (3~4 슬롯)
     ↓
-[Round 3] AskUserQuestion — 화면비 + 텍스트 + 고급 옵션(--sref·--oref·--p·--no)
+[Round 3] 질문 채널(AskUserQuestion) — 화면비 + 텍스트 + 고급 옵션(--sref·--oref·--p·--no)
     ↓
 [내부] 슬롯 → 키워드 콤마 + --파라미터 매핑
     ↓
@@ -110,7 +110,7 @@ Midjourney v8은 텍스트 렌더링이 V6/V7보다 개선됐지만 GPT/Gemini�
 
 #### Q4 — 고급 옵션 (선택)
 
-`AskUserQuestion`으로 추가 옵션 선택:
+질문 채널(`AskUserQuestion`)로 추가 옵션 선택:
 
 | 옵션 | 사용 | 메모 |
 |---|---|---|

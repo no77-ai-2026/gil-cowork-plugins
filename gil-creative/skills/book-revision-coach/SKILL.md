@@ -2,7 +2,7 @@
 name: book-revision-coach
 description: |
   [한·UZ 듀얼] 도서 본문 퇴고·교열 코치 트리거: "원고 퇴고", "교열", "본문 다듬기"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

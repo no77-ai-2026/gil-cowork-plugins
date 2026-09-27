@@ -2,7 +2,7 @@
 name: higgsfield-video
 description: |
   Higgsfield MCP 기반 AI 영상을 자연어 요청 한 줄로 생성합니다 트리거: "Higgsfield 영상 만들어줘", "Veo 3로 영상", "Sora 2로 영상 만들어"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -92,7 +92,7 @@ Higgsfield 영상, Sora 2, Google Veo 3, Kling 2.1 Master, Kling 2.5 Turbo, Klin
 | **입력** | text-to-video · image-to-video · 캐릭터 시리즈 |
 | **프리셋** | UGC·Unboxing·Product review·Hyper motion·TV spot·Wild Card |
 
-부족하면 AskUserQuestion 1라운드.
+부족하면 질문 채널(AskUserQuestion) 1라운드.
 
 ### 2단계 — 모델·프리셋 자동 선택
 

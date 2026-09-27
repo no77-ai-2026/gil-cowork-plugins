@@ -1,7 +1,7 @@
 {
   "name": "gil-creative",
   "displayName": "GIL Creative — 콘텐츠·마케팅·창작·미디어·디자인",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "[한·UZ 듀얼] GIL 크리에이티브 애드온 — 블로그·SNS·카드뉴스·뉴스레터·카피·캠페인·SEO 마케팅, 출판(book-*)·스토리 IP(story-*, 웹툰·웹소설·시나리오), Higgsfield 이미지·영상, TTS·오디오, Claude Design 핸드오프·디자인 시스템, 광고 크리에이티브 마법사(creative-wizard), Threads·인스타그램 발행 등 99개 스킬 — v2.4.0 신규: 업종 오버레이 11종(industry-overlay)·레퍼런스 보드 4레인(reference-board)·게시 전 검수 4상태(publication-review) + 유료 생성 원장·2회 상한, 실사 인물 프롬프트 8칸 문법·수위 스위치. MCP 7종(typefully·wordpress·meta-ads·higgsfield·ElevenLabs·gil-mcp-threads-poster·reference-preview[Node]). 코어 gil 번들과 함께 설치 권장.",
   "author": {
     "name": "gil"

@@ -2,7 +2,7 @@
 name: threads-multichannel
 description: |
   하나의 텍스트를 Threads(직접 발행) / Facebook(복붙) / X(복붙, free=스레드 분할·premium=단일) 용으로 각각 포맷합니다. 발행은 하지 않고 포맷만 — Facebook·X 출력은 사용자가 직접 복붙하고, Threads 출력은 승인 시 threads_publish_text 로 즉시 발행합니다. 트리거: "이 글 페이스북/엑스에도 올릴 수 있게 해줘", "X 스레드로 쪼개줘", "트위터용 스레드 만들어줘"
-version: "2.4.0"
+version: "2.4.1"
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
 
@@ -114,7 +114,7 @@ threads_format_multi_channel(
 
 ### 4단계 (선택): Threads 즉시 발행
 
-사용자가 Threads 발행까지 원하면, **`threads-post-draft` 스킬의 2~4단계(⟨한국어 감사 3단⟩ → `AskUserQuestion` 승인 → 발행)를 그대로 태웁니다.**
+사용자가 Threads 발행까지 원하면, **`threads-post-draft` 스킬의 2~4단계(⟨한국어 감사 3단⟩ → 질문 채널(`AskUserQuestion`) 승인 → 발행)를 그대로 태웁니다.**
 
 - **[HARD] 포맷만 하고 바로 발행하지 않는다.** 여기서 `threads_publish_text`를 직접 호출하면 `threads-post-draft`가 세워둔 감사·승인 게이트를 우회하게 됩니다. 같은 계정에 같은 방식으로 나가는 글인데 한쪽 경로만 검수받는 상태가 되므로, 발행은 반드시 `threads-post-draft`로 넘깁니다.
 - 넘길 때 전달하는 것은 `out["threads"]["text"]` 한 덩어리입니다. 감사가 문장을 고치므로 **바이트 수는 `threads-post-draft`가 감사 후 다시 셉니다** — 여기서 센 값은 포맷 시점의 참고값입니다.

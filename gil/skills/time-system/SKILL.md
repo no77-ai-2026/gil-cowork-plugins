@@ -2,7 +2,7 @@
 name: time-system
 description: |
   하루·한 주의 시간을 주도적으로 설계하도록 도와주는 시간관리 스킬입니다
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

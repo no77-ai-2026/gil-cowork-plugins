@@ -2,7 +2,7 @@
 name: weekly-report
 description: |
   한국 팀의 주간 비즈니스 리뷰(WBR) 보고서 자동 생성 스킬입니다 트리거: "주간보고 작성", "WBR 준비", "이번 주 한 일 정리"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

@@ -1,17 +1,16 @@
-# moai-imweb MCP
+# 아임웹 OPEN API MCP
 
-아임웹(Imweb) OPEN API **v3** 를 MCP(Model Context Protocol) 도구로 노출하는 서버.
-쇼핑몰 운영 전 도메인 **136개 엔드포인트** 를 **8개 카테고리 도구** 로 제공합니다
-(smartstore "83 API → 15 도구" 와 같은 압축 설계).
+아임웹 [공식 OPEN API 명세](https://developers-docs.imweb.me/reference/openapi.json)를 바탕으로 만든 판매자용 MCP 서버입니다. 현재 명세의 OAuth 엔드포인트 2개를 제외한 작업 138개를 카테고리 도구 8개에 묶었습니다. 실제 호출에는 해당 사이트의 앱 권한과 유효한 토큰이 필요합니다.
 
-- **스펙 SSOT**: `https://developers-docs.imweb.me/reference/openapi.json` (OAS 3.1.0)
-- **API 서버**: `https://openapi.imweb.me`
-- **인증**: OAuth2 authorizationCode + JWT access token (자동 갱신)
-- **구현**: Python + [FastMCP](https://github.com/modelcontextprotocol/python-sdk), uv 기반
+## 구성
 
-> 인증·자격증명 발급 절차는 [`CONNECTORS.md`](./CONNECTORS.md) 참고.
+- MCP 서버 키와 실행 파일: `gil-mcp-imweb`
+- 실행: Claude는 `.mcp.json`의 `${CLAUDE_PLUGIN_ROOT}` 경로에서 `uv`로 `gil-mcp-imweb`을 시작합니다.
+- 도구: `imweb_site_info`, `imweb_member_info`, `imweb_community`, `imweb_promotion`, `imweb_product`, `imweb_order`, `imweb_script`, `imweb_payment`
+- 각 도구는 `action`으로 작업을 고릅니다. 경로·조회 조건은 `params`, 요청 본문은 `body`에 넣습니다. `paginate=True`는 명세에 `page`와 `limit`가 있는 GET 작업에만 사용합니다.
+- 액세스 토큰 만료 시 refresh token을 이용한 갱신을 지원합니다. 초기 앱 등록·인가·토큰 발급은 [연동 안내](./CONNECTORS.md)를 따릅니다.
 
----
+## 명세 갱신
 
 ## 도구 설계 — 카테고리 디스패치
 
@@ -82,54 +81,10 @@ imweb_<category>(
 
 ## 사용 예 (MCP 클라이언트 관점)
 
+```text
+uv run --directory mcp-servers/gil-mcp-imweb python tools/_generator.py
+uv run --directory mcp-servers/gil-mcp-imweb --group dev pytest -q
 ```
-# 주문 목록 (배송완료, 최근 50건)
-imweb_order(action="read_all_order", params={"orderSectionStatus":"SHIPPING_COMPLETE","page":1,"limit":50})
-
-# 주문 전체 페이지 자동 집계
-imweb_order(action="read_all_order", params={"orderSectionStatus":"SHIPPING_COMPLETE"}, paginate=True)
-
-# 상품 등록
-imweb_product(action="create_product", body={"prodName":"테스트 상품","price":10000,...})
-
-# 주문 송장 등록
-imweb_order(action="create_order_invoice", params={"orderNo":"ORD123"}, body={"deliveryCompany":"CJ","invoiceNo":"..."})
-
-# 구매평 답글 등록
-imweb_community(action="create_site_review_answer", body={"reviewNo":1,"content":"감사합니다"})
-```
-
-## 도구 재생성 (스펙 변경 시)
-
-아임웹 API 가 업데이트되면 스펙을 갱신하고 도구를 재생성합니다:
-
-```bash
-cd mcp-servers/gil-mcp-imweb
-curl -sL https://developers-docs.imweb.me/reference/openapi.json -o tools/openapi.json
-python3 tools/_generator.py      # src/gil_mcp_imweb/tools/*.py 재생성 (카테고리 디스패치)
-uv run pytest -q                 # 회귀 검증
-```
-
-생성기는 `tools/_generator.py`, SSOT 스펙은 `tools/openapi.json`. 생성된
-`src/gil_mcp_imweb/tools/*.py` 는 **수동 편집 금지** — 재생성 시 덮어쓰입니다.
-
-## 아키텍처
-
-```
-src/gil_mcp_imweb/
-  _app.py        # FastMCP 인스턴스 (도구 등록 공유 객체)
-  _base.py       # 설정(env) + ImwebClient 싱글톤 + 토큰 영속화
-  auth.py        # OAuth2 refresh_token 갱신 (camelCase/snake 양쪽 대응)
-  client.py      # HTTP: Bearer 주입 · 401 자동재발급 · 에러 매핑 · list_all_pages
-  server.py      # 진입점(tools import 로 등록 트리거 → stdio run)
-  tools/*.py     # 생성된 8 카테고리 도구 (_OPS 디스패치 테이블 + 도구 함수)
-tools/
-  _generator.py  # OpenAPI → 카테고리-디스패치 도구 생성기
-  openapi.json   # SSOT 스펙 (재생성 입력)
-tests/           # client/auth/tools/generator 단위 테스트 (19)
-```
-
-## 라이선스
 
 Apache-2.0 (모두의 코워크 플러그인 패밀리).
 

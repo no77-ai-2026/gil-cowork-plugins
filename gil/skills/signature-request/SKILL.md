@@ -2,7 +2,7 @@
 name: signature-request
 description: |
   전자서명 라우팅 — 서명 전 체크리스트, 서명 순서 구성, 발송 준비를 정리합니다 트리거: "전자서명 보내줘", "서명 순서 정리", "계약 체결 준비 체크"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-signature-request.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (legal/signature-request, Apache-2.0)
 ---

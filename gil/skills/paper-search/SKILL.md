@@ -2,7 +2,7 @@
 name: paper-search
 description: |
   RISS·KCI·DBpia·Google Scholar에서 논문을 통합 검색해 서지정보와 인용 형식을 정리해 드립니다 트리거: "딥러닝 이미지 분류 논문 찾아줘. 최근 5년 내로", "자연어 처리 선행연구 조사해줘", "KCI 등재 학술지에서 머신러닝 논문 검색해줘"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: design-prompt-builder
 description: |
   Claude Design용 시니어 UX 프롬프트를 10가지 전문 패턴(정보 구조·디자인 시스템·카피·온보딩·접근성·대시보드·폼·테스트·휴리스틱·리서치) 중 적합한 것… 트리거: "Claude Design 시니어 프롬프트", "UX 패턴 프롬프트", "정보 구조 프롬프트 만들어 줘"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -84,7 +84,7 @@ Anthropic 공식 발표(2026-04-17)에서 강조한 **코드 기반 프로토타
 
 ### 3단계 — CONTEXT 보완
 
-사용자에게 CONTEXT 항목만 묻습니다. AskUserQuestion 1-2라운드.
+사용자에게 CONTEXT 항목만 묻습니다. 질문 채널(AskUserQuestion) 1-2라운드.
 
 #### 패턴별 CONTEXT 요구 항목
 

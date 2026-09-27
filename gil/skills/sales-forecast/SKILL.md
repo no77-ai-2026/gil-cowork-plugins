@@ -2,7 +2,7 @@
 name: sales-forecast
 description: |
   가중 영업 예측 — 최선/예상/최악 시나리오, 커밋 대 업사이드, 갭 분석을 만듭니다 트리거: "영업 예측 뽑아줘", "이번 분기 포캐스트", "목표 대비 갭 분석"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-sales-forecast.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (sales/forecast, Apache-2.0)
 ---

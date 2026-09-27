@@ -2,7 +2,7 @@
 name: html-slide
 description: |
   발표용 슬라이드 덱을 브라우저에서 바로 열리는 단일 파일·자체 완결형(self-contained) HTML로 만들어 드립니다 트리거: "발표 슬라이드 HTML로 만들어줘", "키노트 덱 단일 HTML 파일로 렌더해줘", "사업계획서 슬라이드 10장, 브라우저에서 바로 열리게"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -67,7 +67,7 @@ PDF 배포본이 필요하면 브라우저 `?print-pdf` 인쇄 모드를 쓰거�
 ## 핵심 워크플로우 (9단계)
 
 ### 1. 컨텍스트 수집
-`AskUserQuestion`으로 design_system(75 시스템, 기본 `claude`)·발표 시간(슬라이드 수)·이미지 필요 여부·PPTX 산출 여부를 확인합니다. design_system 선택 시 [`references/design-system-links.md`](references/design-system-links.md)의 getdesign.md 링크로 각 토큰 상세 페이지를 안내해 사용자가 미리보기로 확인할 수 있게 합니다. **강연/발표 맥락** — 비개발자 청중 다수·주간·프로젝터 환경에서는 라이트 테마(claude·notion·apple·stripe·mintlify)가 안전합니다. 다크는 발표 공간을 어둡게 조절할 수 있을 때만 권장.
+질문 채널(`AskUserQuestion`)로 design_system(75 시스템, 기본 `claude`)·발표 시간(슬라이드 수)·이미지 필요 여부·PPTX 산출 여부를 확인합니다. design_system 선택 시 [`references/design-system-links.md`](references/design-system-links.md)의 getdesign.md 링크로 각 토큰 상세 페이지를 안내해 사용자가 미리보기로 확인할 수 있게 합니다. **강연/발표 맥락** — 비개발자 청중 다수·주간·프로젝터 환경에서는 라이트 테마(claude·notion·apple·stripe·mintlify)가 안전합니다. 다크는 발표 공간을 어둡게 조절할 수 있을 때만 권장.
 
 ### 2. 원고 SSOT 구축 (핵심)
 `deck.json` 원고를 먼저 작성합니다 — title/bullets/chart-data/image-path/layout-key/notes. 이 원고가 HTML 렌더와 pptx-designer PPTX 렌더 양쪽의 공통 소스입니다. 스키마: [`references/deck-manuscript-schema.md`](references/deck-manuscript-schema.md). layout-key는 pptx-designer 9 아키타입(Title/Agenda/Problem/Solution/Features/Stats/Team/CTA/Closing)에 정합시킵니다.
@@ -136,7 +136,7 @@ design_system 지정 시 `systems/<name>.md` 토큰 → Tailwind Play CDN config
 
 ## 승인 요청 계약 (런타임 중립)
 
-[HARD] 이 스킬의 게이트는 **특정 도구 이름에 묶이지 않는다.** `AskUserQuestion`은 Claude 런타임의 수단일 뿐이고, Codex를 비롯한 다른 런타임에는 그 도구가 없다. 도구 이름으로 계약을 쓰면 그 도구가 없는 런타임에서 게이트가 **영구 blocker**가 되어, 승인이 필요한 모든 작업이 그냥 멈춘다. 그건 안전이 아니라 고장이다.
+[HARD] 이 스킬의 게이트는 **특정 도구 이름에 묶이지 않는다.** 질문 채널(`AskUserQuestion`)은 Claude 런타임의 수단일 뿐이고, Codex를 비롯한 다른 런타임에는 그 도구가 없다. 도구 이름으로 계약을 쓰면 그 도구가 없는 런타임에서 게이트가 **영구 blocker**가 되어, 승인이 필요한 모든 작업이 그냥 멈춘다. 그건 안전이 아니라 고장이다.
 
 승인은 아래 순서로 구한다. 위에서부터 **실제로 가능한 첫 번째**를 쓴다.
 
@@ -161,7 +161,7 @@ design_system 지정 시 `systems/<name>.md` 토큰 → Tailwind Play CDN config
 
 **[HARD] 세 경로가 모두 불가능한 무인 실행에서는 실행하지 않는다(fail-closed).** 물을 수단이 없다는 것은 승인을 받았다는 뜻이 아니다. 이때는 "승인 수단이 없어 진행하지 못했다"고 기록하고 멈춘다 — 조용히 진행하지 않는다. 반대로 **대화가 가능한데 도구가 없다는 이유로 멈추는 것도 잘못**이다. 2번 경로를 쓴다.
 
-> 이 계약은 GIL 공통 규칙(`gil:project` `references/core/common-rules.md`)의 승인형 원칙을 게이트 쪽에 적용한 것이다. AskUserQuestion 유무·서브에이전트 여부와 무관하게 같은 승인서·같은 선택지로 동작해야 한다.
+> 이 계약은 GIL 공통 규칙(`gil:project` `references/core/common-rules.md`)의 승인형 원칙을 게이트 쪽에 적용한 것이다. 질문 채널(AskUserQuestion) 유무·서브에이전트 여부와 무관하게 같은 승인서·같은 선택지로 동작해야 한다.
 
 ---
 

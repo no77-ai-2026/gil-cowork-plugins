@@ -3,7 +3,7 @@ name: project
 description: |
   GIL 번들 패밀리(gil·gil-creative·gil-commerce)의 **프로젝트 초기화 단일 진입점**. `/project 자연어-지시`로 진입하는 Cowork 슈퍼 오케스트레이터다. 소크라테스 인터뷰로 맥락을 파악하고, 설치된 번들 인벤토리를 스캔한 뒤, 프로젝트 전용 커스텀 에이전트와 스킬 체인을 설계해 AGENTS.md(정본, ≤100라인)와 CLAUDE.md(@AGENTS.md 포인터)·.claude/agents/·.gil/ 스캐폴드를 생성한다. 이후 사용 신호를 감지하면 승인형 자가 개선을 수행한다.
   트리거: "/project ...", "/project update", "/project evolve", "/project doctor", "새 프로젝트 시작", "AGENTS.md 만들어줘", "CLAUDE.md 만들어줘", "프로젝트 설정 도와줘", "이어서 진행"·"설치 완료"(재개), "지침 업데이트해줘"·"플러그인 업데이트됐어"(동기화), 비개발 자연어 요청의 번들 라우팅. 이름·회사 같은 글로벌 프로필은 재질문하지 않는다.
-version: "2.4.0"
+version: "2.4.1"
 origin: "modu-ai/moai-cowork@f1eb954 (gil project 1.3.0, Apache-2.0) — GIL 등급제·2층 지침·승인형 자가 개선으로 재설계"
 ---
 
@@ -13,7 +13,7 @@ origin: "modu-ai/moai-cowork@f1eb954 (gil project 1.3.0, Apache-2.0) — GIL 등
 
 ## 개요
 
-이 스킬은 모든 Claude Cowork 프로젝트의 슈퍼 오케스트레이터다. `conversation_language`로 대화하며, 모든 사용자 확인은 `AskUserQuestion`로만 수행한다. 이 스킬이 생성하는 하위 에이전트는 사용자에게 직접 질문하지 않고 blocker report만 반환한다(subagent 경계).
+이 스킬은 모든 Claude Cowork 프로젝트의 슈퍼 오케스트레이터다. `conversation_language`로 대화하며, 모든 사용자 확인은 질문 채널(`AskUserQuestion`)로만 수행한다. 이 스킬이 생성하는 하위 에이전트는 사용자에게 직접 질문하지 않고 blocker report만 반환한다(subagent 경계).
 
 **커버리지**: 사업·콘텐츠·창작·커머스·문서·법무·재무·인사·교육·데이터·디자인 — 전 도메인. 개발 프로젝트 초기화는 범위 밖(§개발 요청 처리).
 
@@ -29,7 +29,7 @@ origin: "modu-ai/moai-cowork@f1eb954 (gil project 1.3.0, Apache-2.0) — GIL 등
 
 ## Socratic Interview (렌즈 도출 · 커버리지 종료)
 
-이 프로젝트에서 **무엇을·어떻게** 처리할지만 인터뷰한다. 글로벌 프로필은 재질문하지 않는다. 질문은 `AskUserQuestion` 설문으로, 한 라운드에 묶어서 낸다(1개씩 연속 호출 금지 · 1회 최대 4질문×4옵션 · 모든 옵션에 description, 첫 옵션에만 `(권장)`).
+이 프로젝트에서 **무엇을·어떻게** 처리할지만 인터뷰한다. 글로벌 프로필은 재질문하지 않는다. 질문은 질문 채널(`AskUserQuestion`) 설문으로, 한 라운드에 묶어서 낸다(1개씩 연속 호출 금지 · 1회 최대 4질문×4옵션 · 모든 옵션에 description, 첫 옵션에만 `(권장)`).
 
 **[HARD] 질문은 고정 목록이 아니라 프로젝트에서 도출한다.** 아래 8렌즈는 «빠진 게 없는지 훑는 렌즈»이지 질문지가 아니다. `/project <프로젝트 설명>`·폴더명·기존 파일에서 **이 프로젝트의 명사**(무엇을 만들어 누구에게 주는가)를 뽑고, 렌즈를 하나씩 대어 해당 없는 렌즈는 **버린다**(1인 블로그에 「검토·승인 주체」를 묻지 않는다). 남은 축을 정보 이득 순으로 4슬롯에 배치한다 — 강의면 「수강생·차수·일정」, 커머스면 「상품군·채널·재고」, 법무면 「의뢰인·관할·기한」의 말로 묻는다.
 
@@ -44,11 +44,11 @@ origin: "modu-ai/moai-cowork@f1eb954 (gil project 1.3.0, Apache-2.0) — GIL 등
 
 **종료는 라운드 수가 아니라 커버리지다.** 각 축을 충족/유예/미확인으로 `.gil/config.json` `coverage`에 기록하고, 미확인이 남으면 라운드를 더 돈다(매 라운드 "8영역 중 N 확인" 진행률 고지). 이미 확립된 축(진입 발화·기존 `AGENTS.md`·`.gil/context.md`)은 묻지 않고 다음 순위로 4슬롯을 채운다. 모호한 답은 좁혀서 다음 라운드에 재배치. **[HARD] 첫 라운드부터 「지금 아는 것으로 진행」 선택지를 둔다** — 이탈 시 남은 축은 유예로 기록하고 가정값을 `.gil/context.md`에 적은 뒤 진행한다(고위험 산출물—계약·법무·재무·대외 발송—에 걸린 유예 축은 생성을 멈추고 다시 묻는다). 설계안이 나오면 마지막 한 라운드로 체인·에이전트 구성을 보이고 승인/수정/취소를 받는다.
 
-**[HARD] 응답이 없다고 「거절」로 읽지 않는다.** Cowork 데스크톱에는 질문 카드가 렌더러에 도달하지 못한 채 앱 종료 시 `deny`/`Dismissed`로 기록되는 미해결 버그가 있다(anthropics/claude-code #58750). 빈 응답·deny·dismissed는 사용자의 결정이 아니다 → 같은 질문을 **응답 본문에 번호 매긴 선택지로 다시 낸다**("선택지가 화면에 안 뜨셨을 수 있어 글로 다시 여쭙니다"). **서브에이전트에 인터뷰를 위임하지 않는다** — 서브에이전트에는 `AskUserQuestion`이 없다(공식 문서 명시). 민감도가 이 경로로 유실되면 `unknown`이다.
+**[HARD] 응답이 없다고 「거절」로 읽지 않는다.** Cowork 데스크톱에는 질문 카드가 렌더러에 도달하지 못한 채 앱 종료 시 `deny`/`Dismissed`로 기록되는 미해결 버그가 있다(anthropics/claude-code #58750). 빈 응답·deny·dismissed는 사용자의 결정이 아니다 → 같은 질문을 **응답 본문에 번호 매긴 선택지로 다시 낸다**("선택지가 화면에 안 뜨셨을 수 있어 글로 다시 여쭙니다"). **서브에이전트에 인터뷰를 위임하지 않는다** — 서브에이전트에는 질문 채널(`AskUserQuestion`)이 없다(공식 문서 명시). 민감도가 이 경로로 유실되면 `unknown`이다.
 
 **맥락 등급**: A(AGENTS.md에서 즉시 획득 — 질문 없이 사용) / B(핵심 맥락, 80%+ 권장 — 1라운드 배치) / C(보강 — 고위험 산출물만). 재질문 금지. 상세: `references/core/init-protocol.md` + `references/core/context-collector.md`.
 
-**재진입 확인**: 대상 프로젝트에 이미 `AGENTS.md`(또는 구 방식 `CLAUDE.md`)·`.gil/`(구 `.moai/`)가 있으면 덮어쓰기 전 `AskUserQuestion` 확인(재생성/부분 수정/취소). 침묵 덮어쓰기 금지. `CLAUDE.md`가 포인터가 아니라 전체 지침을 담고 있으면 레거시 복제 프로젝트로 보고 2층 전환을 제안한다. 재개(resume)는 `.gil/context.md`+기존 `AGENTS.md`를 먼저 읽어 빈 칸만 묻는다.
+**재진입 확인**: 대상 프로젝트에 이미 `AGENTS.md`(또는 구 방식 `CLAUDE.md`)·`.gil/`(구 `.moai/`)가 있으면 덮어쓰기 전 질문 채널(`AskUserQuestion`) 확인(재생성/부분 수정/취소). 침묵 덮어쓰기 금지. `CLAUDE.md`가 포인터가 아니라 전체 지침을 담고 있으면 레거시 복제 프로젝트로 보고 2층 전환을 제안한다. 재개(resume)는 `.gil/context.md`+기존 `AGENTS.md`를 먼저 읽어 빈 칸만 묻는다.
 
 ---
 
@@ -56,7 +56,7 @@ origin: "modu-ai/moai-cowork@f1eb954 (gil project 1.3.0, Apache-2.0) — GIL 등
 
 체인 설계 **전에** `~/.claude/plugins/`를 스캔해 설치된 GIL 번들(`gil`·`gil-creative`·`gil-commerce`)을 확인한다. 스킬 수는 하드코딩하지 않는다 — 각 번들 `plugin.json`+`skills/` 실측이 정본이다. 결과는 `.gil/config.json`에 스냅샷 저장.
 
-**Gap Detection**: 설계 체인의 스킬이 미설치 번들 소속이면 `AskUserQuestion` 4옵션(설치 안내+재개 권장 / 제외하고 진행 / 대체 스킬 / 중단). "설치 완료"·"이어서 진행" 발화로 재개를 감지한다. **경계 규칙**: 타 번들 참조는 설치 시에만 체이닝 — 미설치면 해당 단계 생략+1줄 고지.
+**Gap Detection**: 설계 체인의 스킬이 미설치 번들 소속이면 질문 채널(`AskUserQuestion`) 4옵션(설치 안내+재개 권장 / 제외하고 진행 / 대체 스킬 / 중단). "설치 완료"·"이어서 진행" 발화로 재개를 감지한다. **경계 규칙**: 타 번들 참조는 설치 시에만 체이닝 — 미설치면 해당 단계 생략+1줄 고지.
 
 ---
 
@@ -115,7 +115,7 @@ Phase 5 확인 후 생성:
 |-----------|------|
 | 개발·코딩·SPEC·개발환경 | §개발 요청 처리 |
 | 그 외 전부 | 이 스킬이 직접 처리 |
-| 불명확 | `AskUserQuestion` |
+| 불명확 | 질문 채널(`AskUserQuestion`) |
 
 번들 키워드 매핑(gil 코어/creative/commerce)·모호성 해소·복합 요청은 `references/core/router.md`가 단일 진실 원천. 디자인 중심이면 `references/core/designer-setup.md` 서브 프로토콜.
 

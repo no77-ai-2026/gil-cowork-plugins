@@ -9,7 +9,7 @@ description: |
   - "포스터 비주얼 렌더"
   - "rasm yaratish" (이미지 생성, UZ)
   프롬프트 설계는 gil-creative:gpt-image-2-prompt·gil-creative:gemini-3-image-prompt와, 커넥터 폴백은 gil-creative:higgsfield-image와 조합합니다. BYOK 키는 환경변수/세션에만 두고 저장·메모리 기록하지 않습니다.
-version: "2.4.0"
+version: "2.4.1"
 ---
 
 # 이미지 브리지 (Image Bridge) — BYOK

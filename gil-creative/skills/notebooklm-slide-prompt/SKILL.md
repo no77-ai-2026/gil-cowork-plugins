@@ -2,7 +2,7 @@
 name: notebooklm-slide-prompt
 description: |
   강연·강의·세미나 본문 마크다운을 입력받아 (1) NotebookLM Studio에 그대로 붙여 넣을 슬라이드 데크 생성 프롬프트와 (2) 슬라이드별 나노바나나(Ge… 트리거: "NotebookLM 슬라이드 프롬프트", "NotebookLM 프롬프트", "NotebookLM 데크"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -69,7 +69,7 @@ NotebookLM Studio의 공식 4축(Format/Length/Output language/Prompt)을 정확
 
 ### Phase 1 — Intake & Interview
 
-본문 MD가 첨부되어 있는지 확인. 없으면 한 줄로 요약된 주제·핵심 포인트라도 받는다. 누락된 선택 항목은 AskUserQuestion 한 라운드(3~4질문 이내)로 묶어서 묻는다:
+본문 MD가 첨부되어 있는지 확인. 없으면 한 줄로 요약된 주제·핵심 포인트라도 받는다. 누락된 선택 항목은 질문 채널(AskUserQuestion) 한 라운드(3~4질문 이내)로 묶어서 묻는다:
 
 1. 슬라이드 매수 목표는?
 2. Detailed Deck vs Presenter Slides 중 어느 쪽?
@@ -222,7 +222,7 @@ Consistency tag: series="harness-lecture", palette="teal-amber-dim", lighting="v
 사용자: "S0 도입 본문을 NotebookLM 슬라이드 프롬프트로 만들어줘"
 ```
 
-→ 본문 MD를 읽고 매수·포맷·시각 톤·강조 슬라이드 4가지를 AskUserQuestion 한 라운드로 묻는다.  
+→ 본문 MD를 읽고 매수·포맷·시각 톤·강조 슬라이드 4가지를 질문 채널(AskUserQuestion) 한 라운드로 묻는다.  
 → 답변 수신 후 Part A + Part B를 한 마크다운 파일로 산출.
 
 ### 예 2 — 매수·톤 직접 지정
@@ -292,7 +292,7 @@ gil:ai-slop-reviewer
         ↓
 [references/slide-style-library.md "스타일 매칭 가이드"] 카테고리 매핑
         ↓
-[AskUserQuestion] 카테고리 내 1~3 스타일 후보 제시 (영문 프롬프트 + 추천 상황 동봉)
+[질문 채널(AskUserQuestion)] 카테고리 내 1~3 스타일 후보 제시 (영문 프롬프트 + 추천 상황 동봉)
         ↓
 [Phase 3] 선택된 스타일의 영문 프롬프트 키워드를 모든 슬라이드 `Style:` 필드에 동일 적용
 ```

@@ -2,7 +2,7 @@
 name: enterprise-search
 description: |
   연결된 모든 소스(Drive·Slack·메일 등) 횡단 검색 — 질의 분해·다중 소스 검색·중복 제거 종합·출처 명기·활동 다이제스트까지 한 스킬로 제공합니다 트리거: "그 문서 어디 있지 찾아줘", "우리가 뭐라고 결정했었지", "자리 비운 동안 뭐 있었는지 다이제스트"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-enterprise-search.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (enterprise-search/search+search-strategy+knowledge-synthesis+source-management+digest, Apache-2.0)
 ---

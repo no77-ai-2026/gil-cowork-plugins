@@ -15,7 +15,7 @@ project 스킬 SKILL.md의 §Recursive Self-Improvement가 정의하는 `invento
 `update` 절차에 들어가기 전 반드시 확인한다.
 
 1. **프로젝트 존재 여부** — `./AGENTS.md`·`./CLAUDE.md`·`./.gil/config.json`이 모두 없으면 동기화 대상이 없다.
-   - 침묵 생성 금지. `AskUserQuestion`으로 `/project`(최초 셋업)로 안내한다.
+   - 침묵 생성 금지. 질문 채널(`AskUserQuestion`)로 `/project`(최초 셋업)로 안내한다.
    - 옵션: `/project 시작으로 안내` / `update 중단`.
 2. **스냅샷 존재 여부** — `.gil/config.json`에 `plugins_installed` + `skills_available` 스냅샷이 없으면(최초 셋업 직후 미저장 등), 현재 인벤토리를 그대로 최초 스냅샷으로 저장하고 "이미 최신 상태"로 보고한다(비교 기준이 없으므로 diff는 공집합).
 3. **진입 발화 인자** — `/project update` 외 추가 자연어 지시가 있으면 1줄 요약으로 `context.md`에 누적한다(인터뷰는 생략 — `update`는 맥락 수집이 아니라 동기화가 목적).
@@ -99,7 +99,7 @@ diff에 맞춰 프로젝트 산출물을 갱신한다. **전면 재작성 금지
 
 ### 4-3. 파괴적 변경 (사전 확인)
 
-제거된 스킬로 인해 **에이전트 1개 이상을 통째로 폐기**해야 하거나, AGENTS.md HARD 블록 외의 섹션을 재구조해야 하는 경우 — 적용 전 `AskUserQuestion`으로 1-3줄 요지를 보고하고 승인받는다. 비파괴적 최소 diff는 보고 후 적용한다.
+제거된 스킬로 인해 **에이전트 1개 이상을 통째로 폐기**해야 하거나, AGENTS.md HARD 블록 외의 섹션을 재구조해야 하는 경우 — 적용 전 질문 채널(`AskUserQuestion`)로 1-3줄 요지를 보고하고 승인받는다. 비파괴적 최소 diff는 보고 후 적용한다.
 
 ---
 

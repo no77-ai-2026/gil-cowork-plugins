@@ -2,7 +2,7 @@
 name: sql-query-writer
 description: |
   주요 웨어하우스 방언(BigQuery·Snowflake·PostgreSQL 등)에 맞는 정확하고 성능 좋은 SQL을 작성합니다 트리거: "SQL 짜줘", "이 질문을 쿼리로 바꿔줘", "쿼리 최적화해줘"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-sql-query-writer.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (data/sql-queries+write-query, Apache-2.0)
 ---

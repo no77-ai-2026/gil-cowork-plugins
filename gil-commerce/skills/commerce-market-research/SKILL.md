@@ -2,7 +2,7 @@
 name: commerce-market-research
 description: |
   [책임 경계] 카테고리 시장조사 1장 자동 생성 트리거: "내 카테고리 시장조사 해줘", "경쟁사 동향 알아봐줘", "이 카테고리 진입 검토해줘"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

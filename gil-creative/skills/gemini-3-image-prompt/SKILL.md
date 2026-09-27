@@ -2,11 +2,11 @@
 name: gemini-3-image-prompt
 description: |
   Google Gemini 3 Pro Image (a.k.a 트리거: "Gemini 이미지 프롬프트 만들어줘", "나노바나나 프롬프트", "Nano Banana Pro 프롬프트"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
-Google Gemini 3 Pro Image (a.k.a. Nano Banana Pro) 전용 이미지 프롬프트 빌더. 사용자 자연어 한 줄 + AskUserQuestion 프리셋·미세조정으로 컨텍스트를 수집해 Google AI Developers 공식 가이드의 5-component 구조([Subject+Adj] doing [Action] in [Location]. [Composition]. [Lighting]. [Style]. [Constraint/Text])로 변환합니다. Google AI Studio · Vertex AI · Gemini 앱에 그대로 복붙 가능. 보너스로 GPT-image-2(6-Block) · Midjourney v8.1(키워드+파라미터) 프롬프트도 동시 출력해 모델 간 비교·이식이 가능합니다.
+Google Gemini 3 Pro Image (a.k.a. Nano Banana Pro) 전용 이미지 프롬프트 빌더. 사용자 자연어 한 줄 + 질문 채널(AskUserQuestion) 프리셋·미세조정으로 컨텍스트를 수집해 Google AI Developers 공식 가이드의 5-component 구조([Subject+Adj] doing [Action] in [Location]. [Composition]. [Lighting]. [Style]. [Constraint/Text])로 변환합니다. Google AI Studio · Vertex AI · Gemini 앱에 그대로 복붙 가능. 보너스로 GPT-image-2(6-Block) · Midjourney v8.1(키워드+파라미터) 프롬프트도 동시 출력해 모델 간 비교·이식이 가능합니다.
 
 다음과 같은 요청 시 반드시 이 스킬을 사용하세요:
 - "Gemini 이미지 프롬프트 만들어줘", "나노바나나 프롬프트"
@@ -52,11 +52,11 @@ Gemini 이미지 프롬프트 나노바나나 프롬프트 Nano Banana Pro 프�
 ```
 사용자 자연어 한 줄
     ↓
-[Round 1] AskUserQuestion — 프리셋 선택 (제품샷·인물·일러스트·풍경)
+[Round 1] 질문 채널(AskUserQuestion) — 프리셋 선택 (제품샷·인물·일러스트·풍경)
     ↓
-[Round 2] AskUserQuestion — 프리셋별 미세조정 (3~4 슬롯)
+[Round 2] 질문 채널(AskUserQuestion) — 프리셋별 미세조정 (3~4 슬롯)
     ↓
-[Round 3] AskUserQuestion — 화면비 + 이미지 내 텍스트 유무 + 카메라 하드웨어(선택)
+[Round 3] 질문 채널(AskUserQuestion) — 화면비 + 이미지 내 텍스트 유무 + 카메라 하드웨어(선택)
     ↓
 [내부] 슬롯 → 5-component 매핑
     ↓
@@ -69,7 +69,7 @@ Gemini 이미지 프롬프트 나노바나나 프롬프트 Nano Banana Pro 프�
 
 ### Round 1 — 프리셋 선택 (필수)
 
-`AskUserQuestion`을 호출해 4개 프리셋 중 1개를 선택받습니다.
+질문 채널(`AskUserQuestion`)을 호출해 4개 프리셋 중 1개를 선택받습니다.
 
 | 프리셋 | 적용 케이스 | references |
 |---|---|---|

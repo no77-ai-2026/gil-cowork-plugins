@@ -2,7 +2,7 @@
 name: higgsfield-image
 description: |
   Higgsfield MCP 기반 AI 이미지를 자연어 요청 한 줄로 생성합니다 트리거: "Higgsfield로 이미지 만들어 줘", "Soul 2.0으로 이미지", "Nano Banana Pro로 카드뉴스 이미지"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -107,7 +107,7 @@ Soul Characters 기능으로 캐릭터 reference 학습 → 시리즈 일관성.
 - 청중 (B2B 임원 · 일반 대중 · 디자이너 · 개발자)
 - 톤 (시네마틱 · 미니멀 · 다크 · 따뜻함 · 신뢰감)
 
-부족하면 AskUserQuestion 1라운드.
+부족하면 질문 채널(AskUserQuestion) 1라운드.
 
 ### 2단계 — 모델 자동 선택
 

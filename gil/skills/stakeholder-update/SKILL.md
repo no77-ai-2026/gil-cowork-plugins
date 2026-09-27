@@ -2,7 +2,7 @@
 name: stakeholder-update
 description: |
   이해관계자 업데이트 — 대상·주기에 맞춘 제품 현황 보고를 생성합니다 트리거: "임원용 제품 업데이트 써줘", "주간 스테이크홀더 보고", "론칭 공지 초안"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-stakeholder-update.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (product-management/stakeholder-update, Apache-2.0)
 ---

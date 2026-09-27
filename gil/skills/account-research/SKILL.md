@@ -2,7 +2,7 @@
 name: account-research
 description: |
   기업·인물 영업 리서치 — 웹 검색 기반으로 실행 가능한 영업 인텔을 정리합니다 트리거: "이 회사 조사해줘 영업 관점으로", "미팅 상대 리서치", "어카운트 리서치"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-account-research.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (sales/account-research, Apache-2.0)
 ---

@@ -2,11 +2,11 @@
 name: gpt-image-2-prompt
 description: |
   OpenAI GPT-image-2 모델 전용 이미지 프롬프트 텍스트 빌더 트리거: "GPT 이미지 프롬프트 만들어줘", "ChatGPT 이미지 프롬프트", "GPT-image-2 프롬프트"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
-OpenAI GPT-image-2 모델 전용 이미지 프롬프트 텍스트 빌더. 사용자 자연어 한 줄 + AskUserQuestion 프리셋·미세조정 라운드로 컨텍스트를 수집하고, OpenAI Cookbook 공식 6-Block 구조(Subject·Action·Scene·Composition·Lighting·Style&Text)에 매핑해 ChatGPT·OpenAI API에 복붙 가능한 프롬프트를 출력합니다. 보너스로 같은 입력에 대한 Gemini 3 Pro Image · Midjourney v8.1 프롬프트도 함께 생성해 모델 간 비교·이식이 즉시 가능합니다.
+OpenAI GPT-image-2 모델 전용 이미지 프롬프트 텍스트 빌더. 사용자 자연어 한 줄 + 질문 채널(AskUserQuestion) 프리셋·미세조정 라운드로 컨텍스트를 수집하고, OpenAI Cookbook 공식 6-Block 구조(Subject·Action·Scene·Composition·Lighting·Style&Text)에 매핑해 ChatGPT·OpenAI API에 복붙 가능한 프롬프트를 출력합니다. 보너스로 같은 입력에 대한 Gemini 3 Pro Image · Midjourney v8.1 프롬프트도 함께 생성해 모델 간 비교·이식이 즉시 가능합니다.
 
 다음과 같은 요청 시 반드시 이 스킬을 사용하세요:
 - "GPT 이미지 프롬프트 만들어줘", "ChatGPT 이미지 프롬프트"
@@ -41,11 +41,11 @@ GPT 이미지 프롬프트 ChatGPT 이미지 프롬프트 GPT-image-2 프롬프�
 ```
 사용자 자연어 한 줄
     ↓
-[Round 1] AskUserQuestion — 프리셋 선택 (제품샷·인물·일러스트·풍경)
+[Round 1] 질문 채널(AskUserQuestion) — 프리셋 선택 (제품샷·인물·일러스트·풍경)
     ↓
-[Round 2] AskUserQuestion — 프리셋별 미세조정 (3~4 슬롯)
+[Round 2] 질문 채널(AskUserQuestion) — 프리셋별 미세조정 (3~4 슬롯)
     ↓
-[Round 3] AskUserQuestion — 화면비 + 이미지 내 텍스트 유무
+[Round 3] 질문 채널(AskUserQuestion) — 화면비 + 이미지 내 텍스트 유무
     ↓
 [내부] 슬롯 → 6-Block 매핑 (Subject·Action·Scene·Composition·Lighting·Style&Text)
     ↓
@@ -58,7 +58,7 @@ GPT 이미지 프롬프트 ChatGPT 이미지 프롬프트 GPT-image-2 프롬프�
 
 ### Round 1 — 프리셋 선택 (필수)
 
-`AskUserQuestion`을 호출해 4개 프리셋 중 1개를 선택받습니다.
+질문 채널(`AskUserQuestion`)을 호출해 4개 프리셋 중 1개를 선택받습니다.
 
 | 프리셋 | 적용 케이스 | references |
 |---|---|---|
@@ -71,7 +71,7 @@ GPT 이미지 프롬프트 ChatGPT 이미지 프롬프트 GPT-image-2 프롬프�
 
 ### Round 2 — 프리셋별 미세조정 (3-4 질문)
 
-선택된 프리셋의 `presets/<name>.md`에 정의된 질문 세트를 `AskUserQuestion`으로 순회합니다. 각 질문은 4 옵션 + Other이며, 첫 번째 옵션에 `(권장)` 라벨을 표시합니다.
+선택된 프리셋의 `presets/<name>.md`에 정의된 질문 세트를 질문 채널(`AskUserQuestion`)로 순회합니다. 각 질문은 4 옵션 + Other이며, 첫 번째 옵션에 `(권장)` 라벨을 표시합니다.
 
 **제품샷 예시:**
 1. 제품·소재 (예: 매트 블랙 세라믹 머그, 우드 트레이 + 가죽 노트북 슬리브)

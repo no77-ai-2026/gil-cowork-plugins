@@ -2,7 +2,7 @@
 name: commerce-ltv-cac-architect
 description: |
   [책임 경계] CAC→재구매율→구매주기→ARPU→공헌이익→LTV 6대 지표 연결 모델 + LTV/CAC ratio 진단 + 광고 의존도 진단 + 손익분기 ROAS 자동 계산 + 채… 트리거: "LTV 계산해줘", "CAC vs LTV 진단", "광고 의존도 진단"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

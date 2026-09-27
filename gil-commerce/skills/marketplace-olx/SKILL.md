@@ -2,7 +2,7 @@
 name: marketplace-olx
 description: |
   [한·UZ 듀얼] OLX.uz(UZ 최대 C2C·중고·소상공인 플랫폼) 운영 전담 스킬 트리거: "OLX.uz 등록", "OLX 상품 올려줘", "OLX 비즈니스 계정"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

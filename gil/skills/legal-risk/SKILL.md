@@ -2,7 +2,7 @@
 name: legal-risk
 description: |
   기업 법적 리스크를 분석하고 지적재산권 전략을 수립합니다
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

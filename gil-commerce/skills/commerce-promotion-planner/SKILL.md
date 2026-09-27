@@ -2,7 +2,7 @@
 name: commerce-promotion-planner
 description: |
   [책임 경계] 3대 프로모션 기획법(이슈화·얼리버드·한정) 전담 트리거: "프로모션 기획해줘", "이슈화 캠페인", "얼리버드 프로모션"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

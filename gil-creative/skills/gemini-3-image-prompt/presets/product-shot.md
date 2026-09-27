@@ -4,7 +4,7 @@
 
 ## Round 2 슬롯 정의
 
-`AskUserQuestion` 4 라운드. 각 질문에 4 옵션 + Other.
+질문 채널(`AskUserQuestion`) 4 라운드. 각 질문에 4 옵션 + Other.
 
 ### Q1 — 제품·소재
 

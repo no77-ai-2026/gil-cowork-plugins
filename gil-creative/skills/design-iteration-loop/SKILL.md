@@ -7,7 +7,7 @@ description: |
   Quality, Originality, Completeness, Functionality), stagnation
   detection, and escalation.
 user-invocable: false
-version: "2.4.0"
+version: "2.4.1"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---
@@ -133,7 +133,7 @@ Tracking:
 - Calculate `delta = score[N] - score[N-1]`.
 - If `delta < improvement_threshold` for the last 2 iterations, flag stagnation.
 
-When stagnation is detected, escalate to user via AskUserQuestion with three options:
+When stagnation is detected, escalate to user via question channel(AskUserQuestion) with three options:
 1. Continue with current approach (Evaluator tries a different dimension focus)
 2. Adjust criteria (user provides guidance or relaxes constraints)
 3. Abort loop (accept current output as-is)

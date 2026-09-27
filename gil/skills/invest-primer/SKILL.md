@@ -2,7 +2,7 @@
 name: invest-primer
 description: |
   투자를 처음 시작하는 사람에게 기본 원칙과 자산군, 초보 포트폴리오를 안내하는 스킬입니다
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

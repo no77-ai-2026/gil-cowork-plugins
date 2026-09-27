@@ -2,7 +2,7 @@
 name: detail-page-copy
 description: |
   [책임 경계] 카피 산출 (13섹션 감정여정 JSON + 마크다운 미리보기 트리거: "상세페이지 카피 써줘", "상폐 만들어줘", "이커머스 상세페이지 글 작성해줘"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
@@ -215,7 +215,7 @@ JTBD·페르소나(commerce-jtbd-persona 산출물)와 현재 상세페이지를
 
 ## 필요 입력 정보 (기존 모드)
 
-orchestrator가 사용자에게 다음 정보를 사전 수집합니다 (스킬 호출 전 AskUserQuestion 활용):
+orchestrator가 사용자에게 다음 정보를 사전 수집합니다 (스킬 호출 전 질문 채널(AskUserQuestion) 활용):
 
 | 항목 | 필수 여부 | 예시 |
 |------|----------|------|

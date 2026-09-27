@@ -2,7 +2,7 @@
 name: meeting-facilitator
 description: |
   회의가 산으로 가지 않게 아젠다를 짜고 결론까지 끌고 가는 진행을 도와주는 스킬입니다
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

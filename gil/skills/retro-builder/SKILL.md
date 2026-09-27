@@ -2,7 +2,7 @@
 name: retro-builder
 description: |
   한 주나 한 해를 가볍게 돌아보는 회고를 도와주는 스킬입니다
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

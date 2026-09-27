@@ -2,7 +2,7 @@
 name: commerce-voc-triage
 description: |
   고객의 소리(VOC) 전체를 다루는 엄브렐러 스킬 트리거: "리뷰 모아서 분석해줘", "리뷰 분석해줘", "수백 개 리뷰 정리"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

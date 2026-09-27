@@ -2,7 +2,7 @@
 name: mcp-connector-setup
 description: |
   [책임 경계] Drive·Notion·Higgsfield·OpenAI 4커넥터 인증·환경변수·트러블슈팅 가이드 전담 트리거: "MCP 커넥터 연결", "Drive 인증 방법", "Notion Integration Token 어디서"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

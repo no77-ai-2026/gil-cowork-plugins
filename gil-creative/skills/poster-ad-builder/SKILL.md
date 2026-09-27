@@ -9,7 +9,7 @@ description: |
   - "배너 광고 시안"
   - "reklama afishasi" (광고 포스터, UZ)
   gil-creative:creative-architect 설계를 입력으로 받아 gil-creative:image-bridge로 배경을 렌더하고, 카피 오버레이 레이아웃을 산출합니다. 카드뉴스는 gil-creative:card-news, 상세페이지는 gil-commerce:detail-page-image로 갈라집니다.
-version: "2.4.0"
+version: "2.4.1"
 ---
 
 # 포스터/광고 빌더 (Poster & Ad Builder)

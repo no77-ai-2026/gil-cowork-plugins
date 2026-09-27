@@ -2,7 +2,7 @@
 name: policy-lookup
 description: |
   사내 규정 조회 — 취업규칙·정책 문서를 찾아 쉬운 말로 답합니다 트리거: "연차 규정 알려줘", "재택 정책 어떻게 돼", "경조휴가 며칠이야"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-policy-lookup.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/policy-lookup, Apache-2.0)
 ---

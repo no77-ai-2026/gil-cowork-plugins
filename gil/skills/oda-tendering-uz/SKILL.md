@@ -2,7 +2,7 @@
 name: oda-tendering-uz
 description: |
   ODA·EDCF·국제기구 입찰에 대응합니다
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

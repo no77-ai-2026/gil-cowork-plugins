@@ -1,6 +1,6 @@
 # shadcn/ui 테마 인터뷰 프로토콜 (v1.4.0)
 
-HTML·웹 산출물을 생성하기 전, GIL 오케스트레이터가 **AskUserQuestion** 도구로 shadcn/ui 기반 테마·효과를 사용자에게 물어봅니다. 본 문서는 인터뷰 설계도이자 구현 계약서입니다.
+HTML·웹 산출물을 생성하기 전, GIL 오케스트레이터가 **질문 채널(AskUserQuestion)** 도구로 shadcn/ui 기반 테마·효과를 사용자에게 물어봅니다. 본 문서는 인터뷰 설계도이자 구현 계약서입니다.
 
 > Source of truth: https://ui.shadcn.com/docs/theming · https://ui.shadcn.com/docs/skills
 
@@ -11,7 +11,7 @@ HTML·웹 산출물을 생성하기 전, GIL 오케스트레이터가 **AskUserQ
 - [HARD] HTML/웹 산출물을 생성하는 모든 스킬(`landing-page`, `product-detail`, `data-visualizer`)은 코드 생성 전에 **이 인터뷰를 먼저 실행**한다.
 - [HARD] 사용자가 명시적으로 다른 프레임워크를 지정하지 않는 한 기본 스택은 **shadcn/ui + Tailwind CSS v4 + React/Next.js**다.
 - [HARD] 모든 색상 토큰은 **OKLCH 포맷**으로 `:root` + `.dark` 블록에 출력한다.
-- [HARD] AskUserQuestion 호출 규칙을 따른다:
+- [HARD] 질문 채널(AskUserQuestion) 호출 규칙을 따른다:
   - 질문·헤더·옵션에 이모지 금지
   - 옵션은 2-4개 (최대 4개)
   - 한 번에 최대 4개 질문
@@ -22,7 +22,7 @@ HTML·웹 산출물을 생성하기 전, GIL 오케스트레이터가 **AskUserQ
 
 ## 2. 기본 인터뷰 (4문항 · 1회 호출)
 
-아래는 AskUserQuestion payload의 설계 명세다. 실제 호출 시에는 스킬이 요청받은 페이지 유형(랜딩/상세/대시보드)에 맞춰 `question` 문구를 약간 조정할 수 있다.
+아래는 질문 채널(AskUserQuestion) payload의 설계 명세다. 실제 호출 시에는 스킬이 요청받은 페이지 유형(랜딩/상세/대시보드)에 맞춰 `question` 문구를 약간 조정할 수 있다.
 
 ### Q1. 베이스 팔레트
 

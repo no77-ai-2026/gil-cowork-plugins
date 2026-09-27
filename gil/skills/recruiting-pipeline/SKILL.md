@@ -2,7 +2,7 @@
 name: recruiting-pipeline
 description: |
   채용 파이프라인 추적 — 단계별 후보자 현황·병목·전환율을 관리합니다 트리거: "채용 현황 정리", "후보자 파이프라인", "포지션별 채용 진행률"
-version: "2.4.0"
+version: "2.4.1"
 uz: references/uz-recruiting-pipeline.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/recruiting-pipeline, Apache-2.0)
 ---

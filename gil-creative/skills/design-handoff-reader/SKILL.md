@@ -2,7 +2,7 @@
 name: design-handoff-reader
 description: |
   Claude Code 핸드오프 번들(README + design-tokens.json + components.json + layout-hierarchy.json +… 트리거: "Claude Design 핸드오프 번들 분석", "handoff 번들 요약", "핸드오프 번들 읽어 줘"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 

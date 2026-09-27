@@ -2,7 +2,7 @@
 name: status-reporter
 description: |
   KPI 대시보드와 운영 현황 보고서를 자동으로 생성합니다 트리거: "주간 보고서 작성해줘", "KPI 현황 정리해줘", "월간 성과 보고서 만들어줘"
-version: "2.4.0"
+version: "2.4.1"
 ---
 ## 스킬 개요(상세)
 
