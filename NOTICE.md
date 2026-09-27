@@ -202,3 +202,4 @@ These materials are developed internally by the moai-cowork community. Skills ma
 **Third-Party Components**: governed solely by their own licenses listed above (Apache License 2.0 / MIT / SIL OFL 1.1). The NC-ND license does not modify, restrict, or supersede them; where a conflict arises, the third-party license controls for that component.
 
 - **Wanted Design System (Beta)** — Wanted Lab, Figma Community 공개 자료. GIL 오피스 산출물 기본 디자인 시스템(`design-system-library/systems/wanted.md`)의 토큰 참조 원천(색상 hex는 캡처 실측 근사치). 개인 사적 사용·로컬 전용.
+- **chany-studio/chany-studio** v2.8.1 (MIT) — GIL v2.4.0: 업종 오버레이·게시 전 검수·캠페인 상태·유료 생성 원장 방법론 반영, `gil-creative/mcp-servers/reference-preview/` 소스 무변경 vendor(LICENSE 동봉). 상세는 `gil-creative/NOTICE.md`.

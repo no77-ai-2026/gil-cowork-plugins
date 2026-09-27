@@ -2,7 +2,7 @@
 name: yandex-market
 description: |
   [한·UZ 듀얼] Yandex Market(러시아 최대 이커머스) + UZ Yandex 생태계(Direct 광고·Search) 운영 전담 스킬 트리거: "Yandex Market 등록", "얀덱스 마켓 입점", "Yandex Direct 광고"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

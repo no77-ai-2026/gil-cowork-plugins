@@ -2,7 +2,7 @@
 name: crm-cleanup
 description: |
   CRM 정리 — 방치된 거래·중복 연락처·누락 필드를 스캔하고 승인받아 정리합니다 트리거: "CRM 정리해줘", "고객 명단 중복 정리", "방치된 거래 찾아줘"
-version: "2.2.1"
+version: "2.4.0"
 uz: references/uz-crm-cleanup.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/crm-cleanup+crm-maintenance, Apache-2.0)
 ---

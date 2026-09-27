@@ -2,7 +2,7 @@
 name: market-analyst
 description: |
   시장 규모(TAM/SAM/SOM)·경쟁사 분석·가격 전략을 정리한 시장 분석 보고서를 만들어 드립니다 트리거: "시장 규모 조사해줘", "TAM SAM SOM 산출해줘", "경쟁사 분석해줘"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

@@ -3,7 +3,7 @@ name: social-media
 description: |
   [DEPRECATED v2.3.0] 본 스킬은 gil-creative:sns-content로 흡수되었습니다
 user-invocable: false
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: commerce-channel-message
 description: |
   NCM 프레임워크(Need→Channel→Moment→Message→CTA)로 검색·광고·CRM·앱 푸시 채널별 메시지를 자동 생성하는 단일 채널 메시지 엔진입니다 트리거: "채널별 메시지 만들어줘", "검색광고 카피 15종", "CRM 메시지 뽑아줘"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

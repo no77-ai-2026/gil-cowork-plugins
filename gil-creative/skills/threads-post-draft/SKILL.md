@@ -2,7 +2,7 @@
 name: threads-post-draft
 description: |
   주제를 Threads 게시글 초안으로 작성합니다. 저장된 문체 프로필이 있으면 자동으로 적용합니다. 초안을 사용자에게 보여드리고 승인하면 즉시 Graph API 로 발행합니다 — 큐·예약·상태머신 없이 세션 안에서 직접 발행합니다. 예약·정기 발행은 Claude Cowork 이 담당합니다. 트리거: "이 주제로 Threads 포스트 작성해줘", "Threads에 올릴 글 초안 만들어줘", "이 뉴스를 Threads용으로 요약해줘"
-version: "2.2.1"
+version: "2.4.0"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---

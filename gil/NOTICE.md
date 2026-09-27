@@ -1,6 +1,6 @@
 # GIL Third-Party Notices
 
-> **본 저작물(GIL v2.0.0 번들: gil·gil-creative·gil-commerce)의 라이선스**: Apache License 2.0 ([LICENSE](LICENSE)).
+> **본 저작물(GIL v2.4.0 번들: gil·gil-creative·gil-commerce)의 라이선스**: Apache License 2.0 ([LICENSE](LICENSE)).
 >
 > **모태**: modu-ai/moai-cowork@f1eb954 (Apache-2.0) — GIL v2.0.0의 신규 포팅·동기화 기준. v2.3.0(2026-09-02)에서 @61fac40(v1.2.4), v2.3.1(2026-09-03)에서 @d71addc(v1.2.5, 자격증명 배선)로 재동기화(스킬 25종 품질·안전 층, korean-humanize 1.4.0 계보).
 > 구 모태 modu-ai/cowork-plugins 유래 콘텐츠는 ≤v2.19.0 구간이 MIT([LICENSE.MIT](LICENSE.MIT))이며,
@@ -22,6 +22,7 @@
 - **epoko77-ai/im-not-ai** (MIT) — humanize-korean 기반.
 - **seulee26/axlabs-mckinsey-pptx** (MIT) — pptx-designer 맥킨지 프리셋 방법론.
 - **coreyhaines31/marketingskills** (MIT) — retention 등 마케팅 방법론.
+- **chany-studio/chany-studio** v2.8.1 (MIT) — v2.4.0: 업종 오버레이 11종·게시 검수 4상태/5레인·캠페인 상태 레코드·미디어 작업 원장·창작 품질 루프·이미지 모델 기본값 계약·플랫폼 게시 어댑터·레퍼런스 보드 4레인·환경 프리플라이트 방법론(한국어 재구성) + `reference-preview` MCP 서버 소스 vendor(gil-creative/mcp-servers/reference-preview, LICENSE 동봉).
 
 ---
 
@@ -202,3 +203,5 @@ These materials are developed internally by the moai-cowork community. Skills ma
 **Third-Party Components**: governed solely by their own licenses listed above (Apache License 2.0 / MIT / SIL OFL 1.1). The NC-ND license does not modify, restrict, or supersede them; where a conflict arises, the third-party license controls for that component.
 
 - **Wanted Design System (Beta)** — Wanted Lab, Figma Community 공개 자료. GIL 오피스 산출물 기본 디자인 시스템(`design-system-library/systems/wanted.md`)의 토큰 참조 원천(색상 hex는 캡처 실측 근사치). 개인 사적 사용·로컬 전용.
+
+- **AI 인플루언서 가이드북 원문(인공지능 한이룸, 사용자 구매 자료)** — v2.4.0 `photoreal-prompt-grammar.md`·`candid-moments-kr-uz.md`·`virtual-model-preset.md`는 문법·어휘를 GIL이 자체 재구성한 오리지널이다. 원문 프롬프트는 `references/private/`(로컬 설치본 전용, `.gitignore` 제외)에만 두며 공개 저장소·마켓플레이스에 포함하지 않는다.

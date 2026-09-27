@@ -2,7 +2,7 @@
 name: mfds-safety
 description: |
   식품의약품안전처(MFDS) 공식 OpenAPI를 k-skill-proxy 경유로 조회해 의약품과 식품의 트리거: "타이레놀이랑 판콜 같이 먹어도 돼?", "이 약 부작용 알려줘", "임산부 감기약"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

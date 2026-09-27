@@ -1,8 +1,8 @@
 {
   "name": "gil",
   "displayName": "GIL — 코어 (범용·전문직·오피스·데이터)",
-  "version": "2.3.1",
-  "description": "[한·UZ 듀얼] GIL 코어 번들 — 사업전략·컨설팅·오피스 문서(Word·PPT·Excel·한글·PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 등 148개 스킬 — v2.2.0 신규: PSA 문제 구조화(problem-solving)·검증형 리서치(research-verify) + /project 프로젝트 허브(산출물 등급제 ⚡◐◆·2층 지침·승인형 자가 개선) + 텍스트 QA 3종(ai-slop-reviewer·humanize-korean·korean-spell-check). MCP 6종(dart·korean-law·korean-stats·archhub·kordoc·context7). 한국 표준 + 우즈베키스탄 듀얼 컨텍스트. gil-creative·gil-commerce 애드온의 코어. 모태: modu-ai/moai-cowork(Apache-2.0) 차용·확장.",
+  "version": "2.4.0",
+  "description": "[한·UZ 듀얼] GIL 코어 번들 — 사업전략·컨설팅·오피스 문서(Word·PPT·Excel·한글·PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 등 149개 스킬 — v2.4.0 신규: 로컬 실행 환경 4상태 점검(env-preflight) — v2.2.0 신규: PSA 문제 구조화(problem-solving)·검증형 리서치(research-verify) + /project 프로젝트 허브(산출물 등급제 ⚡◐◆·2층 지침·승인형 자가 개선) + 텍스트 QA 3종(ai-slop-reviewer·humanize-korean·korean-spell-check). MCP 6종(dart·korean-law·korean-stats·archhub·kordoc·context7). 한국 표준 + 우즈베키스탄 듀얼 컨텍스트. gil-creative·gil-commerce 애드온의 코어. 모태: modu-ai/moai-cowork(Apache-2.0) 차용·확장.",
   "author": {
     "name": "gil"
   },
@@ -205,7 +205,10 @@
     "로직트리",
     "가설검증",
     "팩트체크",
-    "problem-solving"
+    "problem-solving",
+    "환경점검",
+    "프리플라이트",
+    "실행환경진단"
   ],
   "license": "Apache-2.0",
   "userConfig": {

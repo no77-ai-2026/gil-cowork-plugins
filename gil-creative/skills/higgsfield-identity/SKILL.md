@@ -2,7 +2,7 @@
 name: higgsfield-identity
 description: |
   Higgsfield MCP에서 재사용 가능한 인물·사물 일관성 참조를 만듭니다. 트리거: "내 얼굴로 Soul 만들어줘", "디지털 트윈 학습시켜줘", "이 캐릭터 계속 똑같이 나오게 해줘"
-version: "2.2.1"
+version: "2.4.0"
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
 
@@ -220,3 +220,23 @@ Element 경로라고 위험이 줄지 않는다. 학습은 없지만 **그 사�
 - [Higgsfield Skills (공식 agent 문서)](https://github.com/higgsfield-ai/skills) — `higgsfield-soul-id` 스킬 v0.12.0 (MIT). 학습 사진 기준·실패 원인은 이 문서 기반.
 - 라이브 MCP 도구 스키마 관측 (`show_characters` / `show_reference_elements`) — Soul/Element 분기 규칙·지원 모델 목록·업로드 제약의 근거. **Evidence tier: 1차.**
 - 공식 CLI 스킬에는 Element 경로와 분기 규칙이 없다. 그 부분은 MCP 스키마 관측이 유일 출처다.
+
+## 브랜드 가상 모델 프리셋 (v2.4.0)
+
+브랜드 전용 **비실존 성인** 가상 모델을 만들고 50장면에서 같은 사람으로 유지하는 규칙은 `references/virtual-model-preset.md`에 있다.
+
+- 외형 시트 고정 속성 12개(얼굴형·눈·눈썹·코·입술·피부·특징점·머리색/길이·기본 헤어·체형·기본 메이크업·시그니처 액세서리). 특징점(점·주근깨) 1개가 일관성 앵커다.
+- 장면 프롬프트의 1번 칸에 시트를 **문자열 그대로** 복사하고, 나머지 7칸만 장면별로 쓴다(8칸 문법: `gil-creative:image-bridge/references/photoreal-prompt-grammar.md`).
+- 기준 컷(정면·3/4·측면) 3장을 먼저 승인받고, 이후 참조는 항상 그 원본 3장이다. 최신 컷을 기준으로 갈아타지 않는다.
+- `identity_authorities[]` 레코드 1개/모델. 비실존이면 `face_use_consent_status: not-applicable`, 실존 인물 사진이 한 장이라도 참고로 들어갔다면 그 인물의 동의 레코드가 필요하고 없으면 blocker(0단계 게이트와 동일).
+- Soul/Element 선택: 1회 캠페인·10컷 이하는 Element, 50장면 이상 반복은 Soul(학습 데이터는 생성 기준 컷). 한 컷 2명은 Element.
+- 수위 스위치(`sensuality_level`)는 시트가 아니라 장면이 갖는다. 기본 0, UZ/CIS·중동 0 고정, 1 이상은 `gil-creative:publication-review` 레인 D 통과 필수.
+
+## 유료 생성 원장·품질 루프 (v2.4.0 HARD)
+
+- **[HARD]** 산출물 1개당 `media_job` 레코드 1개. 배치 5장이면 레코드 5개이며, 필드명과 상태 enum은 `gil-creative:higgsfield-core/references/media-job-ledger.md`를 그대로 따른다.
+- **[HARD]** 산출물당 시도 상한은 기본 2회(초기 1 + 관측 결함 교정 1). 상한을 넘기려면 사용자 승인과 사유가 레코드에 남아야 한다. 규칙은 `gil-creative:higgsfield-core/references/creative-quality-loop.md`.
+- **[HARD]** 미확인 응답(타임아웃·응답 없음)은 재제출하지 않는다. `show_characters(action:'list')`·잡 조회로 실제 생성 여부를 먼저 확인하고, 없음이 확인된 뒤에만 다시 제출한다.
+- **[HARD]** `status: accepted`는 검수(드리프트 5항목·`design-slop-check` 이미지 12항목) 뒤에만 기록한다. 생성 성공은 accepted가 아니다.
+- **[HARD]** Soul 학습은 되돌릴 수 없다. `get_cost` 견적과 승인서(게이트 2)를 표시하고 명시적 응답을 받은 뒤에만 `action:'train'`을 실행한다.
+- 실패 시도는 삭제하지 않고 `attempts[]`에 남긴다. 실패는 학습 증거이지 산출물이 아니다.

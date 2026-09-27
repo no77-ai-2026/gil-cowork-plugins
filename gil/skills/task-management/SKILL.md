@@ -2,7 +2,7 @@
 name: task-management
 description: |
   TASKS.md 단일 파일 기반의 단순 태스크 관리 — 할 일 추가·완료·정리와 HTML 대시보드 뷰를 제공합니다 트리거: "내 할 일 정리해줘", "태스크 추가", "할 일 대시보드 보여줘"
-version: "2.3.1"
+version: "2.4.0"
 uz: references/uz-task-management.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (productivity/task-management+start+update, Apache-2.0)
 ---

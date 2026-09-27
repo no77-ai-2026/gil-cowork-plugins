@@ -2,7 +2,7 @@
 name: legal-response
 description: |
   일반적인 법률 문의에 템플릿 기반 회신을 생성하되, 전문가 검토가 필요한 상황은 자동 에스컬레이션합니다 트리거: "법률 문의 회신 초안", "이 질의에 법무 답변", "내용증명 답변 초안"
-version: "2.3.1"
+version: "2.4.0"
 uz: references/uz-legal-response.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (legal/legal-response, Apache-2.0)
 ---

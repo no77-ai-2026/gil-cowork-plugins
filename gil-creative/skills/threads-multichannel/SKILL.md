@@ -2,7 +2,7 @@
 name: threads-multichannel
 description: |
   하나의 텍스트를 Threads(직접 발행) / Facebook(복붙) / X(복붙, free=스레드 분할·premium=단일) 용으로 각각 포맷합니다. 발행은 하지 않고 포맷만 — Facebook·X 출력은 사용자가 직접 복붙하고, Threads 출력은 승인 시 threads_publish_text 로 즉시 발행합니다. 트리거: "이 글 페이스북/엑스에도 올릴 수 있게 해줘", "X 스레드로 쪼개줘", "트위터용 스레드 만들어줘"
-version: "2.2.1"
+version: "2.4.0"
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
 

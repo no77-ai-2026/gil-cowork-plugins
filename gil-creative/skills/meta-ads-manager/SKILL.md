@@ -2,7 +2,7 @@
 name: meta-ads-manager
 description: |
   페이스북·인스타그램 광고를 자연어로 직접 만들고 켜고 끄고 예산까지 조정해 드립니다 트리거: "메타 광고 만들어줘", "인스타 광고 캠페인 생성해줘", "광고세트 추가해줘"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 
@@ -111,6 +111,16 @@ OAuth 로그인 중 사용자가 등급을 선택합니다. 쓰기·결제 동�
 
 승인 없는 자동 활성화·예산 증액·결제는 어떤 경우에도 수행하지 않습니다.
 
+### 4-1. 쓰기·예산·활성화 승인 3분리 (v2.4.0)
+
+| 승인 | 허가 범위 | 허가하지 않는 것 |
+|---|---|---|
+| `write_approval` | 캠페인·광고세트·광고 생성·수정 (PAUSED) | 예산 변경, 활성화 |
+| `budget_approval` | 일예산·총예산·청구 변경 | 리소스 생성, 활성화 |
+| `activation_approval` | ACTIVE 전환, 지출 시작 | 리소스 생성, 예산 변경 |
+
+**하나의 승인은 다른 둘을 허가하지 않습니다.** 라이브 쓰기 전에는 항상 읽기 전용 확인 → 변경안 표 → 3분리 승인 → 승인 행만 실행 → 읽기 재검증 → 부분 실패 시 재시도 금지의 6단계를 따릅니다. 상세 규칙과 `platform_publication_adapter{...}` 레코드는 [references/platform-publication-adapter.md](references/platform-publication-adapter.md)를 따르며, 이 어댑터는 이름이 명시된 플랫폼·지면을 대상으로 하는 모든 게시 흐름의 필수 입력입니다. 어댑터가 반환하는 `adapter_status`는 최대 `ready_for_review`이고, 최종 릴리스 상태는 `gil-creative:publication-review`에만 속합니다.
+
 ---
 
 ## 5. 트리거 키워드
@@ -150,6 +160,21 @@ meta-ads-manager (생성·운영)
   → gil-creative:meta-ads-analyzer / gil-ads-audit MCP (진단)
   → gil:ai-slop-reviewer (진단 텍스트 검수)
   → gil:humanize-korean (한국어 AI 티 제거)
+```
+
+### 7-1. 최종 게이트: publication-review (v2.4.0)
+
+광고 소재(이미지·영상·문구)를 등록하거나 PAUSED 리소스를 활성화하기 전, 소재의 정확한 버전은 **`gil-creative:publication-review`** 를 통과해야 합니다. 어댑터 레코드의 `next_gate: "gil-creative:publication-review"`가 이 순서를 고정합니다.
+
+- `publication_reviews[].status`가 `reviewed-by-named-owner`이고 `owner_decision: approved-within-scope`인 소재 버전만 `activation_approval`을 요청할 수 있습니다.
+- `ready-for-named-human-review`는 승인이 아닙니다. 이 상태의 소재는 PAUSED로 만들 수는 있어도 켤 수 없습니다.
+- 소재 교체·카피 수정·랜딩 변경은 검수를 무효화하므로, 변경 후에는 다시 `draft-only`에서 시작합니다.
+
+```
+meta-ads-manager (읽기 전용 확인 → 변경안 → PAUSED 생성)
+  → references/platform-publication-adapter.md (요건 3분류·자산 단위 점검)
+  → gil-creative:publication-review (4상태·담당자 결정)   ← 최종 게이트
+  → meta-ads-manager (activation_approval 후 활성화)
 ```
 
 ---

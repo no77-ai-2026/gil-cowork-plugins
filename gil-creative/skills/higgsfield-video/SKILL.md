@@ -2,7 +2,7 @@
 name: higgsfield-video
 description: |
   Higgsfield MCP 기반 AI 영상을 자연어 요청 한 줄로 생성합니다 트리거: "Higgsfield 영상 만들어줘", "Veo 3로 영상", "Sora 2로 영상 만들어"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 
@@ -343,6 +343,18 @@ duration: 6s
 | 영상이 너무 짧음 | duration 미지정 | duration_seconds 명시 |
 | 비용 예상보다 큼 | 비싼 모델 사용 | Kling 2.5 Turbo로 우선 탐색 |
 | 프리셋 효과 안 보임 | model과 호환 안 됨 | 프리셋만 단독 사용 또는 권장 모델 |
+
+## 유료 생성 원장·품질 루프 (v2.4.0 HARD)
+
+영상 유료 생성은 코어 원장·품질 루프를 따른다. 정본: `gil-creative:higgsfield-core/references/media-job-ledger.md`, `gil-creative:higgsfield-core/references/creative-quality-loop.md`.
+
+- **[HARD] 요청 산출물 1개당 `media_job` 레코드 1개.** `media_job_id`·`output_index`는 불변이며 배치 재시도에도 살아남은 항목의 번호를 다시 매기지 않는다.
+- **[HARD] 기본 시도 상한 2회** — 초기 생성 1회 + 결함 1종 교정 1회(수락된 속성은 동결). 확대는 사용자 명시 승인 + 새 견적 체크포인트가 함께 있어야 한다.
+- **[HARD] 미확인 응답은 재제출 금지.** 타임아웃·끊김·과금 불명이면 기존 잡 ID로 `job_status`·이력을 먼저 조회한다. 실패한 인덱스만, 과금 잡이 없음을 증명한 뒤 또는 새 승인 뒤에 재시도하고 수락된 형제는 재생성하지 않는다.
+- **[HARD] `accepted`는 검수 후에만.** 제공자 `completed`는 `retrieved`까지다. technical(길이·치수·fps·코덱·오디오·재생)/creative(승인된 첫 프레임·연속성·identity·개연성·카피 타이밍·메시지 순서) 두 게이트가 모두 `pass`여야 하며 must-pass 실패는 평균 점수로 은폐하지 않는다.
+- **[HARD] 승인 전 표시 항목:** 요청 기본 모델 + 실제 해석 모델, 입력 미디어와 역할, 프롬프트 전문, 조회 확정 옵션과 `adjustments`, 개수, 제공자 보고 비용·잔액(없으면 `unavailable`), 배치 상한. 이 중 하나라도 바뀌면 새 승인 버전이다.
+- 품질 결함·타임아웃은 모델 교체 사유가 아니다. 모델·제공자를 바꾸면 견적·승인·수락 레코드가 무효화되므로 새 프리플라이트를 거친다.
+- 영수증·토큰·임시 핸들은 원장 내부에만 두고 사용자 대면 출력에 노출하지 않는다. 수락 결과는 한 번만 표시한다.
 
 ## 관련 스킬
 

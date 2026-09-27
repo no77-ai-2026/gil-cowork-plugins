@@ -2,7 +2,7 @@
 name: design-slop-check
 description: |
   Claude Design에서 생성된 결과 카피(헤드라인·서브헤드·CTA·feature·푸터)를 AI 슬롭 패턴으로 검수합니다 트리거: "Claude Design 카피 검수", "AI 슬롭 점검", "AI 티 나는 카피 확인"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 
@@ -265,3 +265,28 @@ Tier 2 표현은 **문맥**에 따라 슬롭 여부가 달라집니다. 다음�
 | `gil-creative:design-brief` | 선행: 더 좋은 카피가 나오도록 브리프 정돈 |
 | `gil-creative:campaign-planner` | 보조: 캠페인 카피의 톤·메시지 일관성 검토 |
 | `gil-creative:copywriting` | 대안: Claude Design 외부에서 카피 직접 생성 |
+
+## 이미지 AI 티 체크리스트 (v2.4.0)
+
+카피뿐 아니라 **생성 이미지**(실사 인물·제품·배경)도 같은 스킬로 검수한다. 기준 문법은 `gil-creative:image-bridge/references/photoreal-prompt-grammar.md`(8칸 문법·AI 티 제거 어휘집).
+
+| # | 항목 | 검출 신호 | 교정 어휘 (재생성 프롬프트에 추가) |
+|---|---|---|---|
+| 1 | 플라스틱 피부 | 모공·솜털 없음, 왁스 같은 광택 | `visible pores, fine peach fuzz, subtle imperfections` |
+| 2 | 완벽 대칭 | 얼굴 좌우 거울상, 눈 크기 동일 | `avoid perfect symmetry, natural asymmetry` |
+| 3 | HDR 광택 | 그림자·하이라이트 모두 살아 있는 비현실 계조 | `no HDR, smooth highlight roll-off, exposed slightly under` |
+| 4 | 과선명 | 머리카락 한 올씩 날카로움, 윤곽 헤일로 | `slightly lowered digital sharpness, no over-sharpening, film grain` |
+| 5 | 불가능한 손가락 | 6개 손가락, 융합 관절, 뒤틀린 엄지 | 손을 소품 잡는 동작으로 고정 `hand wrapped around the cup` |
+| 6 | 읽을 수 없는 글자 | 간판·라벨의 깨진 문자 | `no readable text, signage abstract and unreadable` 또는 `authorized_marks` 원본 주입 |
+| 7 | 부유 로고 | 물체 표면과 원근이 맞지 않는 로고 | 로고는 텍스트로 그리지 않고 참조 이미지 재현으로 |
+| 8 | 균일 조명 | 그림자 방향 없음, 소프트박스 티 | `mixed color temperatures, bounce from (surface)` |
+| 9 | 무한 심도 | 전경·배경 모두 선명 | `f/1.8~2.8, shallow depth of field, creamy bokeh` |
+| 10 | 과포화 | 피부 주황·하늘 청록 | `natural saturation, Kodak Portra 400 / Fujifilm Superia 400` |
+| 11 | 복붙 배경 인물 | 같은 얼굴·자세의 행인 반복 | `patrons as soft bokeh silhouettes, no duplicated people` |
+| 12 | 워터마크·서명 | 모서리의 흐릿한 글자·문양 | `no watermark, no signature` (SynthID 등 비가시 워터마크는 제외) |
+
+**판정 방식**
+- 항목당 `pass | minor | critical`. 5(손가락)·6(글자)·7(로고)·12(워터마크)는 발견 즉시 **critical** — 광고 게재 불가.
+- critical 0개 + minor 2개 이하면 accepted 후보. minor 3개 이상이면 교정 1회(코어 `creative-quality-loop.md`의 초기 1 + 교정 1 상한).
+- 교정 프롬프트는 관측된 결함 항목의 교정 어휘만 추가하고, 승인된 포즈·장소·조명은 유지한다.
+- 결과는 `media_job.unresolved_defects[]`에 항목 번호로 기록한다. 실사 인물이면 `sensuality_level`과 성인 표기 유무도 함께 확인한다(문법 §5 HARD).

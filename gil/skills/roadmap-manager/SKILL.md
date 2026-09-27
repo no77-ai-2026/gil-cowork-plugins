@@ -2,7 +2,7 @@
 name: roadmap-manager
 description: |
   프로젝트 로드맵·마일스톤 계획과 전략적 제휴(MOU) 초안, ESG 지속가능성 감사·DEI 전략 문서를 만들어 드립니다 트리거: "로드맵 정리해줘", "마일스톤 계획 세워줘", "MOU 초안 작성해줘"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

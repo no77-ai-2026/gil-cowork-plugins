@@ -2,7 +2,7 @@
 name: validate-data
 description: |
   분석 공유 전 QA — 방법론·정확성·편향을 점검해 이해관계자 보고 전 오류를 걸러냅니다 트리거: "분석 검증해줘", "보고 전 데이터 QA", "이 분석 맞는지 봐줘"
-version: "2.3.1"
+version: "2.4.0"
 uz: references/uz-validate-data.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (data/validate-data, Apache-2.0)
 ---

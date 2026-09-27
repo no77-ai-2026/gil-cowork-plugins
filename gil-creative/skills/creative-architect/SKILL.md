@@ -10,7 +10,7 @@ description: |
   - "우즈벡 시장용 크리에이티브 설계"
   - "reklama kreativ" (광고 크리에이티브, UZ)
   단독으로도 쓰지만 보통 gil-creative:creative-wizard 코디네이터가 호출합니다. 시장 현지화는 gil-creative:market-profile-engine, 자료 흐름은 gil-creative:material-analyzer, 포맷 산출은 gil-commerce:detail-page-copy·gil-creative:card-news·gil-creative:poster-ad-builder·gil-creative:print-creative-builder로 이어집니다. 텍스트 산출은 마지막에 gil:ai-slop-reviewer → gil:humanize-korean으로 종료합니다.
-version: "2.2.1"
+version: "2.4.0"
 ---
 
 # 크리에이티브 아키텍트 (Creative Architect)
@@ -145,11 +145,11 @@ ELSE                                                    → renderMode = "overla
 
 ## 7. 산출 절차 (실행)
 
-1. **입력 수집**: 브리프(product·market·format·tone), 시장 프로필(gil-creative:market-profile-engine), 자료·후기 인사이트(gil-creative:material-analyzer), 벤치마크 흐름.
+1. **입력 수집**: 브리프(product·market·format·tone), 시장 프로필(gil-creative:market-profile-engine), 자료·후기 인사이트(gil-creative:material-analyzer), 벤치마크 흐름. (v2.4.0) 업종 패킷 `industry_direction`(gil-creative:industry-overlay)이 있으면 `message_job`·`proof_objects`·`claim_ledger`·`must_capture`·`directing_rules`·`required_disclosures`·`prohibited_or_high_risk`를 **이름 그대로** 받아 8단계 설계에 반영하고, 레퍼런스 보드(gil-creative:reference-board)의 Visual DNA는 방향 자료로만 쓴다.
 2. **히어로 우선 설계** → 승인 게이트(§3).
 3. **앵커 상속 → 전 섹션 설계**: §1 골격에 §2 방법론 10종 적용, 언어 병렬 카피.
 4. **renderMode 결정**(§6) + 섹션별 이미지 프롬프트(구조 + §4 레이아웃 + 시장 톤 오버레이) 생성.
-5. **CreativeSpec(.md + JSON)** 출력.
+5. **CreativeSpec(.md + JSON)** 출력. (v2.4.0) 캠페인 상태 레코드(gil-creative:creative-wizard `references/campaign-state.md`)의 `creative_direction.version_id`·`copy_lock`·`claim_ledger` 참조를 함께 기록해, 오퍼·카피·방향이 바뀌면 의존 산출물만 무효화되게 한다. 실사 인물 이미지 프롬프트는 `gil-creative:image-bridge/references/photoreal-prompt-grammar.md`의 8칸 문법·`sensuality_level`(기본 0)을 따른다.
 6. **자가검증 체크리스트**(아래) 전수 통과 확인.
 7. 포맷 빌더로 핸드오프. 텍스트 산출은 **gil:ai-slop-reviewer → gil:korean-spell-check(한국어·민감도 public 시) → gil:humanize-korean(마지막, Phase 6 최종 검수)** 로 종료.
 
@@ -172,6 +172,8 @@ ELSE                                                    → renderMode = "overla
 | 단계 | 연동 스킬 | 방향 |
 |---|---|---|
 | 시장 현지화 오버레이 | `gil-creative:market-profile-engine` | ← 입력 |
+| 업종 오버레이 (v2.4.0) | `gil-creative:industry-overlay` — `industry_direction` 패킷 | ← 입력 |
+| 레퍼런스 보드 (v2.4.0, 선택) | `gil-creative:reference-board` — Visual DNA(방향 자료만) | ← 입력 |
 | 자료·벤치마크 흐름 | `gil-creative:material-analyzer` | ← 입력 |
 | 후기 인사이트 | `gil-commerce:commerce-voc-triage` | ← 입력(material-analyzer 경유) |
 | 디자인 토큰·브랜드킷 | `gil-creative:design-system-prep` | ← 참조 |
@@ -180,6 +182,7 @@ ELSE                                                    → renderMode = "overla
 | 포스터/인쇄 산출 | `gil-creative:poster-ad-builder`·`gil-creative:print-creative-builder` | → 핸드오프 |
 | 이미지 프롬프트 실행 | `gil-creative:image-bridge` (+ `gil-creative:gpt-image-2-prompt`·`gil-creative:gemini-3-image-prompt`) | → 핸드오프 |
 | 규제 점검 | `gil-commerce:commerce-marketing-compliance-kr` | → QA |
+| 게시 전 검수 (v2.4.0) | `gil-creative:publication-review` — 게시 목적 산출물, 4상태 기록 | → QA |
 | 텍스트 마감 | `gil:ai-slop-reviewer` → `gil:korean-spell-check`(민감도 public 시) → `gil:humanize-korean`(마지막, Phase 6 최종 검수) | → QA |
 
 > 상세 UZ/CIS 현지화 규칙은 `references/uz-creative-architect.md` 참조.

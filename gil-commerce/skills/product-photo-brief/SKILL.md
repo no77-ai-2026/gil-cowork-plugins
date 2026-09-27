@@ -2,7 +2,7 @@
 name: product-photo-brief
 description: |
   사용자가 제공한 상품 사진을 분석하여 ProductDNA를 추출하고, 13섹션 상세페이지에 부족한 컷을 식별, 트리거: "상품 사진 분석해줘", "촬영 브리프 만들어줘", "부족한 컷 알려줘"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

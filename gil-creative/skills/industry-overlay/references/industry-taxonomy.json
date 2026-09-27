@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "providers": [
+    "Pinterest"
+  ],
+  "queryPolicy": {
+    "defaultReferenceCount": 6,
+    "maxTaxonomyDepth": 2,
+    "maxSubjectCategories": 2,
+    "maxDiscoveryCallsPerLane": 6,
+    "maxConsecutiveNoProgressCalls": 2,
+    "combinedDefaultReferenceCount": 10,
+    "order": [
+      "l1",
+      "l2"
+    ],
+    "l2Rule": "Use one direct subtype only. If uncertain, stay within L1; equivalent wording and pagination may retry automatically within the discovery budget.",
+    "unlistedDirectSubtypeRule": "A user-named subject may be normalized into one direct subtype using the branch medium; do not add another noun or qualifier.",
+    "prohibitedModifiers": [
+      "color",
+      "palette",
+      "background",
+      "prop",
+      "season",
+      "environment",
+      "lighting",
+      "shadow",
+      "camera",
+      "lens",
+      "angle",
+      "aperture",
+      "mood",
+      "aesthetic",
+      "aspect ratio",
+      "platform",
+      "poster",
+      "banner",
+      "layout",
+      "quality adjective",
+      "brand",
+      "campaign",
+      "creator",
+      "agency",
+      "location"
+    ]
+  },
+  "domains": [
+    {
+      "id": "general-product",
+      "industrySkill": null,
+      "branches": [
+        {
+          "l1": "Cosmetic Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Serum Photography",
+            "Skincare Photography",
+            "Blush Photography",
+            "Lipstick Photography"
+          ],
+          "uzExamples": [
+            "Skincare Photography",
+            "Lipstick Photography"
+          ]
+        },
+        {
+          "l1": "Product Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Jewelry Photography",
+            "Watch Photography",
+            "Headphone Photography"
+          ],
+          "uzExamples": [
+            "Jewelry Photography",
+            "Textile Product Photography"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fashion",
+      "industrySkill": null,
+      "productionSkill": "gil-creative:higgsfield-identity",
+      "branches": [
+        {
+          "l1": "Fashion Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Editorial Fashion Photography",
+            "Lookbook Photography"
+          ],
+          "uzExamples": [
+            "Lookbook Photography",
+            "Modest Fashion Photography"
+          ]
+        },
+        {
+          "l1": "Fashion Accessories Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Footwear Photography",
+            "Handbag Photography"
+          ],
+          "uzExamples": [
+            "Footwear Photography",
+            "Handbag Photography"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "professional-services",
+      "industrySkill": "gil-creative:industry-overlay#professional-services",
+      "branches": [
+        {
+          "l1": "Professional Services Branding",
+          "medium": "Branding",
+          "l2Examples": [
+            "Law Firm Branding",
+            "Accounting Firm Branding",
+            "Consulting Firm Branding",
+            "Architecture Firm Branding"
+          ],
+          "uzExamples": [
+            "Law Firm Branding",
+            "Accounting Firm Branding",
+            "Consulting Firm Branding"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "industrySkill": "gil-creative:industry-overlay#education",
+      "branches": [
+        {
+          "l1": "Education Campaign Design",
+          "medium": "Campaign Design",
+          "l2Examples": [
+            "University Campaign Design",
+            "Academy Campaign Design",
+            "Online Course Campaign Design",
+            "Education Technology Campaign Design",
+            "Language School Campaign Design"
+          ],
+          "uzExamples": [
+            "Language School Campaign Design",
+            "University Campaign Design",
+            "Online Course Campaign Design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "healthcare",
+      "industrySkill": "gil-creative:industry-overlay#healthcare",
+      "branches": [
+        {
+          "l1": "Healthcare Advertising Design",
+          "medium": "Advertising Design",
+          "l2Examples": [
+            "Hospital Advertising Design",
+            "Clinic Advertising Design",
+            "Dental Advertising Design",
+            "Wellness Advertising Design"
+          ],
+          "uzExamples": [
+            "Clinic Advertising Design",
+            "Dental Advertising Design",
+            "Pharmacy Advertising Design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food-dining",
+      "industrySkill": "gil-creative:industry-overlay#food-dining",
+      "branches": [
+        {
+          "l1": "Food Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Restaurant Photography",
+            "Menu Photography",
+            "Dessert Photography",
+            "Hotdog Photography",
+            "Burger Photography",
+            "Bakery Photography"
+          ],
+          "uzExamples": [
+            "Plov Photography",
+            "Bakery Photography",
+            "Restaurant Photography"
+          ]
+        },
+        {
+          "l1": "Beverage Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Cafe Photography",
+            "Coffee Photography",
+            "Cocktail Photography",
+            "Tea Photography"
+          ],
+          "uzExamples": [
+            "Tea Photography",
+            "Cafe Photography"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hospitality-travel",
+      "industrySkill": "gil-creative:industry-overlay#hospitality-travel",
+      "branches": [
+        {
+          "l1": "Hospitality Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Hotel Photography",
+            "Resort Photography",
+            "Guest Room Photography",
+            "Hotel Amenity Photography"
+          ],
+          "uzExamples": [
+            "Hotel Photography",
+            "Guest Room Photography",
+            "Guesthouse Photography"
+          ]
+        },
+        {
+          "l1": "Travel Campaign Design",
+          "medium": "Campaign Design",
+          "l2Examples": [
+            "Destination Campaign Design",
+            "Tourism Campaign Design",
+            "Travel Experience Campaign Design"
+          ],
+          "uzExamples": [
+            "Silk Road Tourism Campaign Design",
+            "Destination Campaign Design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "space-real-estate",
+      "industrySkill": "gil-creative:industry-overlay#space-real-estate",
+      "branches": [
+        {
+          "l1": "Architecture Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Interior Photography",
+            "Exterior Photography",
+            "Residential Architecture Photography",
+            "Commercial Architecture Photography"
+          ],
+          "uzExamples": [
+            "Interior Photography",
+            "Residential Architecture Photography"
+          ]
+        },
+        {
+          "l1": "Real Estate Marketing Design",
+          "medium": "Marketing Design",
+          "l2Examples": [
+            "Residential Real Estate Marketing Design",
+            "Commercial Real Estate Marketing Design",
+            "Property Listing Marketing Design"
+          ],
+          "uzExamples": [
+            "New Development Marketing Design",
+            "Property Listing Marketing Design",
+            "Commercial Real Estate Marketing Design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital-product",
+      "industrySkill": "gil-creative:industry-overlay#digital-product",
+      "branches": [
+        {
+          "l1": "Digital Product Marketing Design",
+          "medium": "Marketing Design",
+          "l2Examples": [
+            "Consumer App Marketing Design",
+            "Marketplace Marketing Design",
+            "B2B SaaS Marketing Design",
+            "Fintech App Marketing Design"
+          ],
+          "uzExamples": [
+            "Fintech App Marketing Design",
+            "Marketplace Marketing Design",
+            "Telegram Bot Marketing Design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "live-culture-events",
+      "industrySkill": "gil-creative:industry-overlay#live-culture-events",
+      "branches": [
+        {
+          "l1": "Event Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Concert Photography",
+            "Festival Photography",
+            "Conference Photography"
+          ],
+          "uzExamples": [
+            "Festival Photography",
+            "Conference Photography"
+          ]
+        },
+        {
+          "l1": "Cultural Campaign Design",
+          "medium": "Campaign Design",
+          "l2Examples": [
+            "Exhibition Campaign Design",
+            "Museum Campaign Design",
+            "Performing Arts Campaign Design",
+            "Local Festival Campaign Design"
+          ],
+          "uzExamples": [
+            "Local Festival Campaign Design",
+            "Museum Campaign Design",
+            "Performing Arts Campaign Design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "automotive",
+      "industrySkill": "gil-creative:industry-overlay#automotive",
+      "branches": [
+        {
+          "l1": "Automotive Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Car Photography",
+            "Electric Vehicle Photography",
+            "Motorcycle Photography",
+            "Commercial Vehicle Photography"
+          ],
+          "uzExamples": [
+            "Car Photography",
+            "Electric Vehicle Photography",
+            "Commercial Vehicle Photography"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consumer-tech",
+      "industrySkill": "gil-creative:industry-overlay#consumer-tech",
+      "branches": [
+        {
+          "l1": "Consumer Electronics Photography",
+          "medium": "Photography",
+          "l2Examples": [
+            "Smartphone Photography",
+            "Laptop Photography",
+            "Audio Product Photography",
+            "Wearable Technology Photography",
+            "Smart Home Product Photography"
+          ],
+          "uzExamples": [
+            "Smartphone Photography",
+            "Home Appliance Photography",
+            "Laptop Photography"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "corporate-employer",
+      "industrySkill": "gil-creative:industry-overlay#corporate-employer",
+      "branches": [
+        {
+          "l1": "Corporate Branding",
+          "medium": "Branding",
+          "l2Examples": [
+            "Employer Branding",
+            "Recruitment Campaign Design",
+            "Corporate Report Design",
+            "Corporate Culture Campaign Design"
+          ],
+          "uzExamples": [
+            "Recruitment Campaign Design",
+            "Employer Branding",
+            "Corporate Report Design"
+          ]
+        }
+      ]
+    }
+  ]
+}

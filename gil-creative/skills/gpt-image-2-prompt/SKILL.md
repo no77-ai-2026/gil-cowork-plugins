@@ -2,7 +2,7 @@
 name: gpt-image-2-prompt
 description: |
   OpenAI GPT-image-2 모델 전용 이미지 프롬프트 텍스트 빌더 트리거: "GPT 이미지 프롬프트 만들어줘", "ChatGPT 이미지 프롬프트", "GPT-image-2 프롬프트"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 
@@ -228,3 +228,18 @@ Constraints: <no extra objects, no redesign, no logo drift, no watermark>
 - [Atlabs AI — The Ultimate GPT Image 2 Prompting Guide (2026)](https://www.atlabs.ai/blog/the-ultimate-gpt-image-2-prompting-guide-how-to-use-openai%E2%80%99s-best-image-model-2026)
 
 위 출처를 기반으로 6-Block 구조, quality/size 권장값, 편집 2열 로직, 텍스트 verbatim 규칙을 도출했습니다.
+
+## 실사 인물 프롬프트 문법 (v2.4.0)
+
+실사 인물(AI 인플루언서·브랜드 가상 모델·라이프스타일 컷) 요청이 들어오면 이 스킬의 기본 구조 위에 **8칸 문법**을 얹는다. 인물 프리셋의 슬롯 질문은 그대로 쓰되, 내부 변환 단계에서 8칸(인물 → 포즈 → 표정 → 의상 → 장소/환경 → 조명 → 카메라 → 필름 에뮬레이션 + 부정 제약)을 모두 채운 뒤 이 스킬의 출력 형식으로 접는다.
+
+- 문법·AI 티 제거 어휘집(28개)·필름 표·로고 규칙: `gil-creative:image-bridge/references/photoreal-prompt-grammar.md`
+- 표정에 원인을 주는 찰나 장치 30개(한국 15·UZ 15): `gil-creative:image-bridge/references/candid-moments-kr-uz.md`
+- 브랜드 가상 모델 외형 시트·일관성: `gil-creative:higgsfield-identity/references/virtual-model-preset.md`
+- GPT-image-2에는 8칸을 **한 단락으로 이어 쓰되 순서는 유지**한다. 6-Block ↔ 8칸 대응표는 문법 §4.
+- 한 프롬프트에 AI 티 제거 어휘는 6~10개, 찰나 장치는 1개만.
+
+**HARD 3줄**
+- 수위 스위치 `sensuality_level` 기본 0. 시장 프로필이 UZ/CIS·중동이면 0 고정. 1 이상은 `gil-creative:publication-review` 레인 D 통과 전 draft-only.
+- 모든 수위에서 성인만: 프롬프트에 `adult` 또는 `in her/his 20s~50s` 필수. 교복·학생·소녀 등 미성년 암시 금지어 검출 시 blocker.
+- 실존 인물 초상 금지: `identity_authorities[]`에 `face_use_consent_status: confirmed` 동의 레코드가 없는 실제 얼굴은 참조·학습·이름 언급 모두 하지 않는다.

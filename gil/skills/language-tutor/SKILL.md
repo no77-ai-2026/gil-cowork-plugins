@@ -2,7 +2,7 @@
 name: language-tutor
 description: |
   [한·UZ 듀얼] 범용 어학 튜터 엔진 트리거: "러시아어 비즈니스 회화 가르쳐줘", "우즈벡어 레벨 진단", "CIS 영어 배우고 싶어"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

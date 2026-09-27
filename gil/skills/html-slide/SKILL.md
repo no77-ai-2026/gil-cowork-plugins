@@ -2,7 +2,7 @@
 name: html-slide
 description: |
   발표용 슬라이드 덱을 브라우저에서 바로 열리는 단일 파일·자체 완결형(self-contained) HTML로 만들어 드립니다 트리거: "발표 슬라이드 HTML로 만들어줘", "키노트 덱 단일 HTML 파일로 렌더해줘", "사업계획서 슬라이드 10장, 브라우저에서 바로 열리게"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 
@@ -44,7 +44,7 @@ PDF 배포본이 필요하면 브라우저 `?print-pdf` 인쇄 모드를 쓰거�
 | 인자 | 필수 | 기본값 | 설명 |
 |------|------|--------|------|
 | `topic` / 자연어 주제 | ✓ | — | 덱 주제·대상 청중·발표 목적 |
-| `design_system` | — | `claude` | `claude` \| `clickhouse` \| `clay` 또는 [`design-system-library`](../design-system-library/SKILL.md)의 75개 시스템. 지정 시 Tailwind Play CDN + shadcn vanilla 컴포넌트로 해당 브랜드 토큰 적용. 각 토큰별 getdesign.md 미리보기 링크는 [`references/design-system-links.md`](references/design-system-links.md) |
+| `design_system` | — | `claude` | `claude` \| `clickhouse` \| `clay` 또는 `gil-creative:design-system-library`(gil-creative 설치 시)의 75개 시스템. 지정 시 Tailwind Play CDN + shadcn vanilla 컴포넌트로 해당 브랜드 토큰 적용. 각 토큰별 getdesign.md 미리보기 링크는 [`references/design-system-links.md`](references/design-system-links.md) |
 | `slide_count` / 발표 시간 | — | 주제에서 추천 | 3분=5-7장 · 10분=10-15장 · 30분=20-30장 |
 | `aspect_ratio` | — | `16:9` | `16:9`(프로젝터 표준) \| `1:1`(소셜/카드뉴스) |
 | `locale` | — | `ko` | `ko` \| `en` — 헤드라인·카피 언어 |
@@ -167,7 +167,7 @@ design_system 지정 시 `systems/<name>.md` 토큰 → Tailwind Play CDN config
 
 ## 디자인 시스템 적용 (`design_system` 파라미터)
 
-`design_system` 입력으로 [`gil-creative:design-system-library`](../design-system-library/SKILL.md)에서 브랜드 토큰을 로드해 **Tailwind Play CDN + shadcn vanilla 컴포넌트**로 렌더합니다. html-report와 동일한 두 렌더 엔진을 제공합니다.
+`design_system` 입력으로 `gil-creative:design-system-library`(gil-creative 설치 시)에서 브랜드 토큰을 로드해 **Tailwind Play CDN + shadcn vanilla 컴포넌트**로 렌더합니다. html-report와 동일한 두 렌더 엔진을 제공합니다.
 
 | `design_system` | 엔진 | 외부 의존 | 산출물 특성 |
 |-----------------|------|-----------|-------------|
@@ -266,10 +266,10 @@ AI 슬라이드 스킬 스타트업 사업계획서 10장 슬라이드로 만들
 - [`samples/deck-sample.html`](samples/deck-sample.html) — 완성 단일 파일 HTML 덱 (design_system: claude 적용)
 
 ### 이웃 스킬 (체이닝)
-- [`gil-creative:design-system-library`](../design-system-library/SKILL.md) — 75개 브랜드 토큰 SSOT
+- `gil-creative:design-system-library`(gil-creative 설치 시) — 75개 브랜드 토큰 SSOT
 - [`gil:pptx-designer`](../pptx-designer/SKILL.md) — 편집 가능 .pptx 생성 (체이닝)
-- [`gil-creative:higgsfield-image`](../higgsfield-image/SKILL.md) — Higgsfield MCP 이미지 (기본 백엔드)
-- [`gil-creative:gpt-image-2-prompt`](../gpt-image-2-prompt/SKILL.md) — 한국어 verbatim 이미지 프롬프트 빌더
+- `gil-creative:higgsfield-image`(gil-creative 설치 시) — Higgsfield MCP 이미지 (기본 백엔드)
+- `gil-creative:gpt-image-2-prompt`(gil-creative 설치 시) — 한국어 verbatim 이미지 프롬프트 빌더
 - [`gil:ai-slop-reviewer`](../../../gil/skills/ai-slop-reviewer/SKILL.md) → [`gil:humanize-korean`](../humanize-korean/SKILL.md) — 의무 후처리 체인
 
 ## 자체 검수

@@ -2,7 +2,7 @@
 name: call-list
 description: |
   오늘 전화할 톱5 리드 선정 — 이력 기반 통화 포인트와 후속 메시지 초안까지 준비합니다 트리거: "오늘 전화 리스트", "콜리스트 뽑아줘", "누구한테 먼저 전화하지"
-version: "2.2.1"
+version: "2.4.0"
 uz: references/uz-call-list.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/call-list, Apache-2.0)
 ---

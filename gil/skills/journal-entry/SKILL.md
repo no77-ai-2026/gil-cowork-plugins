@@ -2,7 +2,7 @@
 name: journal-entry
 description: |
   분개 준비 — 차변·대변과 증빙을 갖춘 월 마감 분개(미지급·선급·급여 발생액 등)를 작성합니다 트리거: "분개 만들어줘", "월말 발생액 분개", "미지급 비용 분개 준비"
-version: "2.3.1"
+version: "2.4.0"
 uz: references/uz-journal-entry.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (finance/journal-entry+journal-entry-prep, Apache-2.0)
 ---

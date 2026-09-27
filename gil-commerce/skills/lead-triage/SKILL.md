@@ -2,7 +2,7 @@
 name: lead-triage
 description: |
   리드 분류 — 신규 문의·리드를 구매 가능성 기준으로 분류하고 후속 조치를 배정합니다 트리거: "리드 정리해줘", "문의 온 것 분류", "어떤 고객부터 연락할까"
-version: "2.2.1"
+version: "2.4.0"
 uz: references/uz-lead-triage.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/lead-triage, Apache-2.0)
 ---

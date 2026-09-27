@@ -2,7 +2,7 @@
 name: sprint-planning
 description: |
   스프린트 플래닝 — 범위 산정·캐파 추정·목표 설정·스프린트 플랜 초안을 만듭니다 트리거: "스프린트 계획 짜줘", "백로그 사이징", "이번 스프린트 목표"
-version: "2.3.1"
+version: "2.4.0"
 uz: references/uz-sprint-planning.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (product-management/sprint-planning, Apache-2.0)
 ---

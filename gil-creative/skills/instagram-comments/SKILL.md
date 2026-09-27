@@ -2,7 +2,7 @@
 name: instagram-comments
 description: |
   Instagram 미디어의 댓글을 관리합니다 — 목록 조회, 답글 작성, 댓글 숨김. `manage_comments` 권한이 부여된 경우에만 동작합니다. 발행된 게시물의 댓글 모더레이션(응대/정리) 에 사용합니다. 트리거: "인스타 게시물 댓글 확인해줘", "이 댓글에 답글 달아줘", "스팸 댓글 숨겨줘"
-version: "2.2.1"
+version: "2.4.0"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---

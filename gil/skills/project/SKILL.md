@@ -3,7 +3,7 @@ name: project
 description: |
   GIL 번들 패밀리(gil·gil-creative·gil-commerce)의 **프로젝트 초기화 단일 진입점**. `/project 자연어-지시`로 진입하는 Cowork 슈퍼 오케스트레이터다. 소크라테스 인터뷰로 맥락을 파악하고, 설치된 번들 인벤토리를 스캔한 뒤, 프로젝트 전용 커스텀 에이전트와 스킬 체인을 설계해 AGENTS.md(정본, ≤100라인)와 CLAUDE.md(@AGENTS.md 포인터)·.claude/agents/·.gil/ 스캐폴드를 생성한다. 이후 사용 신호를 감지하면 승인형 자가 개선을 수행한다.
   트리거: "/project ...", "/project update", "/project evolve", "/project doctor", "새 프로젝트 시작", "AGENTS.md 만들어줘", "CLAUDE.md 만들어줘", "프로젝트 설정 도와줘", "이어서 진행"·"설치 완료"(재개), "지침 업데이트해줘"·"플러그인 업데이트됐어"(동기화), 비개발 자연어 요청의 번들 라우팅. 이름·회사 같은 글로벌 프로필은 재질문하지 않는다.
-version: "2.3.1"
+version: "2.4.0"
 origin: "modu-ai/moai-cowork@f1eb954 (gil project 1.3.0, Apache-2.0) — GIL 등급제·2층 지침·승인형 자가 개선으로 재설계"
 ---
 

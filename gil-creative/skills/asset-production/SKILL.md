@@ -3,7 +3,7 @@ name: asset-production
 description: |
   (구명칭 호환 스텁) 콘텐츠 캘린더는 `gil-creative:content-calendar`, 유튜브·팟캐스트 기획은 `gil-creative:youtube-podcast-planner`로 분리됨. 직접 호출하지 않는다.
 user-invocable: false
-version: "2.2.1"
+version: "2.4.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

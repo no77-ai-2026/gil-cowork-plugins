@@ -2,7 +2,7 @@
 name: gemini-3-image-prompt
 description: |
   Google Gemini 3 Pro Image (a.k.a 트리거: "Gemini 이미지 프롬프트 만들어줘", "나노바나나 프롬프트", "Nano Banana Pro 프롬프트"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 
@@ -226,3 +226,18 @@ Component 5 — [Specific Constraint/Text]
 - [Medium — Testing Gemini 3 Pro Image](https://medium.com/google-cloud/testing-gemini-3-pro-image-f585236ae411)
 
 위 출처를 기반으로 5-component 구조, Thinking/Fast 모드 권장, aspect_ratio 범위, 14 reference images, SynthID 정책, 65K/32K 토큰 제한, Search Grounding 활용을 도출했습니다.
+
+## 실사 인물 프롬프트 문법 (v2.4.0)
+
+실사 인물(AI 인플루언서·브랜드 가상 모델·라이프스타일 컷) 요청이 들어오면 이 스킬의 기본 구조 위에 **8칸 문법**을 얹는다. 인물 프리셋의 슬롯 질문은 그대로 쓰되, 내부 변환 단계에서 8칸(인물 → 포즈 → 표정 → 의상 → 장소/환경 → 조명 → 카메라 → 필름 에뮬레이션 + 부정 제약)을 모두 채운 뒤 이 스킬의 출력 형식으로 접는다.
+
+- 문법·AI 티 제거 어휘집(28개)·필름 표·로고 규칙: `gil-creative:image-bridge/references/photoreal-prompt-grammar.md`
+- 표정에 원인을 주는 찰나 장치 30개(한국 15·UZ 15): `gil-creative:image-bridge/references/candid-moments-kr-uz.md`
+- 브랜드 가상 모델 외형 시트·일관성: `gil-creative:higgsfield-identity/references/virtual-model-preset.md`
+- Gemini 5-component로 접을 때는 `[인물+의상] [포즈+표정] in [장소]. [카메라]. [조명]. [필름 + 부정 제약].` 순서. 참조 이미지 첫 슬롯은 가상 모델 기준 컷, 둘째는 `authorized_marks` 원본. SynthID는 제거 대상이 아니다(문법 §4.1).
+- 한 프롬프트에 AI 티 제거 어휘는 6~10개, 찰나 장치는 1개만.
+
+**HARD 3줄**
+- 수위 스위치 `sensuality_level` 기본 0. 시장 프로필이 UZ/CIS·중동이면 0 고정. 1 이상은 `gil-creative:publication-review` 레인 D 통과 전 draft-only.
+- 모든 수위에서 성인만: 프롬프트에 `adult` 또는 `in her/his 20s~50s` 필수. 교복·학생·소녀 등 미성년 암시 금지어 검출 시 blocker.
+- 실존 인물 초상 금지: `identity_authorities[]`에 `face_use_consent_status: confirmed` 동의 레코드가 없는 실제 얼굴은 참조·학습·이름 언급 모두 하지 않는다.

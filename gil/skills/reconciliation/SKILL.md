@@ -2,7 +2,7 @@
 name: reconciliation
 description: |
   계정 조정 — 총계정원장을 보조원장·은행 명세·외부 데이터와 대사해 차이를 식별·해소합니다 트리거: "은행 계정 조정해줘", "원장 대사", "이 차이 어디서 났는지 찾아줘"
-version: "2.3.1"
+version: "2.4.0"
 uz: references/uz-reconciliation.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (finance/reconciliation, Apache-2.0)
 ---

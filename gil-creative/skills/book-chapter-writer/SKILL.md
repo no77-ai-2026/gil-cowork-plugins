@@ -2,7 +2,7 @@
 name: book-chapter-writer
 description: |
   [한·UZ 듀얼] 도서 본문 챕터 초고 집필 트리거: "챕터 본문 작성", "꼭지 집필", "원고 작성"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

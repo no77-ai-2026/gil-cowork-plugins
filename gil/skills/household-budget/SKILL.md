@@ -2,7 +2,7 @@
 name: household-budget
 description: |
   월급 관리와 가계부, 예산 배분, 소비 회고를 도와주는 스킬입니다
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: feedback-loop
 description: |
   피드백을 건설적으로 주고, 받은 피드백을 감정 상하지 않게 소화하도록 도와주는 스킬입니다
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

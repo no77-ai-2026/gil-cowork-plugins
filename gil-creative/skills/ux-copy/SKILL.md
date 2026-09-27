@@ -2,7 +2,7 @@
 name: ux-copy
 description: |
   UX 카피 — 마이크로카피·에러 메시지·빈 상태·CTA 문구를 쓰고 검수합니다 트리거: "이 버튼 문구 뭐라고 하지", "에러 메시지 써줘", "UX 카피 검수"
-version: "2.2.1"
+version: "2.4.0"
 uz: references/uz-ux-copy.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (design/ux-copy, Apache-2.0)
 ---

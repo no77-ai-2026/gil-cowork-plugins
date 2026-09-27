@@ -2,7 +2,7 @@
 name: people-report
 description: |
   인사 리포트 — 헤드카운트·이직률·조직 건강 지표 보고서를 생성합니다 트리거: "헤드카운트 리포트", "이직률 분석해줘", "조직 현황 보고서"
-version: "2.3.1"
+version: "2.4.0"
 uz: references/uz-people-report.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/people-report, Apache-2.0)
 ---

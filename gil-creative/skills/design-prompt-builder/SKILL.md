@@ -2,7 +2,7 @@
 name: design-prompt-builder
 description: |
   Claude Design용 시니어 UX 프롬프트를 10가지 전문 패턴(정보 구조·디자인 시스템·카피·온보딩·접근성·대시보드·폼·테스트·휴리스틱·리서치) 중 적합한 것… 트리거: "Claude Design 시니어 프롬프트", "UX 패턴 프롬프트", "정보 구조 프롬프트 만들어 줘"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

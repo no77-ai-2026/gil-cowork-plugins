@@ -2,7 +2,7 @@
 name: report-speak
 description: |
   상사에게 보고하거나 누군가에게 무언가를 설명할 때 결론부터 명확하게 전달하도록 도와주는 스킬입니다
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

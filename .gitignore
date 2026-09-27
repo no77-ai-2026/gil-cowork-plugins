@@ -1,5 +1,9 @@
+# GIL v2.4.0 — 공개 저장소 제외 목록
+# 사용자 구매 자료 원문(로컬 설치본 전용). 공개 푸시·마켓플레이스 배포에 포함 금지.
+**/references/private/
 __pycache__/
 *.pyc
+.venv/
 .pytest_cache/
 *.orig
 *.rej

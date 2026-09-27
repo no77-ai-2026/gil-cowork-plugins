@@ -2,7 +2,7 @@
 name: cash-flow-snapshot
 description: |
   현금흐름 스냅샷 — 현재 현금·30/60/90일 유입·유출 전망·런웨이를 한 장으로 만듭니다 트리거: "현금흐름 스냅샷", "런웨이 계산해줘", "돈 언제 마르는지 봐줘"
-version: "2.2.1"
+version: "2.4.0"
 uz: references/uz-cash-flow-snapshot.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/cash-flow-snapshot, Apache-2.0)
 ---

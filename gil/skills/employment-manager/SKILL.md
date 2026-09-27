@@ -2,7 +2,7 @@
 name: employment-manager
 description: |
   채용 프로세스 전반을 관리해주는 스킬입니다 트리거: "JD 작성해줘", "면접 질문 만들어줘", "신입 온보딩 계획 짜줘"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

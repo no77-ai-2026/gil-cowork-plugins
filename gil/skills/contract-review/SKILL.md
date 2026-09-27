@@ -2,7 +2,7 @@
 name: contract-review
 description: |
   계약서 검토, 이용약관, 개인정보처리방침 등 법률 문서를 분석하고 작성합니다
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: oda-project-planner
 description: |
   ODA 사업을 기획합니다
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: mcp-connector-setup
 description: |
   [책임 경계] Drive·Notion·Higgsfield·OpenAI 4커넥터 인증·환경변수·트러블슈팅 가이드 전담 트리거: "MCP 커넥터 연결", "Drive 인증 방법", "Notion Integration Token 어디서"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 
@@ -289,6 +289,7 @@ D-7 사전 준비물 메일 기준으로 4커넥터 가입·인증 상태를 체
 - `gil-commerce:commerce-morning-brief` — 인증 완료 후 아침 브리핑 MCP 호출
 - `gil-commerce:commerce-morning-brief` — 인증 완료 후 신규 주문 통합 호출
 - `gil:course-operations-manual` — D-7 사전 준비물 메일 (계정 가입 안내 포함)
+- `gil:env-preflight` — 로컬 런타임(Node·uv·npx·Python·ffmpeg·한글 폰트·자격증명 파일 존재) 4상태 점검. 본 스킬 `--check`는 커넥터 인증, 페어는 실행 환경
 
 ---
 

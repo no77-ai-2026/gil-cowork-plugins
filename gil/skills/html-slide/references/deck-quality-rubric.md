@@ -172,7 +172,7 @@
 
 ## doc-pptx와의 공유
 
-이 루브릭은 **doc-pptx와 공유**됩니다. doc-pptx는 pptx 네이티브 채점기([`doc-pptx/references/qa-checklist.md`](../../doc-pptx/references/qa-checklist.md), python-pptx/pptxgenjs 좌표 기준·EMU 단위)를 별도로 가지며, 본 파일은 그 6카테고리·hard-fail 개념을 **HTML/DOM 렌더 대상으로 재해석한 대응본**입니다. 두 스킬은 같은 원칙(폰트 하한·출처 라인·명도대비·오버플로)을 각자의 렌더 컨텍스트에서 검사합니다.
+이 루브릭은 **doc-pptx와 공유**됩니다. doc-pptx는 pptx 네이티브 채점기(`gil:pptx-designer`의 QA 체크리스트, python-pptx/pptxgenjs 좌표 기준·EMU 단위)를 별도로 가지며, 본 파일은 그 6카테고리·hard-fail 개념을 **HTML/DOM 렌더 대상으로 재해석한 대응본**입니다. 두 스킬은 같은 원칙(폰트 하한·출처 라인·명도대비·오버플로)을 각자의 렌더 컨텍스트에서 검사합니다.
 
 ## 근거 (공개 1차 출처)
 

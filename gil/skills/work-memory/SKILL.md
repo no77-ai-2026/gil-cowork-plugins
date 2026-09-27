@@ -2,7 +2,7 @@
 name: work-memory
 description: |
   2계층 업무 메모리 — 약어·별칭·내부 용어를 학습해 조직 맥락을 이해하는 협업 메모리를 만듭니다 트리거: "우리 팀 용어 기억해줘", "업무 메모리 세팅", "약어 사전 만들어줘"
-version: "2.3.1"
+version: "2.4.0"
 uz: references/uz-work-memory.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (productivity/memory-management, Apache-2.0)
 ---

@@ -2,7 +2,7 @@
 name: book-author-bio
 description: |
   [한·UZ 듀얼] 도서 저자 약력·저자의 말·SNS·강연 통합 작성 트리거: "왜 이 사람이 이 책을 쓰는가", "저자 약력", "저자 소개"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

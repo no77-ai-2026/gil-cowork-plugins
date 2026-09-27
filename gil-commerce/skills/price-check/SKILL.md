@@ -2,7 +2,7 @@
 name: price-check
 description: |
   가격 점검 — 상품별 마진 표와 3가지 가격 시나리오를 만들어 인상·인하 결정을 돕습니다 트리거: "가격 올려도 될까", "가격 시나리오 비교", "상품별 마진 표"
-version: "2.2.1"
+version: "2.4.0"
 uz: references/uz-price-check.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/price-check, Apache-2.0)
 ---

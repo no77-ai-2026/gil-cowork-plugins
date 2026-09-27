@@ -2,7 +2,7 @@
 name: notebooklm-slide-prompt
 description: |
   강연·강의·세미나 본문 마크다운을 입력받아 (1) NotebookLM Studio에 그대로 붙여 넣을 슬라이드 데크 생성 프롬프트와 (2) 슬라이드별 나노바나나(Ge… 트리거: "NotebookLM 슬라이드 프롬프트", "NotebookLM 프롬프트", "NotebookLM 데크"
-version: "2.2.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

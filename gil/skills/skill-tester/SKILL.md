@@ -2,7 +2,7 @@
 name: skill-tester
 description: |
   스킬 품질 자동 검증 도구 트리거: "스킬 테스트해줘", "스킬 검증", "skill-tester"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

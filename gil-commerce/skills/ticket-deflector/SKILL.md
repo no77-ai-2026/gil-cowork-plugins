@@ -2,7 +2,7 @@
 name: ticket-deflector
 description: |
   반복 문의 자동화 — 자주 오는 문의를 분석해 FAQ·자동응답·템플릿으로 문의량 자체를 줄입니다 트리거: "반복 문의 줄여줘", "자주 묻는 질문 자동화", "문의 패턴 분석"
-version: "2.2.1"
+version: "2.4.0"
 uz: references/uz-ticket-deflector.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/ticket-deflector, Apache-2.0)
 ---

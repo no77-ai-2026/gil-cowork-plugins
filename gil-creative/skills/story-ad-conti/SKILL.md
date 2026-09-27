@@ -2,7 +2,7 @@
 name: story-ad-conti
 description: story-conti의 광고 프리셋으로 통합됨 (폐지).
 user-invocable: false
-version: "2.2.1"
+version: "2.4.0"
 origin: moai-cowork@f1eb954
 ---
 

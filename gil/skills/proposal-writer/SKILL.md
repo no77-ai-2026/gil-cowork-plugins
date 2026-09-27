@@ -2,7 +2,7 @@
 name: proposal-writer
 description: |
   한국 B2B 영업 제안서 본문을 RFP·고객 요구사항 기반으로 자동 생성합니다 트리거: "B2B 영업 제안서 작성", "RFP 답변 만들어줘", "고객사 제안서"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

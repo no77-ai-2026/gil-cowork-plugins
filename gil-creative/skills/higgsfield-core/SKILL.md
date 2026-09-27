@@ -3,7 +3,7 @@ name: higgsfield-core
 description: |
   Higgsfield MCP 이미지·영상 생성의 공유 코어.
   [역할 경계] higgsfield-core=모델 카탈로그·파라미터·비용 공통 정본(직접 트리거 아님). 이미지 생성 요청은 higgsfield-image, 영상 생성 요청은 higgsfield-video가 담당하며 이 스킬을 내부 참조합니다.
-version: "2.2.1"
+version: "2.4.0"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
@@ -44,6 +44,8 @@ Higgsfield MCP 이미지·영상 생성의 공유 코어. higgsfield-image / hig
 | `references/universal-rules.md` | R1–R5 벤더 교차 공통 규칙 |
 | `references/interview-schema.md` | 크래프트 파일이 소비하는 수집 슬롯 |
 | `references/job-lifecycle.md` | `get_cost` 프리플라이트, `credits` 규칙, `adjustments` 리드백, 폴링·오류 분류, 잔액 정지 |
+| `references/media-job-ledger.md` | 산출물 1개당 `media_job` 원장 레코드, 상태 전이 규칙(ID 안정·미확인 응답 재제출 금지·accepted는 검수만), technical/creative 게이트 분리 |
+| `references/creative-quality-loop.md` | `creative_acceptance` 계약, 기본 시도 상한 2회, 5단계 검수 순서, 결함 1종 교정·동결, 중단·에스컬레이션 조건 6개 |
 
 ## 오케스트레이션 계약 (REQ-010 흐름)
 
@@ -123,6 +125,18 @@ Higgsfield 도구의 namespace 접두사는 등록 방식에 따라 `mcp__higgsf
 
 > 이 계약은 GIL 공통 규칙(`gil:project` `references/core/common-rules.md`)의 승인형 원칙을 게이트 쪽에 적용한 것이다. AskUserQuestion 유무·서브에이전트 여부와 무관하게 같은 승인서·같은 선택지로 동작해야 한다.
 
+## 유료 생성 원장·품질 루프 (v2.4.0 HARD)
+
+모든 유료 생성 소비 스킬(image·video·product·assets·identity)은 다음을 따른다. `higgsfield-explainer`는 설명 전용이라 유료 생성을 실행하지 않으므로 대상이 아니다. 상세는 `references/media-job-ledger.md`와 `references/creative-quality-loop.md`가 정본이다.
+
+- **[HARD] 요청 산출물 1개당 `media_job` 레코드 1개.** `media_job_id`·`output_index`는 생애 동안 불변이며 배치 재시도에도 번호를 다시 매기지 않는다.
+- **[HARD] 기본 시도 상한 2회** — 초기 생성 1회 + 결함 1종 교정 1회. 확대는 명시 승인 + 새 `get_cost` 체크포인트가 함께 있어야 한다.
+- **[HARD] 미확인 응답(타임아웃·끊김·과금 불명)은 재제출 권한이 아니다.** `submitted`·`processing`은 같은 잡의 조회·취소·회수로만 전이한다. 실패한 인덱스만, 과금 잡이 없음을 증명한 뒤 또는 새 승인 뒤에 재시도한다.
+- **[HARD] `accepted`는 검수 후에만.** 제공자 완료 플래그는 `retrieved`까지다. technical/creative 게이트가 둘 다 `pass`여야 하며, must-pass 실패는 평균 점수로 덮지 못한다.
+- **[HARD] 승인 전 표시 항목:** 요청 기본 모델 + 실제 해석 모델, 입력과 역할, 프롬프트 전문, 조회 확정 옵션과 `adjustments`, 개수, 제공자 보고 비용·잔액(없으면 `unavailable`), 배치 상한. 프롬프트·입력·모델·옵션·개수 변경은 새 승인 버전이다.
+- 모델을 조용히 교체하지 않는다. 정지 이미지 기본 모델·오버라이드 규칙은 `gil-creative:image-bridge/references/image-generation-runtime.md`.
+- 영수증·토큰·임시 핸들은 원장 내부에만 두고 사용자 대면 출력에 노출하지 않는다. 수락 결과는 한 번만 표시한다.
+
 ---
 
 ## 관련 스킬
@@ -136,7 +150,7 @@ Higgsfield 도구의 namespace 접두사는 등록 방식에 따라 `mcp__higgsf
 | `gil-creative:higgsfield-explainer` | 소비: 블록 조립형 설명 영상 |
 | `gil-creative:higgsfield-product` | 소비: 제품 촬영 10모드 |
 | `gil-creative:design-brand-visual` | 소비(교차 플러그인): 브랜드 정합 비주얼 |
-| `gil-creative:story-*` | 소비(교차 플러그인): 작화·콘티·표지·캐릭터 |
+| `gil-creative:story-webtoon-art` · `story-conti` · `story-cover-art` · `story-character-sheet` | 소비: 작화·콘티·표지·캐릭터 |
 
 ## 출처
 

@@ -2,7 +2,7 @@
 name: html-report
 description: |
   마크다운 보고서를 그대로 브라우저에서 열리는 단일 파일 HTML로 바꿔 드립니다 트리거: "이 보고서 HTML 파일로 만들어줘", "주간 현황 보고서를 하나의 HTML로 렌더해줘", "재무제표를 HTML 보고서로 변환해줘"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 
@@ -43,7 +43,7 @@ PDF 파일이 필요하면 생성한 HTML을 gil:pdf-writer로 넘겨 디자인 
 |------|------|--------|------|
 | `markdown` | ✓ | — | 변환할 마크다운 본문 |
 | `mode` | ✓ | — | `status` \| `incident` \| `plan` \| `explainer` \| `financial` \| `pr` |
-| `design_system` | — | (미지정 시 0의존 기본 템플릿) | `claude` \| `clickhouse` \| `clay` 또는 [`design-system-library`](../design-system-library/SKILL.md)의 75개 시스템. **지정 시** Tailwind Play CDN + shadcn vanilla 컴포넌트로 해당 브랜드 토큰 적용 (인터넷 연결 필요) |
+| `design_system` | — | (미지정 시 0의존 기본 템플릿) | `claude` \| `clickhouse` \| `clay` 또는 `gil-creative:design-system-library`(gil-creative 설치 시)의 75개 시스템. **지정 시** Tailwind Play CDN + shadcn vanilla 컴포넌트로 해당 브랜드 토큰 적용 (인터넷 연결 필요) |
 | `slug` | — | 제목에서 자동 생성 | 출력 파일명 prefix |
 | `output_path` | — | `<cwd>/reports/<slug>-<YYYYMMDD>.html` | 출력 경로 |
 | `font_stack` | — | 모드별 기본값 | 폰트 매핑 오버라이드 |
@@ -144,7 +144,7 @@ PDF 파일이 필요하면 생성한 HTML을 gil:pdf-writer로 넘겨 디자인 
 
 ## 디자인 시스템 적용 (`design_system` 파라미터)
 
-`design_system` 입력을 지정하면 [`gil-creative:design-system-library`](../design-system-library/SKILL.md)에서 브랜드 토큰을 로드해 **Tailwind Play CDN + shadcn vanilla 컴포넌트**로 렌더합니다.
+`design_system` 입력을 지정하면 `gil-creative:design-system-library`(gil-creative 설치 시)에서 브랜드 토큰을 로드해 **Tailwind Play CDN + shadcn vanilla 컴포넌트**로 렌더합니다.
 
 **두 가지 렌더 엔진** (하위 호환 유지):
 
@@ -165,7 +165,7 @@ PDF 파일이 필요하면 생성한 HTML을 gil:pdf-writer로 넘겨 디자인 
 ### 적용 절차
 
 1. `design_system` 값으로 `systems/<name>.md` 토큰 로드
-2. [`mapping/tailwind.md`](../design-system-library/mapping/tailwind.md) 규칙으로 `tailwind.config` 객체 생성
+2. `gil-creative:design-system-library` `mapping/tailwind.md`(gil-creative 설치 시) 규칙으로 `tailwind.config` 객체 생성
 3. shadcn vanilla 컴포넌트(card/button/table/badge)로 구조 치환
 4. 단일 파일 HTML로 출력 (CDN script + config + 마크업)
 

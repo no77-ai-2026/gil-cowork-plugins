@@ -5,28 +5,28 @@
     "email": "no77show@gmail.com"
   },
   "metadata": {
-    "description": "GIL Claude Cowork 플러그인 마켓플레이스 — 3번들 298 스킬. gil 코어(148: 전략·컨설팅·문제해결 PSA·검증형 리서치·오피스 문서·데이터·법무·재무·HR·교육·연구) + gil-creative(96: 마케팅·콘텐츠·디자인·스토리 IP·미디어) + gil-commerce(54: 셀러 운영·상세페이지·광고 최적화·소상공인 루틴). 한국 표준 + 우즈베키스탄 듀얼 컨텍스트. v2.3.x: 모태 moai-cowork v1.2.5 동기화 — MCP 자격증명 userConfig 입력 폼, 승인 게이트, humanize 1.4.0, 슬라이드 정량 QA, Win/Mac 범용성. 모태: modu-ai/moai-cowork (Apache-2.0) 차용·확장. 상세 이력은 각 번들 CHANGELOG 참조.",
-    "version": "2.3.1",
+    "description": "GIL Claude Cowork 플러그인 마켓플레이스 — 3번들 302 스킬. gil 코어(149: 전략·컨설팅·문제해결 PSA·검증형 리서치·오피스 문서·데이터·법무·재무·HR·교육·연구) + gil-creative(99: 마케팅·콘텐츠·디자인·스토리 IP·미디어) + gil-commerce(54: 셀러 운영·상세페이지·광고 최적화·소상공인 루틴). 한국 표준 + 우즈베키스탄 듀얼 컨텍스트. v2.4.x: 업종 오버레이·게시 전 검수·레퍼런스 보드·실사 인물 프롬프트 문법(v2.4.0), 모태 moai-cowork 6bc6098a 데스크톱 범용성 동기화 1단계(v2.4.1). 모태: modu-ai/moai-cowork (Apache-2.0) 차용·확장. 상세 이력은 각 번들 CHANGELOG 참조.",
+    "version": "2.4.0",
     "language": "ko"
   },
   "plugins": [
     {
       "name": "gil",
       "source": "./gil",
-      "description": "[한·UZ 듀얼] GIL 코어 — 전략·컨설팅·문제해결(PSA)·검증형 리서치·오피스 문서(Word·PPT·Excel·한글·PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 148 스킬 + 에이전트 16 + MCP 6종(korean-law·korean-stats·archhub·kordoc·dart·context7). 자격증명은 설치 시 입력 폼(userConfig)",
-      "version": "2.3.1"
+      "description": "[한·UZ 듀얼] GIL 코어 — 전략·컨설팅·문제해결(PSA)·검증형 리서치·오피스 문서(Word·PPT·Excel·한글·PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 149 스킬 + 에이전트 16 + MCP 6종(korean-law·korean-stats·archhub·kordoc·dart·context7). 자격증명은 설치 시 입력 폼(userConfig)",
+      "version": "2.4.0"
     },
     {
       "name": "gil-creative",
       "source": "./gil-creative",
-      "description": "[한·UZ 듀얼] GIL 크리에이티브 — 마케팅·콘텐츠·카피·디자인·광고 크리에이티브·이미지/영상/오디오(Higgsfield·ElevenLabs, 유료 소진·생체정보 승인 게이트)·스토리 IP(웹툰·웹소설·시나리오)·출판·Threads/Instagram 발행 96 스킬 + 에이전트 6 + MCP 6종",
-      "version": "2.2.1"
+      "description": "[한·UZ 듀얼] GIL 크리에이티브 — 마케팅·콘텐츠·카피·디자인·광고 크리에이티브·이미지/영상/오디오(Higgsfield·ElevenLabs, 유료 소진·생체정보 승인 게이트)·스토리 IP(웹툰·웹소설·시나리오)·출판·Threads/Instagram 발행 99 스킬 + 에이전트 6 + MCP 6종",
+      "version": "2.4.0"
     },
     {
       "name": "gil-commerce",
       "source": "./gil-commerce",
       "description": "[한·UZ 듀얼] GIL 커머스 — 스마트스토어·아임웹·카페24 MCP 연동(설치 시 입력 폼으로 자격증명), 쿠팡·자사몰·UZ 채널(Uzum·OLX·Telegram·Yandex) 셀러 운영, 상세페이지, 광고 최적화, 소상공인 루틴(브리핑·현금흐름·수금·세무) 54 스킬 + 에이전트 4",
-      "version": "2.2.1"
+      "version": "2.4.0"
     }
   ]
 }

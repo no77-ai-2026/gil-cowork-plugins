@@ -2,7 +2,7 @@
 name: docx-generator
 description: |
   편집 가능한 워드(.docx) 문서를 만들어 드립니다 트리거: "보고서 워드 파일로 만들어줘", "계약서 DOCX로 작성해줘", "공문서 양식대로 써줘"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

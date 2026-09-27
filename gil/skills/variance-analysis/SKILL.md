@@ -2,7 +2,7 @@
 name: variance-analysis
 description: |
   예산과 실적 차이를 분석해주는 스킬입니다
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

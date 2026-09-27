@@ -2,7 +2,7 @@
 name: textbook-builder
 description: |
   [한·UZ 듀얼] 학습자에게 최적화된 교재를 자동 제작합니다 트리거: "수학 교재 만들어줘 (초3 수준)", "TOEIC 교재 4주 코스", "우즈벡어 입문 교재"
-version: "2.3.1"
+version: "2.4.0"
 ---
 ## 스킬 개요(상세)
 

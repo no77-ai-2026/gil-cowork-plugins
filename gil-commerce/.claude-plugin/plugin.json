@@ -1,8 +1,8 @@
 {
   "name": "gil-commerce",
   "displayName": "GIL Commerce — 이커머스·셀러 운영",
-  "version": "2.2.1",
-  "description": "[한·UZ 듀얼] GIL 커머스 애드온 — 시장조사·JTBD·네이밍·상세페이지(기획·카피·이미지)·마진/LTV/재구매·프로모션·시즌 캘린더·VOC·컴플라이언스(정통망법)·라이브 커머스와 스마트스토어·쿠팡(광고 포함)·카페24·아임웹·크라우드펀딩·큐레이션·Uzum·OLX·Yandex·Telegram 채널 운영 등 54개 스킬. 셀러 MCP 3종 자체 vendor(gil-mcp-smartstore 90도구·gil-mcp-cafe24·gil-mcp-imweb). 코어 gil 번들과 함께 설치 권장.",
+  "version": "2.4.0",
+  "description": "[한·UZ 듀얼] GIL 커머스 애드온 — 시장조사·JTBD·네이밍·상세페이지(기획·카피·이미지)·마진/LTV/재구매·프로모션·시즌 캘린더·VOC·컴플라이언스(정통망법)·라이브 커머스와 스마트스토어·쿠팡(광고 포함)·카페24·아임웹·크라우드펀딩·큐레이션·Uzum·OLX·Yandex·Telegram 채널 운영 등 54개 스킬 — v2.4.0: 컴플라이언스 2스킬 게시 검수 4상태 기록·광고 집행 3분리 승인 가드. 셀러 MCP 3종 자체 vendor(gil-mcp-smartstore 90도구·gil-mcp-cafe24·gil-mcp-imweb). 코어 gil 번들과 함께 설치 권장.",
   "author": {
     "name": "gil"
   },
@@ -26,7 +26,9 @@
     "LTV",
     "재구매",
     "프로모션",
-    "라이브커머스"
+    "라이브커머스",
+    "게시검수",
+    "집행승인"
   ],
   "license": "Apache-2.0",
   "userConfig": {

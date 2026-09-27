@@ -357,10 +357,34 @@ playwright install chromium
 - **Layer 1** (공식 MCP): `meta-ads` — Meta 공식 **Ads AI Connectors** (`https://mcp.facebook.com/ads`)
 - **Layer 2** (자체 MCP): `gil-ads-audit` — audit 비즈니스 로직, `.xlsx` 입력 단독 모드도 항상 지원
 - **Layer 3** (스킬):
-  - `gil:meta-ads-manager` — 공식 MCP 기반 **라이브 운영**(캠페인·광고세트·광고 생성·수정·예산·온오프)
-  - `gil:meta-ads-analyzer` — 보고서 **분석·진단**(`.xlsx` 1-6개 → 9 모듈·4D 교차·🟢🟡🔴 액션)
+  - `gil-creative:meta-ads-manager` — 공식 MCP 기반 **라이브 운영**(캠페인·광고세트·광고 생성·수정·예산·온오프)
+  - `gil-creative:meta-ads-analyzer` — 보고서 **분석·진단**(`.xlsx` 1-6개 → 9 모듈·4D 교차·🟢🟡🔴 액션)
 
 `meta-ads` 비활성 환경에서도 `gil-ads-audit` 단독으로 `.xlsx` 보고서 업로드 모드 동작 (REQ-AUDIT-MCP-005).
+
+---
+
+## reference-preview (Pinterest 레퍼런스 미리보기 MCP, v2.4.0+ · gil-creative)
+
+레퍼런스 보드 스킬(`gil-creative:reference-board`)이 Pinterest 레인 후보를 **대화 안에 실제 이미지**로 표시할 때 쓰는 아주 작은 로컬 서버입니다. 도구 1개(`fetch_reference_preview_image`), 비밀값·API 키 없음.
+
+### 사용 측 준비
+- **Node.js 18 이상**만 필요(추가 npm 패키지 없음). `context7`(npx)과 같은 요구사항이라 새로 설치할 것은 보통 없습니다. 확인: `node -v`. 없으면 `gil:env-preflight`가 상태를 보고하고 설치 안내를 합니다.
+- 자동 등록: `gil-creative/.mcp.json`의 `reference-preview` 항목(`alwaysLoad: true`).
+
+### 보안 설계 (변경 금지)
+- 공개 `pinterest.com/pin/...` 페이지와 짝지어진 `i.pinimg.com` 미리보기 1장만 가져옵니다. 다른 호스트·사설망·링크로컬 주소는 DNS 해석 단계에서 차단(DNS 고정으로 리바인딩 방지).
+- 크기 세그먼트를 `/236x/`로 강제, 92 KiB·4,096px·8,388,608px 상한, 리다이렉트 3회·8초 제한, 선언 MIME과 실제 바이트 대조, 쿠키·인증 헤더 미전송, 파일 쓰기 없음.
+- 이 도구는 **표시**만 담당합니다. 검색(발견)은 Cowork `WebSearch`/`WebFetch` 또는 사용자 브라우저가 담당하며, 검색 결과의 Pin↔미리보기 짝은 "발견 도구가 제공한 매핑, 미검증"으로 표기됩니다.
+- 표시된 이미지는 **방향 자료(direction-only)** 입니다. 픽셀·인물·로고·카피를 산출물에 옮기지 않습니다.
+
+### 트러블슈팅
+- 도구가 목록에 없음 → `ToolSearch(query: "select:fetch_reference_preview_image")`로 지연 로드. 그래도 없으면 Node 미설치 또는 `.mcp.json` 미반영 — `gil:env-preflight` 실행.
+- 이미지가 표시되지 않고 오류 문구만 → 해당 후보를 다른 공개 후보로 교체(같은 카테고리 재검색은 추가 허락 없이 자동).
+- 테스트: `gil-creative/mcp-servers/reference-preview/`에서 `node --test` (15건).
+
+### 출처
+chany-studio/chany-studio v2.8.1 `mcp/reference-preview` (MIT) — 소스 무변경 vendor, LICENSE 동봉.
 
 ---
 

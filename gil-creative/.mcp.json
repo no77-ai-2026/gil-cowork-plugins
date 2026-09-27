@@ -11,7 +11,7 @@
       "url": "https://public-api.wordpress.com/wpcom/v2/mcp/v1"
     },
     "meta-ads": {
-      "$comment": "Meta 공식 Ads AI Connectors (2026-04-29 오픈 베타, hosted at https://mcp.facebook.com/ads). 인증: Meta Business OAuth 2.0 커넥터 흐름 (RFC 9728 protected-resource discovery + RFC 6750 Bearer). Claude 원격 MCP 커넥터로 URL 등록 시 브라우저 OAuth 로그인·광고계정 선택으로 토큰 자동 발급 — 정적 토큰 불필요. scope: ads_management ads_read catalog_management business_management pages_show_list. 개발자/시스템 사용자 정적 토큰은 fallback 전용 (./CONNECTORS.md §Meta Ads). 비활성 환경에서는 Layer 2 gil-ads-audit이 .xlsx 보고서 fallback으로 동작 (SPEC-MOAI-ADS-AUDIT-MCP-001 REQ-AUDIT-MCP-005). 라이브 운영 스킬: gil:meta-ads-manager (Layer 3).",
+      "$comment": "Meta 공식 Ads AI Connectors (2026-04-29 오픈 베타, hosted at https://mcp.facebook.com/ads). 인증: Meta Business OAuth 2.0 커넥터 흐름 (RFC 9728 protected-resource discovery + RFC 6750 Bearer). Claude 원격 MCP 커넥터로 URL 등록 시 브라우저 OAuth 로그인·광고계정 선택으로 토큰 자동 발급 — 정적 토큰 불필요. scope: ads_management ads_read catalog_management business_management pages_show_list. 개발자/시스템 사용자 정적 토큰은 fallback 전용 (./CONNECTORS.md §Meta Ads). 비활성 환경에서는 Layer 2 gil-ads-audit이 .xlsx 보고서 fallback으로 동작 (SPEC-MOAI-ADS-AUDIT-MCP-001 REQ-AUDIT-MCP-005). 라이브 운영 스킬: gil-creative:meta-ads-manager (Layer 3).",
       "type": "http",
       "url": "https://mcp.facebook.com/ads"
     },
@@ -54,6 +54,14 @@
         "IG_ACCESS_TOKEN": "${user_config.IG_ACCESS_TOKEN}",
         "IG_USER_ID": "${user_config.IG_USER_ID}"
       }
+    },
+    "reference-preview": {
+      "$comment": "Pinterest 레퍼런스 미리보기 MCP — 단일 도구 fetch_reference_preview_image. 공개 pinterest.com Pin 페이지와 짝지어진 i.pinimg.com 미리보기 1장을 검증·다운로드해 MCP 이미지 콘텐츠로 반환(reference-board 스킬의 Pinterest 레인이 보드를 대화 안에 실제 이미지로 표시할 때 사용). 허용 호스트는 i.pinimg.com만, /236x/ 축소, 92 KiB·4096px 상한, 사설 IP·리다이렉트 3회·8초 검증, 파일 쓰기 없음. 비밀값·API 키 없음. 사전 설치: Node.js 18+ (추가 npm 패키지 불필요). 소스 자체 vendor(mcp-servers/reference-preview) — 출처 chany-studio/chany-studio photo-reference-studio mcp/reference-preview (MIT). alwaysLoad: 보드마다 필요한 작은 도구 1개라 세션 시작 시 로드. [2026-09-15 v2.4.0]",
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/mcp-servers/reference-preview/server.mjs"
+      ],
+      "alwaysLoad": true
     }
   },
   "staggeredStartup": {

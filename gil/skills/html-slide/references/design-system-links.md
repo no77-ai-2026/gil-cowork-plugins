@@ -3,7 +3,7 @@
 > **타 번들 연계**: 본 문서의 `gil-creative:*`·`gil-commerce:*` 참조는 해당 번들이 설치된 경우에만 체이닝합니다. 미설치 시 해당 단계를 생략하고 코어 스킬만으로 진행합니다.
 
 
-[`gil-creative:design-system-library`](../../design-system-library/SKILL.md)의 75개 브랜드 시스템을 [`getdesign.md`](https://getdesign.md) 상세 페이지에 매핑합니다. 스킬이 design_system 선택 안내 시 각 토큰 옆에 링크를 표시해, 사용자가 클릭(또는 복사)하여 팔레트·타이포그래피·무드를 직접 미리볼 수 있게 합니다.
+`gil-creative:design-system-library`(gil-creative 설치 시)의 75개 브랜드 시스템을 [`getdesign.md`](https://getdesign.md) 상세 페이지에 매핑합니다. 스킬이 design_system 선택 안내 시 각 토큰 옆에 링크를 표시해, 사용자가 클릭(또는 복사)하여 팔레트·타이포그래피·무드를 직접 미리볼 수 있게 합니다.
 
 ## URL 패턴
 
