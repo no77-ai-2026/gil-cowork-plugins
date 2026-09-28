@@ -2,7 +2,7 @@
 name: statistical-analysis
 description: |
   기술통계·추세·이상치·가설검정 등 통계 기법을 데이터 분석에 적용합니다 트리거: "통계 분석해줘", "이 차이가 유의미한지 검정", "이상치 탐지"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-statistical-analysis.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (data/statistical-analysis, Apache-2.0)
 ---
@@ -20,6 +20,10 @@ origin: anthropics/knowledge-work-plugins@2cf4294 (data/statistical-analysis, Ap
 **UZ 컨텍스트**: UZ: stat. 상세는 `references/uz-statistical-analysis.md`.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(통계표). 권장 옵션: `--format json`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 원문 방법론 (EN, knowledge-work-plugins)
 

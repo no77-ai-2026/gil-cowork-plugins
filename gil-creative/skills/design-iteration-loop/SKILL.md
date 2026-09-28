@@ -7,7 +7,7 @@ description: |
   Quality, Originality, Completeness, Functionality), stagnation
   detection, and escalation.
 user-invocable: false
-version: "2.5.0"
+version: "2.6.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

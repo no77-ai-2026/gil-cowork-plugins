@@ -2,7 +2,7 @@
 name: validate-data
 description: |
   분석 공유 전 QA — 방법론·정확성·편향을 점검해 이해관계자 보고 전 오류를 걸러냅니다 트리거: "분석 검증해줘", "보고 전 데이터 QA", "이 분석 맞는지 봐줘"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-validate-data.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (data/validate-data, Apache-2.0)
 ---
@@ -20,6 +20,10 @@ origin: anthropics/knowledge-work-plugins@2cf4294 (data/validate-data, Apache-2.
 **UZ 컨텍스트**: UZ: 공식 통계와 실측 격차(비공식 경제 비중)를 편향 점검 항목에 포함. 상세는 `references/uz-validate-data.md`.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(구조 검증). 권장 옵션: `--format json`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 원문 방법론 (EN, knowledge-work-plugins)
 

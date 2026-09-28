@@ -2,7 +2,7 @@
 name: design-brief
 description: |
   Claude Design용 6요소 브리프(Project·Audience·Pages·Tone·Reference·Constraints)를 자동으로 작성해 주는 스킬 트리거: "Claude Design 브리프 만들어 줘", "클로드 디자인 프롬프트 작성", "디자인 브리프 6요소"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

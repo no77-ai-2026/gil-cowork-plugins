@@ -9,7 +9,7 @@ description: |
   - "브리프 받아서 멀티 포맷으로 만들어줘"
   - "reklama kreativ sehrgari" (광고 크리에이티브 마법사, UZ)
   텍스트 지능(카피·구성·현지화·후기분석)은 Claude가 직접 수행하고, 이미지 생성만 gil-creative:image-bridge(OpenAI/Gemini BYOK)로 붙입니다. 설계는 gil-creative:creative-architect, 현지화는 gil-creative:market-profile-engine, 자료는 gil-creative:material-analyzer로 위임합니다. v2.4.0부터 0단계 업종 오버레이(gil-creative:industry-overlay), 레퍼런스 보드(gil-creative:reference-board), 게시 전 검수(gil-creative:publication-review), 캠페인 상태 레코드(references/campaign-state.md)가 흐름에 들어갑니다.
-version: "2.5.0"
+version: "2.6.0"
 ---
 
 # 크리에이티브 마법사 (Creative Wizard) — 코디네이터

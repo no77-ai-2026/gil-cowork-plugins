@@ -2,7 +2,7 @@
 name: consult-feasibility-audit
 description: |
   사업계획서·시장 분석·지원사업 신청서·상권 보고서의 수치·출처·산식·자격요건·타당성 주장을 읽기 전용 검수합니다(원본 수정 없음, PASS/FAIL/미확인 판정) 트리거: "사업계획서 수치 검수", "시장 규모 근거 점검", "지원사업 신청서 자격요건 확인", "biznes-reja raqamlarini tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

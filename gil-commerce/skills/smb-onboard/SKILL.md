@@ -2,7 +2,7 @@
 name: smb-onboard
 description: |
   소상공인 셀러 온보딩 — 사업 현황을 인터뷰해 gil-commerce 루틴(브리핑·현금·수금·세무)을 프로젝트에 배선합니다 트리거: "셀러 루틴 세팅해줘", "우리 가게에 맞는 자동화 시작", "커머스 온보딩"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-smb-onboard.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/smb-onboard, Apache-2.0)
 ---

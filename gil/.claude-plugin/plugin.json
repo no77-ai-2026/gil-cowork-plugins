@@ -1,8 +1,8 @@
 {
   "name": "gil",
   "displayName": "GIL — 코어 (범용·전문직·오피스·데이터)",
-  "version": "2.5.0",
-  "description": "[한·UZ 듀얼] GIL 코어 번들 — 사업전략·컨설팅·오피스 문서(Word·PPT·Excel·한글·PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 등 149개 스킬 — v2.4.0 신규: 로컬 실행 환경 4상태 점검(env-preflight) — v2.2.0 신규: PSA 문제 구조화(problem-solving)·검증형 리서치(research-verify) + /project 프로젝트 허브(산출물 등급제 ⚡◐◆·2층 지침·승인형 자가 개선) + 텍스트 QA 3종(ai-slop-reviewer·humanize-korean·korean-spell-check). MCP 7종(dart·korean-law·korean-stats·archhub·kordoc·context7·gil-mcp-ip[특허·상표 공식 데이터]). v2.5.0: 특허·상표 선행조사 보고서(legal-ip-search-report)·읽기 전용 검수 스킬 8종(◆최종본 게이트). 한국 표준 + 우즈베키스탄 듀얼 컨텍스트. gil-creative·gil-commerce 애드온의 코어. 모태: modu-ai/moai-cowork(Apache-2.0) 차용·확장.",
+  "version": "2.6.0",
+  "description": "[한·UZ 듀얼] GIL 코어 번들 — 사업전략·컨설팅·오피스 문서(Word·PPT·Excel·한글·PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 등 160개 스킬 — v2.4.0 신규: 로컬 실행 환경 4상태 점검(env-preflight) — v2.2.0 신규: PSA 문제 구조화(problem-solving)·검증형 리서치(research-verify) + /project 프로젝트 허브(산출물 등급제 ⚡◐◆·2층 지침·승인형 자가 개선) + 텍스트 QA 3종(ai-slop-reviewer·humanize-korean·korean-spell-check). MCP 7종(dart·korean-law·korean-stats·archhub·kordoc·context7·gil-mcp-ip[특허·상표 공식 데이터]). v2.5.0: 특허·상표 선행조사 보고서(legal-ip-search-report)·읽기 전용 검수 스킬 8종(◆최종본 게이트). v2.6.0: 한국 공문서 툴킷 kordoc 4.x 스킬화 — doc-reader(CLI-우선 파싱·OCR·RAG 청크)·hwpx-writer(kordoc 엔진 공문서 프리셋 8종·패치)·신규 form-filler(서식 채우기·날인)·doc-redactor(개인정보 마스킹), 소비 스킬 38곳 문서 입력 전처리 배선. 한국 표준 + 우즈베키스탄 듀얼 컨텍스트. gil-creative·gil-commerce 애드온의 코어. 모태: modu-ai/moai-cowork(Apache-2.0) 차용·확장.",
   "author": {
     "name": "gil"
   },
@@ -208,7 +208,13 @@
     "problem-solving",
     "환경점검",
     "프리플라이트",
-    "실행환경진단"
+    "실행환경진단",
+    "kordoc",
+    "HWP 파싱",
+    "공문서 생성",
+    "서식 채우기",
+    "개인정보 마스킹",
+    "OCR"
   ],
   "license": "Apache-2.0",
   "userConfig": {

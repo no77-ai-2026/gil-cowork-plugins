@@ -2,7 +2,7 @@
 name: interview-prep
 description: |
   면접관용 면접 설계 — 역량 기반 질문지·평가 스코어카드·면접 플랜을 만듭니다 트리거: "면접 질문지 만들어줘 면접관용", "면접 평가표", "이 포지션 면접 설계"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-interview-prep.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/interview-prep, Apache-2.0)
 ---

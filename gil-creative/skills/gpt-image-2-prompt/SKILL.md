@@ -2,7 +2,7 @@
 name: gpt-image-2-prompt
 description: |
   이 스킬은 gil-creative:gpt-image-prompt(GPT Image 2.5)로 이름이 변경되었습니다 트리거: "GPT-image-2 프롬프트", "gpt image 2 프롬프트 작성"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

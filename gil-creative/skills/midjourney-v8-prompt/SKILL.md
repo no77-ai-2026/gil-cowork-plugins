@@ -2,7 +2,7 @@
 name: midjourney-v8-prompt
 description: |
   Midjourney v8.1 (2026.03 Alpha) 전용 이미지 프롬프트 빌더 트리거: "미드저니 프롬프트 만들어줘", "MJ 프롬프트", "Midjourney 프롬프트"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

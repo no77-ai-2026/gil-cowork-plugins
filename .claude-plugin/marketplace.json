@@ -5,28 +5,28 @@
     "email": "no77show@gmail.com"
   },
   "metadata": {
-    "description": "GIL Claude Cowork 플러그인 마켓플레이스 — 3번들 315 스킬. gil 코어(158: 전략·컨설팅·문제해결 PSA·검증형 리서치·오피스 문서·데이터·법무·재무·HR·교육·연구) + gil-creative(102: 마케팅·콘텐츠·디자인·스토리 IP·미디어) + gil-commerce(55: 셀러 운영·상세페이지·광고 최적화·소상공인 루틴). 한국 표준 + 우즈베키스탄 듀얼 컨텍스트. v2.5.x: 특허·상표 공식 데이터 MCP·GPT Image 2.5 정확 모델 지정·검수 스킬 11종(v2.5.0), 모태 moai-cowork 6bc6098a 데스크톱 범용성 동기화 완료. 모태: modu-ai/moai-cowork (Apache-2.0) 차용·확장. 상세 이력은 각 번들 CHANGELOG 참조.",
-    "version": "2.5.0",
+    "description": "GIL Claude Cowork 플러그인 마켓플레이스 — 3번들 317 스킬. gil 코어(160: 전략·컨설팅·문제해결 PSA·검증형 리서치·오피스 문서·데이터·법무·재무·HR·교육·연구) + gil-creative(102: 마케팅·콘텐츠·디자인·스토리 IP·미디어) + gil-commerce(55: 셀러 운영·상세페이지·광고 최적화·소상공인 루틴). 한국 표준 + 우즈베키스탄 듀얼 컨텍스트. v2.6.0: 한국 공문서 툴킷 kordoc 4.x 스킬화(doc-reader CLI-우선 파싱·OCR·RAG 청크, hwpx-writer 공문서 프리셋 8종·패치, 신규 form-filler·doc-redactor). v2.5.x: 특허·상표 공식 데이터 MCP·GPT Image 2.5·검수 스킬 11종, 모태 moai-cowork 6bc6098a 동기화 완료. 모태: modu-ai/moai-cowork (Apache-2.0) 차용·확장. 상세 이력은 각 번들 CHANGELOG 참조.",
+    "version": "2.6.0",
     "language": "ko"
   },
   "plugins": [
     {
       "name": "gil",
       "source": "./gil",
-      "description": "[한·UZ 듀얼] GIL 코어 — 전략·컨설팅·문제해결(PSA)·검증형 리서치·오피스 문서(Word·PPT·Excel·한글·PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 158 스킬 + 에이전트 16 + MCP 7종(korean-law·korean-stats·archhub·kordoc·dart·context7·gil-mcp-ip). 자격증명은 설치 시 입력 폼(userConfig)",
-      "version": "2.5.0"
+      "description": "[한·UZ 듀얼] GIL 코어 — 전략·컨설팅·문제해결(PSA)·검증형 리서치·오피스 문서(Word·PPT·Excel·한글·PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어·한국 공문서 툴킷(kordoc: 파싱·생성·서식·마스킹) 160 스킬 + 에이전트 16 + MCP 7종(korean-law·korean-stats·archhub·kordoc·dart·context7·gil-mcp-ip). 자격증명은 설치 시 입력 폼(userConfig)",
+      "version": "2.6.0"
     },
     {
       "name": "gil-creative",
       "source": "./gil-creative",
       "description": "[한·UZ 듀얼] GIL 크리에이티브 — 마케팅·콘텐츠·카피·디자인·광고 크리에이티브·이미지/영상/오디오(Higgsfield·ElevenLabs, 유료 소진·생체정보 승인 게이트)·스토리 IP(웹툰·웹소설·시나리오)·출판·Threads/Instagram 발행 102 스킬 + 에이전트 6 + MCP 8종(gil-mcp-openai 포함)",
-      "version": "2.5.0"
+      "version": "2.6.0"
     },
     {
       "name": "gil-commerce",
       "source": "./gil-commerce",
       "description": "[한·UZ 듀얼] GIL 커머스 — 스마트스토어·아임웹·카페24 MCP 연동(설치 시 입력 폼으로 자격증명), 쿠팡·자사몰·UZ 채널(Uzum·OLX·Telegram·Yandex) 셀러 운영, 상세페이지, 광고 최적화, 소상공인 루틴(브리핑·현금흐름·수금·세무) 55 스킬 + 에이전트 4",
-      "version": "2.5.0"
+      "version": "2.6.0"
     }
   ]
 }

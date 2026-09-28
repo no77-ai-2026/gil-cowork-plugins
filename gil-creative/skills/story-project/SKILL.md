@@ -2,7 +2,7 @@
 name: story-project
 description: |
   작품 유형을 파악해 웹툰·웹소설·영상(시놉시스·시나리오·콘티·프리비즈)·표지·IP 사업화 파이프라인으로 라우팅하는 gil-creative 플러그인의 진입점 스킬. 사용자의 한마디 요청에서 장르를 분류해 알맞은 story-* 스킬 체인으로 안내한다. 출판 도서는 gil-creative로 분기한다. 트리거: "웹툰 기획할래", "웹소설 연재하고 싶어", "시나리오 작성"
-version: "2.5.0"
+version: "2.6.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

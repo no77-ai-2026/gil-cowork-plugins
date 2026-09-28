@@ -2,7 +2,7 @@
 name: law-research
 description: |
   법제처 법령·판례·행정규칙·자치법규·조약·해석례(국세청) 원문 조회와 LLM 환각방지 인용검증·판례 생사 확인·행위시법 판단·조문 영향 그래프·신구대조표를 전담합니다. korean-law MCP(법제처 42개 API → 9 도구) 사용. 트리거: "근로기준법 제74조 본문 알려줘", "이 답변에 인용된 조문 실존하는지 검증해줘", "이 판례 아직 유효한가"
-version: "2.5.0"
+version: "2.6.0"
 origin: moai-cowork@f1eb954
 ---
 
@@ -23,6 +23,10 @@ origin: moai-cowork@f1eb954
 - "근로기준법 최근 개정 신구대조표" (amendment_track)
 법무팀·로펌·법률 연구자·공무원·계약서 검토자·학생 대상. 사전 준비: 법제처 OC 키(law.go.kr 무료), 환경변수 KOREAN_LAW_OC.
 
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(조문 색인용 평문). 권장 옵션: `--plain`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 개요
 

@@ -2,7 +2,7 @@
 name: media-production
 description: |
   (별칭) media-production 스킬은 두 개의 스킬로 분리되었습니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

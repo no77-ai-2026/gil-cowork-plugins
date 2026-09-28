@@ -2,7 +2,7 @@
 name: oda-proposal-writer
 description: |
   ODA 사업 제안서를 작성합니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -13,6 +13,10 @@ KOICA·EDCF·KSP·다자 (UN·WB·ADB) 양식·표준 + 한·우즈벡 사업 �
 # ODA 사업 제안서 작성 (ODA Proposal Writer)
 
 > gil-oda | KOICA·EDCF·KSP·다자 사업 제안서
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(RFP·PDD PDF). 권장 옵션: 기본. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 역할
 

@@ -2,7 +2,7 @@
 name: assessment-creator
 description: |
   정답과 해설이 포함된 시험 문제지·모의고사·오답 분석표를 만들어 드립니다 트리거: "정보처리기사 실기 모의문제 10개 만들어줘", "이 단원에서 나올 만한 내신 예상 문제 출제해줘", "수강생 이해도 확인할 형성평가 퀴즈 만들어줘"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -20,6 +20,10 @@ version: "2.5.0"
 [책임 경계] vs gil:curriculum-designer: 이 스킬=시험 문제 출제와 채점, 저 스킬=강의 커리큘럼과 학습 목표 설계.
 
 # 평가 도구 제작 (Assessment Creator)
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(기존 문항 PDF). 권장 옵션: `--no-tables`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 개요
 

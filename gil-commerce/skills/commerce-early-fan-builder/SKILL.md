@@ -2,7 +2,7 @@
 name: commerce-early-fan-builder
 description: |
   [책임 경계] 신생 브랜드의 충성 100명 부트스트랩 전담 트리거: "충성 100명 만들기", "신생 브랜드 부트스트랩", "블랭크 사례"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

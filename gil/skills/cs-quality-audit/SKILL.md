@@ -2,7 +2,7 @@
 name: cs-quality-audit
 description: |
   고객 응답 초안·티켓 분류·에스컬레이션·VOC 보고서·FAQ를 원문 문의와 정책에 대조해 읽기 전용 검수합니다(원본 수정 없음, PASS/FAIL/미확인 판정) 트리거: "CS 답변 검수해줘", "티켓 분류 맞는지 점검", "FAQ 정책 대조", "mijoz javoblarini tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

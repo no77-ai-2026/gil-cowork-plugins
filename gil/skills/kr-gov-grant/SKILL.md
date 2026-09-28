@@ -2,7 +2,7 @@
 name: kr-gov-grant
 description: |
   나에게 맞는 정부·공공기관 지원사업을 찾아주고, 심사 기준에 맞춘 사업계획서·신청서 초안을 만들어 드립니다(Word·한글·Excel 파일까지) 트리거: "정부 지원사업 찾아줘", "우리 상황에 맞는 지원금 있어?", "사업계획서 초안 써줘"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -27,6 +27,11 @@ version: "2.5.0"
 > 이 스킬은 범용 지원사업 전반을 다룹니다. **연구비 특화(NRF·IITP·KIAT 등 학술/R&D 과제)** 는 `gil:grant-writer` 를 사용하세요.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(공고문·신청 서식 분석). 권장 옵션: `--include-field-placeholders --keep-empty-cols`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: 신청서 채우기는 `gil:form-filler`.
 
 ## 시작: 신청자 유형 파악
 

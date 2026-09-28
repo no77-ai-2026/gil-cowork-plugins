@@ -20,6 +20,8 @@ effort: medium
 
 ## 워크플로우
 
+**0-1. 문서 입력 전처리 (v2.6.0)** — 교재·기출 PDF/HWP는 `gil:doc-reader`로 먼저 마크다운화한다(2단 시험지는 `--no-tables`, 교재는 `--format chunks`).
+
 1. `gil:curriculum-designer` — 커리큘럼 설계
 2. `gil:assessment-creator` — 평가·과제 설계
 3. `gil:course-operations-manual` — 운영 매뉴얼

@@ -2,7 +2,7 @@
 name: sales-brief
 description: |
   판매 브리프 — 톱·바텀 셀러와 시즌 패턴을 짚고 잘 팔리는 것을 밀고 재고를 터는 2주 콘텐츠 브리프를 만듭니다 트리거: "잘 팔리는 것 정리해줘", "재고 털 콘텐츠 브리프", "판매 브리프"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-sales-brief.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/sales-brief, Apache-2.0)
 ---

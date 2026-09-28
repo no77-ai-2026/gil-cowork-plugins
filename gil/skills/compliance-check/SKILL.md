@@ -2,7 +2,7 @@
 name: compliance-check
 description: |
   규제 준수 점검, 내부 감사, ESG 보고, 인허가 서류를 지원합니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -12,6 +12,10 @@ version: "2.5.0"
 한국 주요 규제 기준 적용, 갭 분석, 시정 계획, ESG 지표 보고서를 제공합니다.
 
 # 컴플라이언스 점검 (Compliance Check)
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(규정·내규 문서 입력). 권장 옵션: 기본, 개정 대조는 MCP `compare_documents`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 개요
 

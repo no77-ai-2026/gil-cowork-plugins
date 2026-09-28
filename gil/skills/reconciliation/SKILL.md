@@ -2,7 +2,7 @@
 name: reconciliation
 description: |
   계정 조정 — 총계정원장을 보조원장·은행 명세·외부 데이터와 대사해 차이를 식별·해소합니다 트리거: "은행 계정 조정해줘", "원장 대사", "이 차이 어디서 났는지 찾아줘"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-reconciliation.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (finance/reconciliation, Apache-2.0)
 ---
@@ -23,6 +23,10 @@ origin: anthropics/knowledge-work-plugins@2cf4294 (finance/reconciliation, Apach
 **UZ 컨텍스트**: UZ: 은행 명세(vypiska) 형식·Payme/Click 정산 리포트 대사 절차. 상세는 `references/uz-reconciliation.md`.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(원장·명세 표). 권장 옵션: `--html-tables`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 원문 방법론 (EN, knowledge-work-plugins)
 

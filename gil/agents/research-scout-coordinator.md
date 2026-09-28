@@ -20,6 +20,8 @@ effort: high
 
 ## 워크플로우
 
+**0-1. 문서 입력 전처리 (v2.6.0)** — 논문·특허 PDF는 `gil:doc-reader`(`--formula-ocr`, 155MB 모델 사전 고지)로 먼저 마크다운화한다.
+
 1. `gil:paper-search` — 논문 검색 (WebSearch 보강)
 2. `gil:patent-search` → `gil:patent-analyzer` — 특허 조사·분석
 3. `gil:paper-writer` 또는 `gil:grant-writer` — 작성

@@ -2,7 +2,7 @@
 name: book-manuscript-audit
 description: |
   도서 원고·챕터·출판사 제안서의 인물·설정·시점·사실 앵커와 출판 정보 근거를 읽기 전용 대조합니다(원본 수정 없음, PASS/FAIL/미확인 판정) 트리거: "원고 사실 검수", "챕터 간 설정 대조", "출판 제안서 근거 점검", "qo'lyozmani tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

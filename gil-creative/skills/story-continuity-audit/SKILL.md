@@ -2,7 +2,7 @@
 name: story-continuity-audit
 description: |
   웹툰·웹소설 회차·시나리오·시놉시스·캐릭터 시트·IP 피치의 인물·사건·설정 연속성과 권리 주장을 읽기 전용 검수합니다(원본 수정 없음, PASS/FAIL/미확인 판정) 트리거: "설정 연속성 검수", "캐릭터 설정 충돌 점검", "회차 간 오류 확인", "hikoya izchilligini tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

@@ -2,7 +2,7 @@
 name: education-assessment-audit
 description: |
   커리큘럼·평가 문항·정답·해설·학습자료·학술 인용을 원자료에 대조해 목표-평가 정렬과 문항 재풀이 검수합니다(원본 수정 없음, PASS/FAIL/미확인 판정) 트리거: "시험 문항 정답 검수", "커리큘럼 평가 정렬 점검", "해설 오류 확인", "test savollarini tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

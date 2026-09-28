@@ -2,7 +2,7 @@
 name: tax-prep
 description: |
   사업자 세무자료 준비 — 분기 예정신고 추정 또는 연말 자료를 정리해 세무사 인계 패킷을 만듭니다 트리거: "부가세 신고 자료 준비", "세무사한테 넘길 자료 정리", "세금 시즌 준비"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-tax-prep.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/tax-prep+tax-season-organizer, Apache-2.0)
 ---

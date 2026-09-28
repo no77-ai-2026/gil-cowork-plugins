@@ -36,11 +36,11 @@
       "url": "https://mcp.gomdori.app/archhub"
     },
     "kordoc": {
-      "$comment": "한국 공문서 파서 MCP (chrisryugj/kordoc, MIT) — HWP 3.0/5.x·HWPX·HWPML·PDF·XLSX·DOCX → Markdown. 8도구(parse_document·parse_table·parse_form·fill_form 등). DRM 배포용 복호화, 표 재현, 신구대조표, 양식 자동 채우기, OCR 연동. 사전 설치: Node.js 18+. 키 불필요. 라이브 스킬: gil:doc-reader. 포함 OSS: rhwp(MIT)·OpenDataLoader(Apache-2.0)·pdfjs(Apache-2.0)·cfb(Apache-2.0)·JSZip(MIT).",
+      "$comment": "한국 공문서 툴킷 MCP (chrisryugj/kordoc 4.x, MIT) — HWP 3.0/5.x·HWPX·HWPML·PDF·DOCX·XLS/XLSX·이미지 → Markdown/JSON/RAG 청크, 서식 채우기·날인·제자리 패치·공문서 생성·마스킹·조판 렌더. 17도구(parse_document·parse_pages·parse_table·parse_chunks·parse_metadata·detect_format·compare_documents·extract_tables·crop_regions·render_document·parse_form·fill_form·place_seal·patch_document·redact_document·extract_profile·generate_document). [v2.6.0] 메이저 고정 `kordoc@^4`(v5 무예고 파손 방지). 사전 설치: Node.js 20+. 키 불필요. 보조 경로임 — 라이브 스킬 gil:doc-reader·hwpx-writer·form-filler·doc-redactor는 CLI(`npx -y kordoc@^4`)로 MCP 없이 동작하며, MCP는 신구대조(compare_documents)·이미지 응답(render)에 유리. 포함 OSS: rhwp(MIT)·OpenDataLoader(Apache-2.0)·pdfjs(Apache-2.0)·cfb(Apache-2.0)·JSZip(MIT).",
       "command": "npx",
       "args": [
         "-y",
-        "kordoc",
+        "kordoc@^4",
         "mcp"
       ]
     },

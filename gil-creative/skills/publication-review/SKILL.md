@@ -2,7 +2,7 @@
 name: publication-review
 description: |
   [한·UZ 듀얼] 광고·상세페이지·아웃바운드 메시지·캠페인 영상의 게시 전 최종 검수 — 5레인(주장·오퍼·발송·권리·플랫폼/최종렌더) 점검, 4상태 기록, 담당자 검토 인계 트리거: "이 광고 내보내도 돼?", "게시 전 최종 검수", "발행 승인 기록", "누가 승인했는지", "nashrdan oldin tekshiruv" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 origin: chany-studio/chany-studio@v2.8.1 (MIT, 2026-09-15 반영)
 ---
 

@@ -2,7 +2,7 @@
 name: story-cover-art
 description: |
   표지·썸네일 스킬 — 단행본 인쇄 표지 / 웹툰 썸네일·타이틀 카드 / 웹소설 표지 3분기로 구도·시선 유도·제목 자리를 설계한다. 규격 수치는 story-webtoon-spec 허브를, 폰트 라이선스는 gil-creative를 참조한다. 생성 실행·크레딧은 gil-creative에 위임한다. 트리거: "책 표지", "단행본 표지", "웹툰 썸네일"
-version: "2.5.0"
+version: "2.6.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

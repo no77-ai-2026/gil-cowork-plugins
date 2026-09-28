@@ -2,7 +2,7 @@
 name: commerce-season-calendar
 description: |
   [책임 경계] 연간 시즌 캘린더 전담 트리거: "연간 시즌 캘린더", "블프 솽스이 일정", "한국 시즌 이벤트"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

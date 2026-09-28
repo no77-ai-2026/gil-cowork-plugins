@@ -2,7 +2,7 @@
 name: mcp-connector-setup
 description: |
   [책임 경계] Drive·Notion·Higgsfield·OpenAI 4커넥터 인증·환경변수·트러블슈팅 가이드 전담 트리거: "MCP 커넥터 연결", "Drive 인증 방법", "Notion Integration Token 어디서"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -133,14 +133,14 @@ gil 코어 `.mcp.json`의 `kordoc`(한국 공문서 파서)과 `dart`(korean-dar
 
 | 커넥터 | 요구 | 키 | 확인 |
 |---|---|---|---|
-| kordoc | **Node.js 18+** | 불필요 | `node --version` → v18 이상 |
+| kordoc | **Node.js 20+** (v2.6.0: `kordoc@^4` 고정) | 불필요 | `node --version` → v20 이상. MCP는 보조 — `gil:doc-reader` 등은 CLI(`npx -y kordoc@^4`)로 MCP 없이 동작 |
 | dart (korean-dart-mcp) | **Node.js 20.19+** (LTS 권장) + **uv**(런처 `mcp-launch/mcp_launch.py`가 `uv run --script`로 기동) | `DART_API_KEY` — 설치 시 입력 폼 또는 `~/.gil/mcp/dart.json` (셸 export는 CLI 전용) | `node --version` → v20.19 이상, `uv --version` |
 
 **설치**: Windows — [nodejs.org](https://nodejs.org) LTS 설치본(설치 후 **새 터미널/앱 재시작**) /
 macOS — `brew install node` / Debian·Ubuntu — NodeSource LTS 저장소 또는 `nvm`.
 
 **첫 호출**: npm이 패키지를 내려받아(약 10~30초) 캐시합니다. 이후 즉시 기동.
-**1회 호출 검증**: kordoc — 임의 HWP/PDF에 `parse_document` → 마크다운 응답 / dart — 회사명 1건 공시 검색 응답.
+**1회 호출 검증**: kordoc — `python <gil>/skills/doc-reader/scripts/kordoc_run.py check`(node·npx·kordoc 버전) 또는 임의 HWP/PDF에 `parse_document` → 마크다운 응답 / dart — 회사명 1건 공시 검색 응답.
 
 > **[v2.3.1 HARD] 자격증명은 `.mcp.json`의 `${KEY}`로 전달되지 않는다** — Claude 데스크톱 앱은 이를 확장하지 않는다(모태 실측). 키가 필요한 모든 커넥터(dart·korean-law·ElevenLabs·threads·smartstore·imweb·cafe24)는 ① 플러그인 설치 시 입력 폼(`userConfig`) ② `~/.gil/mcp/<서비스>.json` 파일 중 하나로 넣는다. 사용자가 "키를 넣었는데 401"이라고 하면 이 두 경로로 다시 넣게 안내한다. 상세: 각 번들 `CONNECTORS.md` 머리말.
 

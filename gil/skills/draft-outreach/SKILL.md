@@ -2,7 +2,7 @@
 name: draft-outreach
 description: |
   프로스펙트 리서치 후 개인화된 콜드 아웃리치 메시지를 초안합니다 트리거: "콜드메일 써줘", "아웃리치 초안", "이 회사에 첫 연락 메시지"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-draft-outreach.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (sales/draft-outreach, Apache-2.0)
 ---

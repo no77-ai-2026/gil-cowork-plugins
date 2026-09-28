@@ -2,7 +2,7 @@
 name: edcf-feasibility
 description: |
   EDCF 사업 타당성 조사 (Pre-F/S·F/S)를 작성합니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

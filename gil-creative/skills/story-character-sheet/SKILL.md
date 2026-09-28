@@ -2,7 +2,7 @@
 name: story-character-sheet
 description: |
   캐릭터 시트 스킬 — 인물·동물의 비주얼 시트(외형 8항목)와 일관성 앵커를 설계하고, Soul ID 학습에 쓸 중립 기본형 참조 세트의 사양을 정한다. "무엇을 학습시킬지"만 책임지고, 실제 생성·학습 실행과 크레딧 고지는 gil-creative에 위임한다. 트리거: "무엇을 학습시킬지", "캐릭터 시트", "인물 설정"
-version: "2.5.0"
+version: "2.6.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

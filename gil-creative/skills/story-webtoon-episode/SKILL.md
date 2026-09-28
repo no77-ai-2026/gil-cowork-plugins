@@ -2,7 +2,7 @@
 name: story-webtoon-episode
 description: |
   웹툰 회차 스킬 — 회차 플롯을 짜고, 세로 스크롤 컷으로 분할하고, 컷마다 프레임 연출·인물 배치를 지시한다. 컷 수는 감정 비트가 정하고, 컷 높이와 여백 띠가 호흡을 만든다. 말풍선·식자는 story-webtoon-lettering으로 분리한다. 트리거: "웹툰 회차 대본", "컷 분할", "컷 나누기"
-version: "2.5.0"
+version: "2.6.0"
 uz: n/a
 origin: moai-cowork@f1eb954
 ---

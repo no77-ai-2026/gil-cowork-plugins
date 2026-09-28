@@ -2,7 +2,7 @@
 name: legal-brief
 description: |
   법무 브리핑 — 데일리 요약·주제 리서치·사건 대응 등 맥락형 법무 브리핑을 생성합니다 트리거: "오늘 법무 브리핑", "이 주제 법적 이슈 정리", "사건 대응 브리핑"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-legal-brief.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (legal/brief, Apache-2.0)
 ---
@@ -20,6 +20,11 @@ origin: anthropics/knowledge-work-plugins@2cf4294 (legal/brief, Apache-2.0)
 **UZ 컨텍스트**: UZ: lex. 상세는 `references/uz-legal-brief.md`.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(사건 서류·판결문(HWP 3.0 포함) 입력). 권장 옵션: 기본. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: 인명·주민번호는 `gil:doc-redactor`로 먼저 익명화.
 
 ## 원문 방법론 (EN, knowledge-work-plugins)
 

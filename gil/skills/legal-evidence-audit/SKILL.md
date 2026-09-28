@@ -2,7 +2,7 @@
 name: legal-evidence-audit
 description: |
   계약 검토·법령 조사·규제·특허 보고서의 인용 검증 기록·적용 시점·위험 등급·누락 쟁점을 원자료에 대조합니다(원본 수정 없음, PASS/FAIL/미확인 판정) 트리거: "법무 보고서 인용 검수", "계약 검토 근거 대조", "특허 보고서 출처 점검", "huquqiy hisobot manbalarini tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

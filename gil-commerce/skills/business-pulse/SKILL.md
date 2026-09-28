@@ -2,7 +2,7 @@
 name: business-pulse
 description: |
   사업 전반 펄스 체크 — 매출·마진·고객·운영 신호를 한 번에 스캔해 이상 징후를 짚습니다 트리거: "사업 펄스 체크", "우리 가게 상태 한눈에", "이상 신호 있나 봐줘"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-business-pulse.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/business-pulse, Apache-2.0)
 ---

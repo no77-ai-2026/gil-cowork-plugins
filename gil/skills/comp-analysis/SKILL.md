@@ -2,7 +2,7 @@
 name: comp-analysis
 description: |
   보상 분석 — 시장 벤치마킹·밴드 배치·오퍼 경쟁력을 분석합니다 트리거: "이 직무 연봉 얼마 줘야 해", "오퍼 경쟁력 봐줘", "보상 밴드 분석"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-comp-analysis.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/comp-analysis, Apache-2.0)
 ---

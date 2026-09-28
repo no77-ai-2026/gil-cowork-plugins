@@ -2,7 +2,7 @@
 name: signature-request
 description: |
   전자서명 라우팅 — 서명 전 체크리스트, 서명 순서 구성, 발송 준비를 정리합니다 트리거: "전자서명 보내줘", "서명 순서 정리", "계약 체결 준비 체크"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-signature-request.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (legal/signature-request, Apache-2.0)
 ---
@@ -20,6 +20,11 @@ origin: anthropics/knowledge-work-plugins@2cf4294 (legal/signature-request, Apac
 **UZ 컨텍스트**: UZ: 전자서명(ERI) 키 관습·정부 포털 제출용 서명 요건. 상세는 `references/uz-signature-request.md`.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(서명 대상 문서). 권장 옵션: —. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: 서명·도장 이미지 배치는 `gil:form-filler`(seal).
 
 ## 원문 방법론 (EN, knowledge-work-plugins)
 

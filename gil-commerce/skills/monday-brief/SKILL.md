@@ -2,7 +2,7 @@
 name: monday-brief
 description: |
   월요일 아침 1페이지 주간 브리핑 — 현금·매출·파이프라인·이번 주 일정·최우선 3가지를 한 장으로 정리합니다 트리거: "월요일 브리핑 만들어줘", "이번 주 시작 브리핑", "주간 우선순위 정리해줘"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-monday-brief.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/monday-brief, Apache-2.0)
 ---

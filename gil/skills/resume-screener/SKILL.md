@@ -2,7 +2,7 @@
 name: resume-screener
 description: |
   NCS 국가직무능력표준 기반 이력서·자기소개서 적합성 평가 스킬입니다 트리거: "이력서 검토", "지원자 평가", "서류 스크리닝"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -23,6 +23,11 @@ NCS 국가직무능력표준 기반 이력서·자기소개서 적합성 평가 
 # Resume Screener — NCS 기반 이력서 스크리닝 (의사결정 보조)
 
 > gil-hr | 한국 채용 워크플로우. AI는 채점만, 결정은 사람.
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(이력서 HWP/PDF/DOCX). 권장 옵션: 기본. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: 공유 전 `gil:doc-redactor`.
 
 ## ⚠️ 필수 안전 원칙 (HARD)
 

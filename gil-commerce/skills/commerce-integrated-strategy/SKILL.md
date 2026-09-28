@@ -2,7 +2,7 @@
 name: commerce-integrated-strategy
 description: |
   선행 스킬 산출물(commerce-market-research·commerce-jtbd-persona·commerce-product-naming·commerce-ch… 트리거: "오늘 배운 것 종합 전략으로 정리해줘", "통합 전략 뽑아줘", "실행 우선순위 정해줘"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

@@ -9,7 +9,7 @@ description: |
   - "리플렛 인쇄물 제작"
   - "bosma reklama" (인쇄 광고, UZ)
   gil-creative:creative-architect 설계를 입력으로 받아 gil:pdf-writer로 PDF를 조립하고, 배경은 gil-creative:image-bridge로 렌더합니다. 인쇄 규격 후처리는 인쇄소 프리플라이트 전제입니다.
-version: "2.5.0"
+version: "2.6.0"
 ---
 
 # 인쇄물 빌더 (Print Creative Builder)

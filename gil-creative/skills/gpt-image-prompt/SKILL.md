@@ -2,7 +2,7 @@
 name: gpt-image-prompt
 description: |
   OpenAI GPT Image 2.5(Flare·Sunburst, 2세대 호환) 이미지 프롬프트 텍스트 빌더 — 생성·편집·실사 인물 8칸 문법 트리거: "GPT 이미지 프롬프트 만들어줘", "GPT Image 2.5 프롬프트", "ChatGPT 이미지 프롬프트", "rasm uchun prompt" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

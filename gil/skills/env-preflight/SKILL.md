@@ -2,7 +2,7 @@
 name: env-preflight
 description: |
   [한·UZ 듀얼] 사용자 PC의 로컬 실행 환경(Node 18+·uv·Python·npx·ffmpeg·한글 폰트·자격증명 파일·MCP 기동)을 4상태(available·missing·not_observable·blocked)로 비파괴 점검하고, 설치 명령은 승인 후에만 안내 트리거: "내 PC 환경 점검", "MCP 왜 안 돼", "uv 설치돼 있어?", "한글 폰트 확인", "플러그인 실행 환경 진단", "muhitni tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 origin: chany-studio/chany-studio@v2.8.1 (MIT, 2026-09-15 반영)
 ---
 
@@ -69,7 +69,7 @@ GIL에서 이 점검이 필요한 대표 상황:
 
 | Capability | 관찰 근거(명령) | 필요한 GIL 기능 |
 |---|---|---|
-| Node.js 18+ | `node --version` (dart는 20.19+) | context7·kordoc·dart(`npx`), gil-creative `reference-preview` |
+| Node.js 18+ | `node --version` (kordoc 4.x는 20+, dart는 20.19+) | context7·kordoc·dart(`npx`), gil-creative `reference-preview` |
 | npx | `npx --version` | context7·kordoc·dart 기동 |
 | uv | `uv --version` | smartstore·imweb·cafe24·threads-poster·ElevenLabs·dart 런처(`uv run --script mcp_launch.py`)·gil-mcp-ip(특허·상표)·gil-mcp-openai(GPT Image 2.5) |
 | Python 3.10+ | `python --version` / `python3 --version` (Windows는 `py -3 --version`) | uv 서버 런타임, 표·컨택트시트·배치 헬퍼 |
@@ -174,7 +174,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ## 관련 스킬
 
 - `gil:mcp-connector-setup` — 페어. 커넥터 계정·OAuth·API 키·D-3 `--check` 체크리스트(인증 단계). 본 스킬은 로컬 런타임 4상태 점검.
-- `gil:doc-reader` — kordoc(Node 18+) 사용 스킬
+- `gil:doc-reader`·`gil:hwpx-writer`·`gil:form-filler`·`gil:doc-redactor` — kordoc CLI(`npx -y kordoc@^4`, Node 20+) 사용 스킬. MCP 없이 CLI로 동작하므로 "도구 목록에 parse_document가 없다"는 CLI 경로에는 영향이 없다
 - `gil:korean-stock-search` · `gil:public-data` — dart(Node 20.19+ · uv) 사용 스킬
 - `gil:tutor-research` — context7(Node 18+) 사용 스킬
 - `gil-creative:reference-board` — reference-preview(Node 18+) 사용 스킬(해당 번들 설치 시)

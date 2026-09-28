@@ -2,7 +2,7 @@
 name: paper-search
 description: |
   RISS·KCI·DBpia·Google Scholar에서 논문을 통합 검색해 서지정보와 인용 형식을 정리해 드립니다 트리거: "딥러닝 이미지 분류 논문 찾아줘. 최근 5년 내로", "자연어 처리 선행연구 조사해줘", "KCI 등재 학술지에서 머신러닝 논문 검색해줘"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -18,6 +18,10 @@ RISS·KCI·DBpia·Google Scholar에서 논문을 통합 검색해 서지정보�
 핵심 논문 요약·연도별 연구 동향·참고문헌(BibTeX/RIS/텍스트)을 만들고, 논문 작성이 필요하면 gil:paper-writer로 이어집니다.
 
 # 논문 검색 (Paper Search)
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(논문 PDF). 권장 옵션: `--formula-ocr`(수식 논문, 155MB 모델 사전 고지). 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 개요
 

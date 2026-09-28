@@ -1,6 +1,6 @@
 # GIL — Claude Cowork Plugins (한·UZ 듀얼)
 
-![Version](https://img.shields.io/badge/version-2.5.0-blue) ![Plugins](https://img.shields.io/badge/plugins-3-green) ![Skills](https://img.shields.io/badge/skills-315-orange)
+![Version](https://img.shields.io/badge/version-2.6.0-blue) ![Plugins](https://img.shields.io/badge/plugins-3-green) ![Skills](https://img.shields.io/badge/skills-317-orange)
 
 한국 표준 + 우즈베키스탄 듀얼 컨텍스트의 Claude Cowork 플러그인 마켓플레이스입니다.
 "GIL — 한국과 중앙아시아를 잇는 길"
@@ -9,9 +9,9 @@
 
 | 번들 | 스킬 | 버전 | 내용 |
 |---|---|---|---|
-| **gil** (코어) | 158 | 2.5.0 | 전략·컨설팅·문제해결(PSA)·검증형 리서치·오피스 문서(Word/PPT/Excel/한글/PDF)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 + 에이전트 16 + MCP 7종(korean-law·korean-stats·archhub·kordoc·dart·context7·gil-mcp-ip) |
-| gil-creative | 102 | 2.5.0 | 마케팅·콘텐츠·카피·디자인·광고 크리에이티브·이미지/영상/오디오·스토리 IP(웹툰·웹소설·시나리오)·출판 |
-| gil-commerce | 55 | 2.5.0 | 스마트스토어·쿠팡·자사몰·UZ 채널(Uzum·OLX·Telegram·Yandex) 셀러 운영·상세페이지·광고 최적화·소상공인 루틴 |
+| **gil** (코어) | 160 | 2.6.0 | 전략·컨설팅·문제해결(PSA)·검증형 리서치·오피스 문서(Word/PPT/Excel/한글/PDF)·한국 공문서 툴킷(kordoc: HWP/PDF 파싱·공문서 생성·서식 채우기·개인정보 마스킹)·데이터/공공데이터·법무·재무/세무·HR·CS·교육·연구·특허·ODA·생산성·커리어 + 에이전트 16 + MCP 7종(korean-law·korean-stats·archhub·kordoc·dart·context7·gil-mcp-ip) |
+| gil-creative | 102 | 2.6.0 | 마케팅·콘텐츠·카피·디자인·광고 크리에이티브·이미지/영상/오디오·스토리 IP(웹툰·웹소설·시나리오)·출판 |
+| gil-commerce | 55 | 2.6.0 | 스마트스토어·쿠팡·자사몰·UZ 채널(Uzum·OLX·Telegram·Yandex) 셀러 운영·상세페이지·광고 최적화·소상공인 루틴 |
 
 ## 설치
 
@@ -31,11 +31,18 @@
 | 도구 | 필요한 번들·서버 | 설치 |
 |---|---|---|
 | **uv** | gil(dart 런처·gil-mcp-ip) · gil-creative(threads-poster·ElevenLabs·gil-mcp-openai) · gil-commerce(smartstore·imweb·cafe24) | Windows: `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 \| iex"` / macOS·Linux: `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
-| **Node.js 18+** (dart는 20.19+) | gil(kordoc·dart·context7) · gil-creative(reference-preview) | [nodejs.org](https://nodejs.org) LTS |
+| **Node.js 20+** (kordoc 4.x, dart는 20.19+; context7·reference-preview는 18+) | gil(kordoc CLI·MCP·dart·context7) · gil-creative(reference-preview) | [nodejs.org](https://nodejs.org) LTS |
 
 설치 후 Claude 앱을 재시작하세요. 없으면 해당 서버는 오류 없이 도구 목록에서 조용히 빠집니다.
 
 **자격증명(API 키)** 은 플러그인 설치 시 뜨는 **입력 폼**(plugin.json `userConfig`)에 넣거나, 파일 `~/.gil/mcp/<서비스>.json`(Windows `C:\Users\<사용자>\.gil\mcp\`)에 저장합니다. `.mcp.json`의 `${KEY}` 환경변수 참조는 Claude 데스크톱에서 확장되지 않으므로 v2.3.1부터 쓰지 않습니다(각 번들 `CONNECTORS.md` 참조).
+
+## v2.6.0 하이라이트 (2026-09-28) — 한국 공문서 툴킷 kordoc 4.x 스킬화
+
+- **`doc-reader` 전면 재작성** — HWP 3.0/5.x·HWPX·HML·PDF·DOCX·XLS/XLSX·스캔 이미지를 `npx -y kordoc@^4` CLI로 파싱(MCP 없이 동작), 내장 OCR·RAG 청크(`--format chunks`)·병합 표 HTML 보존·표 분류·경고 코드 39종 품질 게이트, 래퍼 `scripts/kordoc_run.py`
+- **`hwpx-writer` v3** — 엔진을 kordoc으로 교체: 공문서 프리셋 8종(기안문·보고서·계획서·통지·회의록·개조식·업무보고·보도자료)·두문/결문표·네이티브 차트·수식, 서식 보존 제자리 패치, `validate`·`lint`·`render` 검증 루프(python-hwpx는 폴백)
+- **신규 `form-filler`**(서식 빈칸 채우기·내장 정부 표준 기안문 서식·날인)·**`doc-redactor`**(개인정보 마스킹 사본 — 외부 전송·AI 첨부 전 게이트)
+- 문서 파일을 입력받는 스킬 38곳·에이전트 8곳에 "doc-reader 선행" 배선, `.mcp.json` kordoc `@^4` 고정. 스킬 315 → 317. 참고: [chrisryugj/kordoc](https://github.com/chrisryugj/kordoc) 4.15.7 (MIT)
 
 ## v2.5.0 하이라이트 (2026-09-27) — 특허·상표 MCP · GPT Image 2.5 · 검수 스킬
 
@@ -78,7 +85,7 @@
 - **research-verify** (신규) — 검증형 리서치: 출처 병기·[미검증]/[추정] 태그 → 3중 검증(팩트·출처·논리) → Red 반론 → 조건부 결론
 - 기존 스킬 8종·에이전트 2종에 유기적 연동 라우팅 추가
 
-상세 이력: `gil/CHANGELOG-v2.5.0.md`·`gil/CHANGELOG-v2.3.0.md`·`gil/CHANGELOG-v2.2.0.md` 및 각 번들 CHANGELOG.
+상세 이력: `gil/CHANGELOG-v2.6.0.md`·`gil/CHANGELOG-v2.5.0.md`·`gil/CHANGELOG-v2.3.0.md`·`gil/CHANGELOG-v2.2.0.md` 및 각 번들 CHANGELOG.
 
 ## 라이선스
 

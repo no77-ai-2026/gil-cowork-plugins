@@ -2,7 +2,7 @@
 name: higgsfield-product
 description: |
   브랜드·제품 비주얼 요청을 10개 촬영 모드 중 하나로 판정하고, 그 모드에 맞는 프롬프트 구조를 조립해 Higgsfield MCP로 이미지를 생성합니다. 트리거: "제품 사진 만들어줘", "누끼 배경에 스튜디오 컷", "이 제품이 카페에 놓인 장면"
-version: "2.5.0"
+version: "2.6.0"
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
 

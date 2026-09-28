@@ -20,6 +20,8 @@ effort: high
 
 ## 워크플로우
 
+**0-1. 문서 입력 전처리 (v2.6.0)** — 결산 자료가 HWP/PDF/XLS(X) 파일이면 `gil:doc-reader`(`--html-tables`)로 먼저 표를 보존해 마크다운화한다. 결과 재무 보고서를 한글 파일로 요구하면 `gil:hwpx-writer`(보고서·개조식 프리셋)로 생성한다.
+
 1. `gil:close-management` — 결산 정리
 2. `gil:financial-statements` — 재무제표 작성
 3. `gil:variance-analysis` — 예실 변동분석

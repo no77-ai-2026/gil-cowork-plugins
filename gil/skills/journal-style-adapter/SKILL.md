@@ -2,7 +2,7 @@
 name: journal-style-adapter
 description: |
   [한·UZ 듀얼] 선정된 학술지의 형식·문체·구조·인용 형식에 자동 적응합니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

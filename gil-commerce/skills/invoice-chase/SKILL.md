@@ -2,7 +2,7 @@
 name: invoice-chase
 description: |
   미수금 관리 — 연체 인보이스를 금액·연체일 기준으로 정렬하고 단계별 독촉 메시지를 초안합니다 트리거: "미수금 정리해줘", "연체 인보이스 독촉", "수금 계획 세워줘"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-invoice-chase.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (small-business/invoice-chase, Apache-2.0)
 ---

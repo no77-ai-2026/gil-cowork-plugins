@@ -2,7 +2,7 @@
 name: vendor-check
 description: |
   벤더 계약 현황 점검 — 특정 거래처와의 계약·갱신일·리스크 갭을 시스템 횡단으로 확인합니다 트리거: "이 업체랑 계약 상태 확인", "벤더 계약 만료 점검", "거래처 리스크 체크"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-vendor-check.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (legal/vendor-check, Apache-2.0)
 ---

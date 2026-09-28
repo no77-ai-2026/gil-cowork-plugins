@@ -2,13 +2,18 @@
 name: kb-article
 description: |
   고객지원 지식베이스 문서를 작성합니다 트리거: "FAQ 만들어줘", "트러블슈팅 가이드 작성해줘", "헬프센터 아티클 써줘"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
 고객지원 지식베이스 문서를 작성합니다. "FAQ 만들어줘", "트러블슈팅 가이드 작성해줘", "헬프센터 아티클 써줘"라고 요청할 때 사용하세요. FAQ, 사용자 가이드, 트러블슈팅 문서, 정책 안내문을 Zendesk·Freshdesk·카카오비즈니스 형식에 맞게 생성합니다.
 
 # 지식베이스 문서 작성 (KB Article)
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(KB 원문). 권장 옵션: `--format chunks --plain`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: `gil:doc-redactor` 게이트.
 
 ## 개요
 

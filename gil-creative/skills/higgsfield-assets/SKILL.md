@@ -2,7 +2,7 @@
 name: higgsfield-assets
 description: |
   Higgsfield MCP에서 이미지·영상 이외의 생성과 후처리를 다룹니다. 트리거: "이 사진을 3D 모델로 만들어줘", "GLB로 뽑아줘", "캐릭터 리깅해줘"
-version: "2.5.0"
+version: "2.6.0"
 uz: n/a
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---

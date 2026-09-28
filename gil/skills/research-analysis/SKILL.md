@@ -2,7 +2,7 @@
 name: research-analysis
 description: |
   [한·UZ 듀얼] 통계·데이터 분석 가이드를 제공합니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -16,6 +16,10 @@ parametric/non-parametric·regression·ML·survival·시각화 전반. R·Python
 > gil-research | 통계·데이터 분석·시각화 풀 가이드
 
 > **한국 표준 + UZ 듀얼 컨텍스트** — 범용 통계/ML 가이드가 기본이며, UZ 공공데이터(stat.uz)·러시아어 데이터셋·현지 표본 제약을 활용한 분석은 [`references/uz-research-data.md`](references/uz-research-data.md) 참조. (UZ 트리거: "stat.uz 데이터 분석", "UZ 현지 표본 통계")
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(연구 자료 PDF). 권장 옵션: `--formula-ocr`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 역할
 

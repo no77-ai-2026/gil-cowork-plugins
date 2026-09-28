@@ -2,7 +2,7 @@
 name: metrics-review
 description: |
   제품 지표 리뷰 — 주·월·분기 지표를 추세 분석과 실행 가능한 인사이트로 정리합니다 트리거: "제품 지표 리뷰", "주간 메트릭 분석", "이 지표 왜 떨어졌지"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-metrics-review.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (product-management/metrics-review, Apache-2.0)
 ---

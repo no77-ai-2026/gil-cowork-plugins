@@ -2,7 +2,7 @@
 name: employment-manager
 description: |
   채용 프로세스 전반을 관리해주는 스킬입니다 트리거: "JD 작성해줘", "면접 질문 만들어줘", "신입 온보딩 계획 짜줘"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -11,6 +11,11 @@ version: "2.5.0"
 평가 기준 수립, 온보딩 체크리스트, 멘토링 프로그램 설계를 지원합니다.
 
 # 채용 관리자 (employment-manager)
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(인사 서식·규정). 권장 옵션: 기본. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: 서식 기입은 `gil:form-filler`, 공유 전 `gil:doc-redactor`.
 
 ## 지원 영역
 

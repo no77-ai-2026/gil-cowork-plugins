@@ -2,7 +2,7 @@
 name: habit-routine
 description: |
   작심3일을 꾸준함으로 바꾸도록 습관과 루틴을 설계해주는 스킬입니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

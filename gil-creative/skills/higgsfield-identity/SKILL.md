@@ -2,7 +2,7 @@
 name: higgsfield-identity
 description: |
   Higgsfield MCP에서 재사용 가능한 인물·사물 일관성 참조를 만듭니다. 트리거: "내 얼굴로 Soul 만들어줘", "디지털 트윈 학습시켜줘", "이 캐릭터 계속 똑같이 나오게 해줘"
-version: "2.5.0"
+version: "2.6.0"
 origin: moai-cowork@61fac40 (v1.2.4, 2026-09-02 동기화)
 ---
 

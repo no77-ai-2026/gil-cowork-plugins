@@ -2,7 +2,7 @@
 name: skill-template
 description: |
   SKILL.md 표준 템플릿 트리거: "새 스킬 만들고 싶어", "스킬 템플릿", "SKILL.md 템플릿"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

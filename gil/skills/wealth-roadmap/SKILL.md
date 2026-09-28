@@ -2,7 +2,7 @@
 name: wealth-roadmap
 description: |
   재테크를 어디서부터 시작할지 막막할 때 나만의 자산 관리 로드맵을 짜주는 스킬입니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

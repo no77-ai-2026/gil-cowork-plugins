@@ -2,7 +2,7 @@
 name: commerce-margin-audit
 description: |
   상품 등록안·상세페이지·가격표·광고·프로모션 계획의 원가·수수료·할인·마진 계산을 읽기 전용 재검산합니다(원본 수정 없음, PASS/FAIL/미확인 판정) 트리거: "마진 계산 검수해줘", "상세페이지 가격 대조", "프로모션 손익 재검산", "marja hisobini tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

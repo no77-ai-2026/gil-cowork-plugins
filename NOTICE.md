@@ -16,7 +16,7 @@
 - **anthropics/knowledge-work-plugins** @2cf4294 (Apache-2.0) — v2.1.0 신규 50스킬(small-business·data·productivity·sales·finance·legal·HR·PM·enterprise-search·design) + 기존 25스킬 방법론 흡수.
 - **modu-ai/moai-cowork** @f1eb954 — 모태 (Apache-2.0). 신규 50 스킬·MCP 8종·project 스킬 1.3.0 방법론.
 - **modu-ai/cowork-plugins** ≤v2.19.0 — 구 모태 (MIT).
-- **chrisryugj/korean-dart-mcp · korean-law-mcp · korean-stats-mcp · archhub-mcp · kordoc** — MIT.
+- **chrisryugj/korean-dart-mcp · korean-law-mcp · korean-stats-mcp · archhub-mcp · kordoc** — MIT. kordoc 4.15.7(2026-09-28): `gil:doc-reader`·`hwpx-writer`·`form-filler`·`doc-redactor`가 CLI 엔진으로 사용(npx 런타임 호출, 코드 vendoring 없음). `hwpx-writer/references/gongmun-style.md`는 kordoc 저장소 `gongmunseo` 스킬(MIT) 규약을 GIL식으로 재구성.
 - **AgriciDaniel/claude-ads** v1.5.1 (MIT) — gil-ads-audit MCP 방법론.
 - **NomaDamas/k-skill** (MIT) — 한국 특화 6종.
 - **epoko77-ai/im-not-ai** (MIT) — humanize-korean 기반.

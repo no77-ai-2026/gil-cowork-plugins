@@ -20,6 +20,8 @@ effort: medium
 
 ## 워크플로우
 
+**0-1. 문서 입력 전처리 (v2.6.0)** — 이력서·평가표가 HWP/PDF/DOCX 파일이면 `gil:doc-reader`로 먼저 읽고, 공유·외부 전송 사본은 `gil:doc-redactor`로 마스킹한다. 인사 서식 기입은 `gil:form-filler`.
+
 1. `gil:resume-screener` — 이력서 스크리닝·평가
 2. `gil:draft-offer` — 오퍼레터 작성
 3. `gil:employment-manager` — 근로계약·온보딩 관리

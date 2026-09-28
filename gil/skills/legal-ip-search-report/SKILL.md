@@ -2,7 +2,7 @@
 name: legal-ip-search-report
 description: |
   상표 선행검색·특허 선행기술·권리상태를 한국·미국·일본·유럽 공식 DB로 조사해 검색 로그·위험 평가·국가별 출원 전략 보고서를 만듭니다 트리거: "상표 등록 가능한지 한국·미국·일본까지 조사해줘", "해외 선행특허 조사하고 출원 전략", "FTO 예비조사 보고서", "O'zbekistonda tovar belgisi tekshiruvi"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

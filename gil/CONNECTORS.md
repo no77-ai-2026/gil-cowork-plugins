@@ -999,6 +999,25 @@ KB(Knowledge Base) 문서를 Notion 데이터베이스로 관리합니다.
 GIL 플러그인은 Cowork 공식 커넥터와 연동하여 외부 도구와 직접 상호작용할 수 있습니다.
 커넥터는 무료이며, 한 번 인증하면 모든 세션에서 유지됩니다.
 
+## kordoc — 한국 공문서 툴킷 (로컬 CLI · MCP 보조, v2.6.0)
+
+키·계정 없음. **Node.js 20+** 만 필요. 스킬(`gil:doc-reader`·`gil:hwpx-writer`·`gil:form-filler`·`gil:doc-redactor`)은 `npx -y kordoc@^4` CLI로 MCP 없이 동작하며, `.mcp.json`의 `kordoc` 서버(`kordoc@^4 mcp`)는 신구대조(`compare_documents`)·이미지 응답(`render_document`)이 필요할 때 쓰는 보조 경로다.
+
+### 사용 측 준비
+1. `node --version` → v20 이상(없으면 nodejs.org LTS 설치 후 앱 재시작).
+2. 첫 호출 시 npm 캐시 다운로드(20~30초). 점검: `python <gil>/skills/doc-reader/scripts/kordoc_run.py check`.
+3. OCR(스캔 PDF)은 최초 1회 모델 18MB(수식 155MB) 로컬 다운로드 — 폐쇄망은 `KORDOC_OFFLINE=1` + 오프라인 tarball(`gil:doc-reader/references/format-notes.md`).
+
+### 활용 스킬
+| 스킬 | 기능 |
+|---|---|
+| `gil:doc-reader` | HWP/HWPX/HML/PDF/DOCX/XLS(X)/이미지 → 마크다운·JSON·RAG 청크, 표 분류, 신구대조 |
+| `gil:hwpx-writer` | 공문서 프리셋 8종 생성, 서식 보존 패치, validate·render |
+| `gil:form-filler` | 서식 빈칸 채우기(내장 기안문 서식)·날인 |
+| `gil:doc-redactor` | 개인정보 마스킹 사본·탐지 리포트 |
+
+---
+
 ## 커넥터 설정 방법
 
 1. Claude Cowork 좌측 메뉴 > Settings > Connectors
@@ -1150,5 +1169,5 @@ Cowork에서 제공하는 50+개 커넥터 전체 목록은 아래에서 확인:
 
 ---
 
-Version: 1.0.0
-Last Updated: 2026-04-10
+Version: 1.1.0
+Last Updated: 2026-09-28

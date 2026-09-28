@@ -2,7 +2,7 @@
 name: oda-tendering-uz
 description: |
   ODA·EDCF·국제기구 입찰에 대응합니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -13,6 +13,11 @@ UZ + World Bank + ADB + KOICA·EDCF 입찰 차이·국제 조달 표준.
 # ODA·국제 입찰 대응 (ODA International Tendering)
 
 > gil-oda | UZ·KOICA·EDCF·WB·ADB·MDB 입찰 풀 가이드
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(입찰 서류 DOCX/PDF). 권장 옵션: 기본(러·우 병기 표는 `--html-tables`). 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: 서식 기입은 `gil:form-filler`(UZ 분기).
 
 ## 역할
 

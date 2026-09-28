@@ -2,7 +2,7 @@
 name: book-proposal-writer
 description: |
   [한·UZ 듀얼] 한국 출판사 투고용 제안서 작성 트리거: "출판 제안서 작성", "출판기획서", "투고 제안서"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

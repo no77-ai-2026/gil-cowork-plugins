@@ -2,7 +2,7 @@
 name: design-critique
 description: |
   구조화된 디자인 크리틱 — 사용성·위계·일관성 관점의 피드백을 제공합니다 트리거: "이 디자인 리뷰해줘", "목업 크리틱", "뭐가 어색한지 봐줘"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-design-critique.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (design/design-critique, Apache-2.0)
 ---

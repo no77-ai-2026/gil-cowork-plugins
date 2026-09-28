@@ -7,7 +7,7 @@ GIL 3번들의 로컬 MCP 서버·미디어 작업이 어떤 런타임에 의존
 | 번들 | 서버 | 기동 명령 | 필요한 런타임 | 자격증명 파일(`~/.gil/mcp/`) | 도구가 보이는지 확인할 이름 |
 |---|---|---|---|---|---|
 | gil | context7 | `npx -y @upstash/context7-mcp@latest` | Node 18+ · npx | 없음 | `resolve-library-id`, `query-docs` |
-| gil | kordoc | `npx -y kordoc mcp` | Node 18+ · npx | 없음 | `parse_document` |
+| gil | kordoc | `npx -y kordoc@^4 mcp` (보조; 스킬은 CLI `npx -y kordoc@^4`) | Node 20+ · npx | 없음 | 17도구(`parse_document`·`parse_chunks`·`fill_form`·`patch_document`·`generate_document`·`redact_document`·`render_document` 등) |
 | gil | dart | `uv run --script mcp-launch/mcp_launch.py -- npx -y korean-dart-mcp` | uv · Node 20.19+ · npx | `dart.json` (`DART_API_KEY`) | 공시 검색 도구 |
 | gil | korean-law · korean-stats · archhub | http(원격) | 없음(네트워크만) | 없음(`korean-law`는 설치 폼 OC 키) | — |
 | gil-creative | reference-preview | `node mcp-servers/reference-preview/server.mjs` | Node 18+ | 없음 | `fetch_reference_preview_image` |

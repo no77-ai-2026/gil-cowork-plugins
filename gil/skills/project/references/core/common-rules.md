@@ -56,6 +56,8 @@
 | 랜딩 페이지 | `gil-creative:landing-page` | gil-creative |
 | 이미지 / 영상 / 음성 | `gil-creative:higgsfield-image` / `higgsfield-video` / `audio-gen` | gil-creative |
 | 상세페이지 | `gil-commerce:detail-page-copy`(카피) · `detail-page-image`(이미지) | gil-commerce |
+| 문서 파일 **입력**(HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔) | `gil:doc-reader`로 먼저 마크다운화(v2.6.0) | gil |
+| 서식 빈칸 채우기·날인 / 개인정보 마스킹 사본 | `gil:form-filler` / `gil:doc-redactor`(외부 전송·AI 첨부 전 게이트, ◐ 이상) | gil |
 
 ## 6. 한국어 품질 체인 (HARD — 등급제 연동)
 

@@ -10,7 +10,7 @@ description: |
   - "우즈벡 시장용 크리에이티브 설계"
   - "reklama kreativ" (광고 크리에이티브, UZ)
   단독으로도 쓰지만 보통 gil-creative:creative-wizard 코디네이터가 호출합니다. 시장 현지화는 gil-creative:market-profile-engine, 자료 흐름은 gil-creative:material-analyzer, 포맷 산출은 gil-commerce:detail-page-copy·gil-creative:card-news·gil-creative:poster-ad-builder·gil-creative:print-creative-builder로 이어집니다. 텍스트 산출은 마지막에 gil:ai-slop-reviewer → gil:humanize-korean으로 종료합니다.
-version: "2.5.0"
+version: "2.6.0"
 ---
 
 # 크리에이티브 아키텍트 (Creative Architect)

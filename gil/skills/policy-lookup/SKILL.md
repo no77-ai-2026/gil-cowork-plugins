@@ -2,7 +2,7 @@
 name: policy-lookup
 description: |
   사내 규정 조회 — 취업규칙·정책 문서를 찾아 쉬운 말로 답합니다 트리거: "연차 규정 알려줘", "재택 정책 어떻게 돼", "경조휴가 며칠이야"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-policy-lookup.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/policy-lookup, Apache-2.0)
 ---
@@ -20,6 +20,10 @@ origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/policy-lookup
 **UZ 컨텍스트**: UZ: UZ 노동법 기준 병기 옵션(연차 15일+ 등) — 원문 확인 제약 시 SECONDARY 표기. 상세는 `references/uz-policy-lookup.md`.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(정책 문서 색인). 권장 옵션: `--plain`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 원문 방법론 (EN, knowledge-work-plugins)
 

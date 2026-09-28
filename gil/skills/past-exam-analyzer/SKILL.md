@@ -2,7 +2,7 @@
 name: past-exam-analyzer
 description: |
   [한·UZ 듀얼] 기출문제를 분석하고 다음 회차 출제 패턴을 예측하여 예상문제를 자동 생성합니다 트리거: "수능 5개년 분석", "공무원 기출 패턴", "다음 회차 예상문제"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -17,6 +17,10 @@ version: "2.5.0"
 > gil-education | 기출 패턴 분석·다음 회차 예측·예상문제 자동 생성
 
 > **한국 표준 + UZ 듀얼 컨텍스트** — 수능·공무원·자격증·TOEIC 등 한국 시험이 기본이며, UZ·CIS 시험(DTM 국가시험·UZ 대학입시·IELTS/CEFR·러시아어 시험) 기출 패턴은 [`references/uz-exams.md`](references/uz-exams.md) 참조. (UZ 트리거: "DTM 기출 분석", "UZ 대학입시 패턴")
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(기출 PDF). 권장 옵션: `--no-tables`(2단 시험지 읽기 순서 교정). 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 역할
 

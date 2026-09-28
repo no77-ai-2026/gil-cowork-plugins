@@ -20,6 +20,8 @@ effort: high
 
 ## 워크플로우
 
+**0-1. 문서 입력 전처리 (v2.6.0)** — 계약·소장·판결문이 HWP/HWPX/PDF 파일로 오면 `gil:doc-reader`로 먼저 마크다운화하고(개정 대조는 `compare_documents`), 외부 자문·클라우드 분석에 첨부할 사본은 `gil:doc-redactor`로 마스킹한다(◐ 이상).
+
 0. **심도 모드 확인·소요 사전 고지 (HARD — v1.7.2)** — 착수 전에 ⚡Quick(3~5분) / ◐Standard(8~12분) / ◆Deep(20분+)를 판정합니다. 1~5단계를 모두 도는 통합 검토는 **항상 8분을 넘기므로 반드시 사전 고지**하고 선택을 받습니다. 응답이 없으면 Standard로 진행합니다. 정본: `gil:contract-review`의 `references/research-depth-modes.md`
 1. `gil:nda-triage` — NDA/계약 1차 분류·우선순위
 2. `gil:contract-review` — 조항별 상세 검토

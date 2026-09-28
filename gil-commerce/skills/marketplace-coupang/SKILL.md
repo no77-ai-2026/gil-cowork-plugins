@@ -2,7 +2,7 @@
 name: marketplace-coupang
 description: |
   쿠팡 상세페이지 정책과 검색최적화·우수상품 가이드라인을 적용하는 스킬입니다 트리거: "쿠팡 상세페이지 가이드", "로켓배송 등록", "쿠팡 SEO"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

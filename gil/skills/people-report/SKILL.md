@@ -2,7 +2,7 @@
 name: people-report
 description: |
   인사 리포트 — 헤드카운트·이직률·조직 건강 지표 보고서를 생성합니다 트리거: "헤드카운트 리포트", "이직률 분석해줘", "조직 현황 보고서"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-people-report.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/people-report, Apache-2.0)
 ---
@@ -20,6 +20,11 @@ origin: anthropics/knowledge-work-plugins@2cf4294 (human-resources/people-report
 **UZ 컨텍스트**: UZ: 현지 채용 비율(로컬라이제이션)·급여 통화 구성을 지표에 추가. 상세는 `references/uz-people-report.md`.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(인사 자료). 권장 옵션: 기본. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: `gil:doc-redactor`.
 
 ## 원문 방법론 (EN, knowledge-work-plugins)
 

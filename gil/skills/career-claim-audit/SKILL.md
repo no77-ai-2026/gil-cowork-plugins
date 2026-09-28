@@ -2,7 +2,7 @@
 name: career-claim-audit
 description: |
   이력서·자기소개서·포트폴리오·면접 자료의 경력 주장·성과 수치·날짜·개인정보 노출을 원자료와 대조합니다(원본 수정 없음, PASS/FAIL/미확인 판정) 트리거: "이력서 사실 검수해줘", "포트폴리오 수치 과장 점검", "자소서 주장 근거 확인", "rezyumeni tekshirish" (UZ)
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

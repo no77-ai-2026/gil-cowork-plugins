@@ -2,7 +2,7 @@
 name: learning-material
 description: |
   조사한 내용을 도식·차트·수식·코드 하이라이트가 들어간 단일 HTML 학습자료로 만들어 드립니다 트리거: "방금 조사한 내용으로 HTML 학습자료 만들어줘", "도식이랑 예제 들어간 공부 자료로 정리해줘", "mermaid 다이어그램으로 개념 정리해줘"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -18,6 +18,10 @@ version: "2.5.0"
 [책임 경계] vs gil:html-report: 이 스킬=도식·차트·코드가 풍부한 학습자료(JS 라이브러리 허용), 저 스킬=0-JS 단일파일 업무 보고서.
 
 # 학습자료 렌더러 (Learning Material)
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(교재 원본). 권장 옵션: `--format chunks`. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 개요
 

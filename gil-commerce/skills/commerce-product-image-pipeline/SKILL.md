@@ -2,7 +2,7 @@
 name: commerce-product-image-pipeline
 description: |
   [책임 경계] 상품 이미지·영상 풀스택 파이프라인 오케스트레이터 트리거: "상품 이미지·영상 만들어줘", "상품 이미지 만들어줘", "상품 영상 풀세트"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

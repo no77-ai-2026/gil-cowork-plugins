@@ -22,6 +22,8 @@ effort: medium
 
 ## 워크플로우
 
+**0-1. 문서 입력 전처리 (v2.6.0)** — 회의록·프로세스 문서가 HWP/PDF 파일이면 `gil:doc-reader`로 먼저 마크다운화하고, 한글 파일 산출은 `gil:hwpx-writer`(회의록·통지 프리셋)로 만든다.
+
 **B. 회의·보고 분기 (구 meeting-report)**: `gil:meeting-facilitator`(회의 진행·정리) → `gil:report-speak`(보고 화법 변환) → `gil:feedback-loop`(피드백·후속) → `gil:ai-slop-reviewer` → `gil:humanize-korean` → 최종 검수(◆최종본, humanize Phase 6)
 
 **A. 운영 기본 흐름**

@@ -2,7 +2,7 @@
 name: legal-response
 description: |
   일반적인 법률 문의에 템플릿 기반 회신을 생성하되, 전문가 검토가 필요한 상황은 자동 에스컬레이션합니다 트리거: "법률 문의 회신 초안", "이 질의에 법무 답변", "내용증명 답변 초안"
-version: "2.5.0"
+version: "2.6.0"
 uz: references/uz-legal-response.md
 origin: anthropics/knowledge-work-plugins@2cf4294 (legal/legal-response, Apache-2.0)
 ---
@@ -20,6 +20,10 @@ origin: anthropics/knowledge-work-plugins@2cf4294 (legal/legal-response, Apache-
 **UZ 컨텍스트**: UZ: RU 격식 법률 서신 템플릿 병기. 상세는 `references/uz-legal-response.md`.
 
 ---
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(상대 문서·소장 입력). 권장 옵션: 기본. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 원문 방법론 (EN, knowledge-work-plugins)
 

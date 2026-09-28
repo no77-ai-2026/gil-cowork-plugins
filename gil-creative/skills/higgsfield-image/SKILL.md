@@ -2,7 +2,7 @@
 name: higgsfield-image
 description: |
   Higgsfield MCP 기반 AI 이미지를 자연어 요청 한 줄로 생성합니다 트리거: "Higgsfield로 이미지 만들어 줘", "Soul 2.0으로 이미지", "Nano Banana Pro로 카드뉴스 이미지"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 

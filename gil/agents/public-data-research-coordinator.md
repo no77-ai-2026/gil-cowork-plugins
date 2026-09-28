@@ -20,6 +20,8 @@ effort: high
 
 ## 워크플로우
 
+**0-1. 문서 입력 전처리 (v2.6.0)** — 공공 보고서·고시 HWP/PDF는 `gil:doc-reader`로 먼저 마크다운화한다(`--plain`은 색인용).
+
 1. `gil:public-data` — 일반 공공데이터 조회
 2. `gil:court-auction-search` — 법원 경매 조회
 3. `gil:korean-stock-search` — 국내 주식 조회

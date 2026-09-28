@@ -20,6 +20,8 @@ effort: high
 
 ## 워크플로우
 
+**0-1. 문서 입력 전처리 (v2.6.0)** — 입력이 문서 파일(HWP/PDF/DOCX/XLS)이면 `gil:doc-reader`(`--format json`)로 표·블록 구조를 먼저 뽑는다. 스캔본은 `--auto-ocr`.
+
 1. `gil:data-explorer` — 데이터 탐색·요약 통계
 2. `gil:data-visualizer` — 차트·시각화
 3. `gil:public-data` — 공공데이터 보강 (필요 시)

@@ -2,7 +2,7 @@
 name: public-data
 description: |
   공공데이터포털(data.go.kr)·KOSIS 통계청의 실시간 통계 조회·분석 결과를 만들어 드립니다 트리거: "통계 찾아줘", "공공데이터 조회해줘", "인구 통계"
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -15,6 +15,10 @@ version: "2.5.0"
 data.go.kr API와 KOSIS OpenAPI로 실시간 데이터를 조회하고 분석해 핵심 인사이트로 정리합니다.
 
 # 공공데이터 조회 (Public Data)
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(공공 보고서 PDF·HWP). 권장 옵션: 기본. 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
 
 ## 역할
 공공데이터포털(data.go.kr)과 KOSIS 통계청의 데이터를 실시간으로 조회하고 분석하는 전문가.

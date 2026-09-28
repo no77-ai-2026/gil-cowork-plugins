@@ -2,7 +2,7 @@
 name: contract-review
 description: |
   계약서 검토, 이용약관, 개인정보처리방침 등 법률 문서를 분석하고 작성합니다
-version: "2.5.0"
+version: "2.6.0"
 ---
 ## 스킬 개요(상세)
 
@@ -12,6 +12,11 @@ version: "2.5.0"
 한국 민법·상법 기반 10대 리스크 패턴 분석, 수정 권고안을 제공합니다.
 
 # 계약서 검토 (Contract Review)
+
+## 문서 입력 전처리 (v2.6.0)
+
+입력이 HWP/HWPX/HML·PDF·DOCX·XLS(X)·스캔 이미지 파일이면 본문 작업 전에 **`gil:doc-reader`로 먼저 마크다운화**한다(계약서 HWP/PDF 입력). 권장 옵션: 기본(`--html-tables`는 별표·요율표가 있을 때). 파싱 `warnings`(OCR 필요·숨김 텍스트·부분 파싱)는 결과에 그대로 옮긴다.
+추가: 외부 자문·클라우드 분석에 첨부 전 `gil:doc-redactor` 마스킹 사본 사용(◐ 이상).
 
 ## 개요
 

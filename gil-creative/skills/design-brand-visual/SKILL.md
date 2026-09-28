@@ -2,7 +2,7 @@
 name: design-brand-visual
 description: |
   디자인 시스템에 맞는 브랜드 비주얼을 생성합니다. 트리거: "히어로 이미지 만들어 줘", "랜딩 상단 비주얼", "브랜드 톤에 맞는 일러스트"
-version: "2.5.0"
+version: "2.6.0"
 origin: moai-cowork@f1eb954
 ---
 
